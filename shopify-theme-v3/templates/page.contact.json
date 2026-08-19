@@ -17,9 +17,9 @@
     "brief": {
       "type": "lead-form",
       "settings": {
-        "kicker": "Project brief",
-        "heading": "Start the conversation",
-        "subcopy": "The more you tell us here, the more useful our first reply will be. Everything except name, email, service and the last question is optional.",
+        "kicker": "Let's Talk",
+        "heading": "Send us a short brief",
+        "subcopy": "Six quick fields, two minutes. Name, email, what you need and a few lines about it \u2014 that's all we need to reply properly.",
         "submit_label": "Send the brief",
         "booking_label": "Prefer to talk? Book a 30-min call",
         "note": "One reply from a person, within one business day. If we're not the right fit we'll tell you who is.",

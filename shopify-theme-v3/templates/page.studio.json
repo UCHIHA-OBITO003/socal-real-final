@@ -11,10 +11,10 @@
         "dark": false,
         "kicker": "Studio",
         "heading": "A small team that does the whole job.",
-        "subcopy": "socal labs is a digital product and growth studio in Los Angeles. We design, build and then grow, because the gap between those three is where most projects die.",
+        "subcopy": "socal labs is a digital product and growth studio in Carlsbad, California. We design, build and then grow, because the gap between those three is where most projects die.",
         "cta2_label": "See our work",
         "cta2_link": "/pages/work",
-        "want_banner": false,
+        "want_banner": true,
         "asset_file": "gdash-graphic.png",
         "image_alt": "socal labs studio work"
       }
@@ -48,7 +48,7 @@
         "s2": { "type": "service", "settings": { "title": "Mobile Applications", "copy": "iOS and Android from UX concept to App Store release. Native where it matters, React Native where it makes sense.", "tags": "iOS, Android, React Native", "icon": "i-mobile", "accent": "violet", "link": "/pages/mobile-apps" } },
         "s3": { "type": "service", "settings": { "title": "Websites & E-commerce", "copy": "Shopify storefronts, D2C sites, landing pages and marketing sites built to convert and easy for your team to run.", "tags": "Shopify, Headless, Landing pages", "icon": "i-cart", "accent": "teal", "link": "/pages/websites" } },
         "s4": { "type": "service", "settings": { "title": "Creative & 3D", "copy": "Brand systems, product photography, packaging, ad creative and photoreal 3D, produced in-house, next to the campaigns.", "tags": "Branding, Packaging, 3D, Motion", "icon": "i-cube", "accent": "coral", "link": "/pages/creative-studio" } },
-        "s5": { "type": "service", "settings": { "title": "Marketplace Growth", "copy": "Amazon, Walmart, eBay and Target+. Listings, A+ Content, PPC, catalog health and operations, run like a P&L.", "tags": "Amazon, Walmart, PPC, A+", "icon": "i-globe", "accent": "amber", "link": "/pages/marketplace-growth" } },
+        "s5": { "type": "service", "settings": { "title": "Marketplace Growth", "copy": "Amazon, Walmart, eBay, Target+ and TikTok Shop. Listings, A+ Content, PPC, catalog health and operations, run like a P&L.", "tags": "Amazon, Walmart, TikTok Shop, A+", "icon": "i-globe", "accent": "amber", "link": "/pages/marketplace-growth" } },
         "s6": { "type": "service", "settings": { "title": "Paid Media & Social", "copy": "Google, Meta and TikTok with creative tested in-house, plus analytics that reconcile with contribution profit.", "tags": "Google, Meta, TikTok, CRO", "icon": "i-megaphone", "accent": "sun", "link": "/pages/paid-media" } }
       },
       "block_order": ["s1", "s2", "s3", "s4", "s5", "s6"]

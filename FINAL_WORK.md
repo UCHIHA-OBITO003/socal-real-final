@@ -28,10 +28,12 @@ Handoff for the next machine / next chat. This is the **latest live work** from 
 View page source on the storefront. The live HTML must include:
 
 ```html
-data-theme-build="2026-08-07-thumb-stack-blur"
+data-theme-build="2026-08-19-contact-visuals"
 ```
 
 File that holds this string: `socal-devices/shopify-theme-v3/layout/theme.liquid` (first `<html>` tag).
+
+Latest pass (2026-08-19): Carlsbad, California location + sales@socal.com + +1 619 678 2329 sitewide; contact form cut to 6 fields (name, email, phone, service, link, brief); homepage hero tiles now carry images + big platform logo strip (logo-strip `big` setting); Visit-site affordance on work/portfolio external links (HITORK live store wired, case study keeps live-store button via case-study `live_link`); creative mosaic expanded to 8 A+ tiles; marketplace pages got a platform strip, an A+ mosaic and TikTok Shop copy.
 
 Bump this marker on every theme change so you can tell if the live store actually received the push.
 
@@ -194,4 +196,4 @@ If a URL looks like a plain text page, the **page template assignment** is wrong
 
 ## Suggested next prompt for the other system
 
-> Read FINAL_WORK.md. Work only in socal-devices/shopify-theme-v3. Latest live marker is data-theme-build="2026-08-07-thumb-stack-blur". Last visual is thumb-stack (blurred fill + sharp image). Deploy with scripts/deploy_theme_v3_live.ps1 and package with scripts/package_theme_v3.ps1. Branding is lowercase socal, not SoCal.
+> Read FINAL_WORK.md. Work only in socal-devices/shopify-theme-v3. Latest live marker is data-theme-build="2026-08-19-contact-visuals". Last pass: Carlsbad contact details, 6-field contact form, homepage hero images + platform logo strip, Visit-site links, expanded A+ mosaics, TikTok Shop in marketplaces. Deploy with scripts/deploy_theme_v3_live.ps1 and package with scripts/package_theme_v3.ps1. Branding is lowercase socal, not SoCal.

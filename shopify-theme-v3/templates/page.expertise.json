@@ -11,10 +11,10 @@
         "dark": false,
         "kicker": "Studio",
         "heading": "A small team that does the whole job.",
-        "subcopy": "socal labs is a digital product and growth studio in Los Angeles. We design, build and then grow, because the gap between those three is where most projects die.",
+        "subcopy": "socal labs is a digital product and growth studio in Carlsbad, California. We design, build and then grow, because the gap between those three is where most projects die.",
         "cta2_label": "See our work",
         "cta2_link": "/pages/work",
-        "want_banner": false,
+        "want_banner": true,
         "asset_file": "gdash-graphic.png",
         "image_alt": "socal labs studio work"
       }
@@ -125,7 +125,7 @@
           "type": "service",
           "settings": {
             "title": "Marketplace Growth",
-            "copy": "Amazon, Walmart, eBay and Target+. Listings, A+ Content, PPC, catalog health and operations, run like a P&L.",
+            "copy": "Amazon, Walmart, eBay, Target+ and TikTok Shop. Listings, A+ Content, PPC, catalog health and operations, run like a P&L.",
             "tags": "Amazon, Walmart, PPC, A+",
             "icon": "i-globe",
             "accent": "amber",

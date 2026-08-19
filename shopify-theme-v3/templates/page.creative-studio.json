@@ -32,9 +32,13 @@
         "t1": { "type": "tile", "settings": { "title": "FemiCheck packaging", "tag": "3D render", "asset_file": "hitork-product.png", "size": "large", "accent": "coral" } },
         "t2": { "type": "tile", "settings": { "title": "Product photography", "tag": "Listing launch", "asset_file": "creative-studio-hero.png", "size": "medium", "accent": "amber" } },
         "t3": { "type": "tile", "settings": { "title": "Brand system", "tag": "Identity", "asset_file": "apphia-site-path.png", "size": "wide", "accent": "violet" } },
-        "t4": { "type": "tile", "settings": { "title": "Amazon A+", "tag": "Infographics", "asset_file": "apphia-amazon-listing.png", "size": "medium", "accent": "teal" } }
+        "t4": { "type": "tile", "settings": { "title": "Amazon A+", "tag": "Infographics", "asset_file": "apphia-amazon-listing.png", "size": "medium", "accent": "teal" } },
+        "t5": { "type": "tile", "settings": { "title": "How-to-use module", "tag": "Amazon A+", "asset_file": "apphia-how-to-use.png", "size": "medium", "accent": "violet" } },
+        "t6": { "type": "tile", "settings": { "title": "Early detection module", "tag": "Amazon A+", "asset_file": "apphia-early-detection.png", "size": "medium", "accent": "teal" } },
+        "t7": { "type": "tile", "settings": { "title": "hCG education graphic", "tag": "Infographic", "asset_file": "apphia-hcg-graph.png", "size": "wide", "accent": "blue" } },
+        "t8": { "type": "tile", "settings": { "title": "Review social proof", "tag": "Listing creative", "asset_file": "apphia-reviews-summary.png", "size": "medium", "accent": "sun" } }
       },
-      "block_order": ["t1", "t2", "t3", "t4"]
+      "block_order": ["t1", "t2", "t3", "t4", "t5", "t6", "t7", "t8"]
     },
     "problems": {
       "type": "problems",

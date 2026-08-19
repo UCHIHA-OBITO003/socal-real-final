@@ -12,14 +12,14 @@
         "cta2_link": "/pages/work"
       },
       "blocks": {
-        "f1": { "type": "fact", "settings": { "icon": "i-zap", "accent": "blue", "text": "From Figma file to first sale" } },
-        "f2": { "type": "fact", "settings": { "icon": "i-code", "accent": "violet", "text": "Two-week sprints, staging you can watch" } },
-        "f3": { "type": "fact", "settings": { "icon": "i-cube", "accent": "coral", "text": "Creative, 3D and packaging made in-house" } },
-        "f4": { "type": "fact", "settings": { "icon": "i-location", "accent": "teal", "text": "Shipping for USA brands, coast to coast" } },
-        "t1": { "type": "tile", "settings": { "label": "Mobile apps", "link": "/pages/mobile-apps", "accent": "violet", "tagline": "iOS and Android, from UX concept to App Store release.", "brief": "Portrait 3:4. One app screen on a device." } },
-        "t2": { "type": "tile", "settings": { "label": "Web apps", "link": "/pages/web-apps", "accent": "blue", "tagline": "Dashboards, portals and internal tools your team keeps open.", "brief": "Portrait 3:4 crop of a dashboard or portal." } },
-        "t3": { "type": "tile", "settings": { "label": "Creative & 3D", "link": "/pages/creative-studio", "accent": "coral", "tagline": "Brand systems, packaging and 3D rendering, made in-house.", "brief": "Portrait 3:4. A render or packaging shot." } },
-        "t4": { "type": "tile", "settings": { "label": "E-commerce", "link": "/pages/websites", "accent": "teal", "tagline": "Shopify storefronts and D2C sites built to convert.", "brief": "Portrait 3:4. A storefront on mobile." } }
+        "f1": { "type": "fact", "settings": { "icon": "i-zap", "accent": "blue", "text": "Figma file to first sale" } },
+        "f2": { "type": "fact", "settings": { "icon": "i-code", "accent": "violet", "text": "Two-week sprints, live staging" } },
+        "f3": { "type": "fact", "settings": { "icon": "i-cube", "accent": "coral", "text": "Creative and 3D in-house" } },
+        "f4": { "type": "fact", "settings": { "icon": "i-location", "accent": "teal", "text": "USA brands, coast to coast" } },
+        "t1": { "type": "tile", "settings": { "label": "Mobile apps", "link": "/pages/mobile-apps", "accent": "violet", "tagline": "iOS and Android, concept to App Store.", "asset_file": "app-store-phone.png" } },
+        "t2": { "type": "tile", "settings": { "label": "Web apps", "link": "/pages/web-apps", "accent": "blue", "tagline": "Dashboards, portals and internal tools.", "asset_file": "web-apps-hero.png" } },
+        "t3": { "type": "tile", "settings": { "label": "Creative & 3D", "link": "/pages/creative-studio", "accent": "coral", "tagline": "Brand, packaging and 3D, in-house.", "asset_file": "creative-studio-hero.png" } },
+        "t4": { "type": "tile", "settings": { "label": "E-commerce", "link": "/pages/websites", "accent": "teal", "tagline": "Shopify storefronts built to convert.", "asset_file": "websites-hero.png" } }
       },
       "block_order": ["f1", "f2", "f3", "f4", "t1", "t2", "t3", "t4"]
     },
@@ -39,7 +39,7 @@
       "settings": {
         "kicker": "What we do",
         "heading": "Six crafts. One roof. Zero handoffs.",
-        "subcopy": "Most brands hire a dev shop, then a marketplace agency, then a creative studio, and spend a year translating between them. We're all three.",
+        "subcopy": "One team across build, creative and growth \u2014 no translating between vendors.",
         "anchor": "services"
       },
       "blocks": {
@@ -47,7 +47,7 @@
         "s2": { "type": "service", "settings": { "title": "Mobile Applications", "copy": "Native iOS and Android from UX concept to App Store and Play Store release. Built for the first screen, not a browser tab.", "tags": "iOS, Android, App Store, Play Store", "icon": "i-mobile", "accent": "violet", "link": "/pages/mobile-apps" } },
         "s3": { "type": "service", "settings": { "title": "Websites & E-commerce", "copy": "Shopify storefronts, D2C sites, landing pages and marketing sites built to convert and easy for your team to run.", "tags": "Shopify, Headless, Landing pages", "icon": "i-cart", "accent": "teal", "link": "/pages/websites" } },
         "s4": { "type": "service", "settings": { "title": "Creative & 3D", "copy": "Brand systems, product photography, packaging, ad creative and photoreal 3D rendering, produced in-house, not brokered out.", "tags": "Branding, Packaging, 3D, Motion", "icon": "i-cube", "accent": "coral", "link": "/pages/creative-studio" } },
-        "s5": { "type": "service", "settings": { "title": "Marketplace Growth", "copy": "Amazon, Walmart, eBay and Target+. Listing and A+ Content, PPC management, catalog health and marketplace operations.", "tags": "Amazon, Walmart, PPC, A+ Content", "icon": "i-globe", "accent": "amber", "link": "/pages/marketplace-growth" } },
+        "s5": { "type": "service", "settings": { "title": "Marketplace Growth", "copy": "Amazon, Walmart, eBay, Target+ and TikTok Shop. Listing and A+ Content, PPC management, catalog health and marketplace operations.", "tags": "Amazon, Walmart, TikTok Shop, A+ Content", "icon": "i-globe", "accent": "amber", "link": "/pages/marketplace-growth" } },
         "s6": { "type": "service", "settings": { "title": "Paid Media & Social", "copy": "Google, Meta and TikTok campaigns with creative that gets tested, plus the analytics to tell you which half worked.", "tags": "Google Ads, Meta, TikTok, GA4", "icon": "i-megaphone", "accent": "sun", "link": "/pages/paid-media" } }
       },
       "block_order": ["s1", "s2", "s3", "s4", "s5", "s6"]
@@ -66,6 +66,20 @@
         "w5": { "type": "project", "settings": { "badge": "Website · Ads", "title": "Brown Cows", "copy": "Dairy and agritourism brand, FarmStay booking site and local lead generation.", "tone": "tint", "accent": "sun", "link": "/pages/brown-cows", "asset_file": "brown-cows-hero.png" } }
       },
       "block_order": ["w1", "w3", "w4", "w5"]
+    },
+    "platforms": {
+      "type": "logo-strip",
+      "settings": { "label": "Where we ship and grow", "big": true },
+      "blocks": {
+        "pl1": { "type": "logo", "settings": { "asset_file": "platform-amazon.png", "name": "Amazon" } },
+        "pl2": { "type": "logo", "settings": { "asset_file": "platform-shopify.png", "name": "Shopify" } },
+        "pl3": { "type": "logo", "settings": { "asset_file": "platform-google.png", "name": "Google" } },
+        "pl4": { "type": "logo", "settings": { "asset_file": "platform-meta.png", "name": "Meta" } },
+        "pl5": { "type": "logo", "settings": { "asset_file": "platform-tiktok.png", "name": "TikTok" } },
+        "pl6": { "type": "logo", "settings": { "asset_file": "platform-walmart.png", "name": "Walmart" } },
+        "pl7": { "type": "logo", "settings": { "asset_file": "platform-target.png", "name": "Target" } }
+      },
+      "block_order": ["pl1", "pl2", "pl3", "pl4", "pl5", "pl6", "pl7"]
     },
     "asp": {
       "type": "app-store-proof",
@@ -131,7 +145,7 @@
             "label": "Grow",
             "title": "Demand and revenue",
             "copy": "The marketing, creative and marketplace work that turns what we built into sales.",
-            "items": "Amazon, Walmart, eBay and Target+\nGoogle, Meta and TikTok campaigns\nBrand, packaging and ad creative\n3D product rendering and motion\nAnalytics, CRO and reporting",
+            "items": "Amazon, Walmart, eBay, Target+ and TikTok Shop\nGoogle, Meta and TikTok campaigns\nBrand, packaging and ad creative\n3D product rendering and motion\nAnalytics, CRO and reporting",
             "link_label": "See how we grow it",
             "link": "/pages/marketplace-growth",
             "dark": false,
@@ -241,6 +255,7 @@
     "partners",
     "services",
     "work",
+    "platforms",
     "asp",
     "testimonials",
     "capability",

@@ -101,6 +101,22 @@
       },
       "block_order": ["l1", "l2", "l3", "l4"]
     },
+    "screens": {
+      "type": "browser-showcase",
+      "settings": {
+        "kicker": "Real screens",
+        "heading": "Products we've shipped",
+        "subcopy": "Dashboards, catalog platforms and portals \u2014 live screens, not mockup templates.",
+        "background": "white",
+        "anchor": "screens"
+      },
+      "blocks": {
+        "b1": { "type": "browser", "settings": { "title": "Marketing analytics dashboard", "copy": "Campaign, channel and revenue reporting in one product view.", "url": "app.gdash.io", "asset_file": "gdash-devices.png", "accent": "blue" } },
+        "b2": { "type": "browser", "settings": { "title": "Catalog & storefront platform", "copy": "Our own lab-equipment brand \u2014 catalog platform and storefront.", "url": "socalbiomed.com", "asset_file": "biomed-hero.png", "accent": "teal" } },
+        "b3": { "type": "browser", "settings": { "title": "Customer-facing web app", "copy": "Fast, accessible front end on an API we design and maintain.", "url": "app.yourbrand.com", "asset_file": "proof-web.png", "accent": "violet" } }
+      },
+      "block_order": ["b1", "b2", "b3"]
+    },
     "packages": {
       "type": "tier-table",
       "settings": {
@@ -152,5 +168,5 @@
       }
     }
   },
-  "order": ["hero", "problems", "signature", "modules", "packages", "process", "cta"]
+  "order": ["hero", "problems", "signature", "modules", "screens", "packages", "process", "cta"]
 }

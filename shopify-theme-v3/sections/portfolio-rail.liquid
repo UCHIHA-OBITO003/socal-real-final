@@ -40,7 +40,11 @@
               {%- endif -%}
             {%- endif -%}
           </span>
-          <span class="tile-more">Learn more <i aria-hidden="true">&rsaquo;</i></span>
+          {%- if href contains 'http://' or href contains 'https://' -%}
+            <span class="tile-more">Visit site <i aria-hidden="true">&nearr;</i></span>
+          {%- else -%}
+            <span class="tile-more">Learn more <i aria-hidden="true">&rsaquo;</i></span>
+          {%- endif -%}
         </a>
       {%- endfor -%}
     </div>

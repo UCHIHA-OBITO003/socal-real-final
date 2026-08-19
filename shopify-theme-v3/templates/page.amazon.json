@@ -11,7 +11,7 @@
         "dark": true,
         "kicker": "Marketplace growth",
         "heading": "Amazon and beyond, run like a P&L.",
-        "subcopy": "Listings, A+ Content, PPC, catalog health and operations across Amazon, Walmart, eBay and Target+, managed by people who sell on them.",
+        "subcopy": "Listings, A+ Content, PPC, catalog health and operations across Amazon, Walmart, eBay, Target+ and TikTok Shop, managed by people who sell on them.",
         "cta2_label": "What we manage",
         "cta2_link": "#what-we-manage",
         "want_banner": true,
@@ -19,6 +19,20 @@
         "asset_file": "",
         "image_alt": "Amazon marketplace growth dashboard"
       }
+    },
+    "platforms": {
+      "type": "logo-strip",
+      "settings": { "label": "Marketplaces and channels we run", "big": true },
+      "blocks": {
+        "pl1": { "type": "logo", "settings": { "asset_file": "platform-amazon.png", "name": "Amazon" } },
+        "pl2": { "type": "logo", "settings": { "asset_file": "platform-walmart.png", "name": "Walmart" } },
+        "pl3": { "type": "logo", "settings": { "asset_file": "platform-target.png", "name": "Target" } },
+        "pl4": { "type": "logo", "settings": { "asset_file": "platform-tiktok.png", "name": "TikTok Shop" } },
+        "pl5": { "type": "logo", "settings": { "asset_file": "platform-shopify.png", "name": "Shopify" } },
+        "pl6": { "type": "logo", "settings": { "asset_file": "platform-google.png", "name": "Google" } },
+        "pl7": { "type": "logo", "settings": { "asset_file": "platform-meta.png", "name": "Meta" } }
+      },
+      "block_order": ["pl1", "pl2", "pl3", "pl4", "pl5", "pl6", "pl7"]
     },
     "problems": {
       "type": "problems",
@@ -129,7 +143,7 @@
           "type": "module",
           "settings": {
             "title": "Other marketplaces",
-            "copy": "Walmart, eBay and Target+, opened once the primary channel is performing, not on day one.",
+            "copy": "Walmart, eBay, Target+ and TikTok Shop, opened once the primary channel is performing, not on day one.",
             "icon": "i-globe",
             "accent": "blue"
           }
@@ -185,6 +199,15 @@
         "a4": {
           "type": "module",
           "settings": {
+            "title": "TikTok Shop",
+            "copy": "Shoppable video and live commerce once your catalog and creative engine are running.",
+            "icon": "i-megaphone",
+            "accent": "sun"
+          }
+        },
+        "a5": {
+          "type": "module",
+          "settings": {
             "title": "Shopify support",
             "copy": "D2C storefront and landing pages that feed the same catalog story.",
             "icon": "i-code",
@@ -196,8 +219,26 @@
         "a1",
         "a2",
         "a3",
-        "a4"
+        "a4",
+        "a5"
       ]
+    },
+    "aplus": {
+      "type": "creative-mosaic",
+      "settings": {
+        "kicker": "A+ Content in market",
+        "heading": "Listing creative we've shipped",
+        "subcopy": "A+ modules, infographics and listing creative, designed in-house for the same accounts we manage.",
+        "background": "white",
+        "anchor": "aplus"
+      },
+      "blocks": {
+        "a1": { "type": "tile", "settings": { "title": "Amazon listing", "tag": "A+ Content", "asset_file": "apphia-amazon-listing.png", "size": "wide", "accent": "amber" } },
+        "a2": { "type": "tile", "settings": { "title": "How-to-use module", "tag": "A+ Content", "asset_file": "apphia-how-to-use.png", "size": "medium", "accent": "violet" } },
+        "a3": { "type": "tile", "settings": { "title": "Early detection module", "tag": "A+ Content", "asset_file": "apphia-early-detection.png", "size": "medium", "accent": "teal" } },
+        "a4": { "type": "tile", "settings": { "title": "Review social proof", "tag": "Listing creative", "asset_file": "apphia-reviews-summary.png", "size": "wide", "accent": "sun" } }
+      },
+      "block_order": ["a1", "a2", "a3", "a4"]
     },
     "packages": {
       "type": "modules",
@@ -335,9 +376,11 @@
   },
   "order": [
     "hero",
+    "platforms",
     "problems",
     "modules",
     "addons",
+    "aplus",
     "packages",
     "process",
     "cta"

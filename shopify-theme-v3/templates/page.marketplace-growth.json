@@ -11,7 +11,7 @@
         "dark": true,
         "kicker": "Marketplace growth",
         "heading": "Amazon and beyond, run like a P&L.",
-        "subcopy": "Listings, A+ Content, PPC, catalog health and operations across Amazon, Walmart, eBay and Target+, managed by people who sell on them.",
+        "subcopy": "Listings, A+ Content, PPC, catalog health and operations across Amazon, Walmart, eBay, Target+ and TikTok Shop, managed by people who sell on them.",
         "cta2_label": "What we manage",
         "cta2_link": "#what-we-manage",
         "want_banner": true,
@@ -19,6 +19,20 @@
         "asset_file": "",
         "image_alt": "Amazon marketplace growth dashboard"
       }
+    },
+    "platforms": {
+      "type": "logo-strip",
+      "settings": { "label": "Marketplaces and channels we run", "big": true },
+      "blocks": {
+        "pl1": { "type": "logo", "settings": { "asset_file": "platform-amazon.png", "name": "Amazon" } },
+        "pl2": { "type": "logo", "settings": { "asset_file": "platform-walmart.png", "name": "Walmart" } },
+        "pl3": { "type": "logo", "settings": { "asset_file": "platform-target.png", "name": "Target" } },
+        "pl4": { "type": "logo", "settings": { "asset_file": "platform-tiktok.png", "name": "TikTok Shop" } },
+        "pl5": { "type": "logo", "settings": { "asset_file": "platform-shopify.png", "name": "Shopify" } },
+        "pl6": { "type": "logo", "settings": { "asset_file": "platform-google.png", "name": "Google" } },
+        "pl7": { "type": "logo", "settings": { "asset_file": "platform-meta.png", "name": "Meta" } }
+      },
+      "block_order": ["pl1", "pl2", "pl3", "pl4", "pl5", "pl6", "pl7"]
     },
     "problems": {
       "type": "problems",
@@ -124,7 +138,7 @@
           "type": "module",
           "settings": {
             "title": "Other marketplaces",
-            "copy": "Walmart, eBay and Target+, opened once the primary channel is performing, not on day one.",
+            "copy": "Walmart, eBay, Target+ and TikTok Shop, opened once the primary channel is performing, not on day one.",
             "icon": "i-globe",
             "accent": "blue"
           }
@@ -149,6 +163,23 @@
       },
       "block_order": ["s1", "s2", "s3", "s4"]
     },
+    "aplus": {
+      "type": "creative-mosaic",
+      "settings": {
+        "kicker": "A+ Content in market",
+        "heading": "Listing creative we've shipped",
+        "subcopy": "A+ modules, infographics and listing creative, designed in-house for the same accounts we manage.",
+        "background": "white",
+        "anchor": "aplus"
+      },
+      "blocks": {
+        "a1": { "type": "tile", "settings": { "title": "Amazon listing", "tag": "A+ Content", "asset_file": "apphia-amazon-listing.png", "size": "wide", "accent": "amber" } },
+        "a2": { "type": "tile", "settings": { "title": "How-to-use module", "tag": "A+ Content", "asset_file": "apphia-how-to-use.png", "size": "medium", "accent": "violet" } },
+        "a3": { "type": "tile", "settings": { "title": "Early detection module", "tag": "A+ Content", "asset_file": "apphia-early-detection.png", "size": "medium", "accent": "teal" } },
+        "a4": { "type": "tile", "settings": { "title": "Review social proof", "tag": "Listing creative", "asset_file": "apphia-reviews-summary.png", "size": "wide", "accent": "sun" } }
+      },
+      "block_order": ["a1", "a2", "a3", "a4"]
+    },
     "packages": {
       "type": "tier-table",
       "settings": {
@@ -163,7 +194,7 @@
       "blocks": {
         "pk1": { "type": "tier", "settings": { "title": "Audit Pack", "included": "Account, catalog, ads and creative reviewed in writing — yours to keep either way.", "best_for": "Brands unsure where margin is leaking.", "accent": "amber" } },
         "pk2": { "type": "tier", "settings": { "title": "Manage", "included": "Listings, PPC, A+ and catalog health on a weekly cadence tied to contribution profit.", "best_for": "Active Amazon sellers ready for hands-on management.", "accent": "sun" } },
-        "pk3": { "type": "tier", "settings": { "title": "Expand", "included": "New ASINs, categories, Walmart/eBay/Target+ and Shopify support once the primary channel earns.", "best_for": "Brands scaling beyond a single marketplace.", "accent": "coral" } }
+        "pk3": { "type": "tier", "settings": { "title": "Expand", "included": "New ASINs, categories, Walmart/eBay/Target+/TikTok Shop and Shopify support once the primary channel earns.", "best_for": "Brands scaling beyond a single marketplace.", "accent": "coral" } }
       },
       "block_order": ["pk1", "pk2", "pk3"]
     },
@@ -248,5 +279,5 @@
       }
     }
   },
-  "order": ["hero", "problems", "signature", "modules", "packages", "process", "cta"]
+  "order": ["hero", "platforms", "problems", "signature", "modules", "aplus", "packages", "process", "cta"]
 }

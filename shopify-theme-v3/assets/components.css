@@ -433,6 +433,9 @@
 .work-open { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--c-line); display: grid; place-items: center; flex: none; transition: all var(--dur) var(--ease); }
 .work-card:hover .work-open { background: var(--c-ink); border-color: var(--c-ink); color: #fff; transform: rotate(-45deg); }
 .work-open svg { width: 17px; height: 17px; }
+.work-open--live { width: auto; height: 44px; border-radius: 999px; padding: 0 var(--sp-5); display: inline-flex; align-items: center; gap: 8px; }
+.work-open-text { font-size: var(--fs-sm); font-weight: 600; white-space: nowrap; }
+.work-card:hover .work-open--live { transform: none; }
 .section--ink .work-open { border-color: var(--c-line-ink); }
 @media (max-width: 860px) { .work-card, .work-card--third, .work-card--wide { grid-column: span 12; } }
 
@@ -622,12 +625,26 @@
 
 /* -------------------------------------------------------------- Logo strip */
 .logo-strip { padding: var(--sp-10) 0; }
-.logo-row { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-10); flex-wrap: wrap; }
+.logo-strip-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-10); flex-wrap: wrap; }
+.logo-row { display: contents; }
 .logo-label { font-size: var(--fs-micro); font-weight: 600; letter-spacing: var(--ls-wide); text-transform: uppercase; color: var(--c-text-3); }
 .logo-item { font-family: var(--font-display); font-weight: 700; font-size: 20px; letter-spacing: var(--ls-snug); color: var(--c-text); opacity: .55; transition: opacity var(--dur) var(--ease); }
 .logo-item:hover { opacity: 1; }
 .logo-item small { display: block; font-family: var(--font-body); font-size: var(--fs-micro); font-weight: 600; letter-spacing: var(--ls-wide); color: var(--c-text-3); }
-.logo-item img { max-height: 34px; width: auto; filter: grayscale(1); }
+.logo-item img { max-height: 34px; width: auto; filter: grayscale(1); transition: filter var(--dur) var(--ease); }
+.logo-item:hover img { filter: none; }
+
+/* Large full-color variant — platform logos that read as brands */
+.logo-strip--big { padding: var(--sp-14) 0; }
+.logo-strip--big .logo-strip-inner { flex-direction: column; align-items: center; gap: var(--sp-8); }
+.logo-strip--big .logo-row { display: flex; align-items: center; justify-content: center; gap: var(--sp-10) var(--sp-14); flex-wrap: wrap; }
+.logo-strip--big .logo-item { opacity: 1; }
+.logo-strip--big .logo-item img { max-height: 76px; max-width: 180px; width: auto; filter: none; }
+.logo-label--center { text-align: center; }
+@media (max-width: 720px) {
+  .logo-strip--big .logo-row { gap: var(--sp-6) var(--sp-8); }
+  .logo-strip--big .logo-item img { max-height: 52px; max-width: 130px; }
+}
 
 /* ----------------------------------------------------------- Testimonials */
 .quote-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--sp-6); }
@@ -882,6 +899,9 @@ a.hero-tile--link:hover { transform: translateY(-4px); box-shadow: var(--sh-card
 .hero-tile:not(.hero-tile--text):hover { transform: translateY(-4px); }
 .hero-tile .hero-tile-stack,
 .hero-tile .thumb-stack { position: absolute; inset: 0; }
+/* Keep the sharp image clear of the bottom label pill on every screen size */
+.hero-tile .thumb-stack__sharp { padding: 10px 10px 38px; }
+.hero-tile .thumb-stack__sharp img { max-width: 100%; max-height: 100%; }
 .hero-tile > img {
   position: absolute; inset: 0; display: block;
   width: 100%; height: 100%;
@@ -914,8 +934,9 @@ a.hero-tile--link:hover { transform: translateY(-4px); box-shadow: var(--sh-card
   transform: none;
   margin: auto;
 }
-.hero-tile--zoom:hover .thumb-stack__sharp img,
-.hero-tile--zoom:hover > img { transform: translate(-50%, -50%); }
+.hero-tile--zoom:hover > img { transform: translate(-50%, -50%) scale(1.03); }
+.hero-tile--zoom:hover .thumb-stack__sharp img { transform: scale(1.03); }
+.hero-tile:not(.hero-tile--text):not(.hero-tile--zoom):hover .thumb-stack__sharp img { transform: scale(1.04); }
 .hero-tile-panel {
   position: relative; z-index: 1;
   display: flex; flex-direction: column; gap: 5px;

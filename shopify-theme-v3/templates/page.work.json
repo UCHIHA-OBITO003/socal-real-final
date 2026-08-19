@@ -35,10 +35,10 @@
           "settings": {
             "badge": "E-commerce · Brand · Growth",
             "title": "HITORK",
-            "meta": "HITORK hand tools (The Tool Company), Los Angeles, storefront, product creative and marketplace growth",
+            "meta": "HITORK hand tools (The Tool Company), Los Angeles \u2014 storefront, product creative and marketplace growth",
             "span": "wide",
             "accent": "coral",
-            "link": "/pages/hitork",
+            "link": "https://www.thetoolcompany.com/",
             "brief": "Wide hero for the HiTork work. Best option: the wrench set shot flat on a dark surface, or the Amazon A+ module rendered on screen. Landscape, nothing important in the outer 10%.",
             "asset_file": "hitork-hero.png",
             "image_alt": "HITORK storefront, The Tool Company"

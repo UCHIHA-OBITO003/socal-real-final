@@ -48,19 +48,28 @@
                 <input class="form-input" type="text" id="bf-name" name="contact[name]" autocomplete="name" required aria-required="true" placeholder="Your name">
               </div>
               <div class="form-group">
-                <label class="form-label" for="bf-company">Company</label>
-                <input class="form-input" type="text" id="bf-company" name="contact[Company]" autocomplete="organization" placeholder="Brand or company">
+                <label class="form-label" for="bf-email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input class="form-input" type="email" id="bf-email" name="contact[email]" autocomplete="email" required aria-required="true" placeholder="you@company.com">
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label" for="bf-email">Work email <span class="req" aria-hidden="true">*</span></label>
-                <input class="form-input" type="email" id="bf-email" name="contact[email]" autocomplete="email" required aria-required="true" placeholder="you@company.com">
+                <label class="form-label" for="bf-phone">Phone / WhatsApp</label>
+                <input class="form-input" type="tel" id="bf-phone" name="contact[Phone]" autocomplete="tel" placeholder="+1 (619) 000-0000">
               </div>
               <div class="form-group">
-                <label class="form-label" for="bf-phone">Phone / WhatsApp</label>
-                <input class="form-input" type="tel" id="bf-phone" name="contact[Phone]" autocomplete="tel" placeholder="+1 (213) 000-0000">
+                <label class="form-label" for="bf-service">What do you need? <span class="req" aria-hidden="true">*</span></label>
+                <select class="form-select" id="bf-service" name="contact[Service needed]" required aria-required="true">
+                  <option value="Web application">Web application</option>
+                  <option value="Mobile app">Mobile app (iOS / Android)</option>
+                  <option value="Website or Shopify store">Website or Shopify store</option>
+                  <option value="Creative and 3D">Creative, branding or 3D</option>
+                  <option value="Amazon and marketplaces">Amazon &amp; marketplaces</option>
+                  <option value="Paid media">Paid media &amp; social</option>
+                  <option value="Several of these">Several of these</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
               </div>
             </div>
 
@@ -70,65 +79,9 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="bf-service">What do you need? <span class="req" aria-hidden="true">*</span></label>
-              <select class="form-select" id="bf-service" name="contact[Service needed]" required aria-required="true">
-                <option value="Web application">Web application</option>
-                <option value="Mobile app">Mobile app (iOS / Android)</option>
-                <option value="Website or Shopify store">Website or Shopify store</option>
-                <option value="Creative and 3D">Creative, branding or 3D</option>
-                <option value="Amazon and marketplaces">Amazon &amp; marketplaces</option>
-                <option value="Paid media">Paid media &amp; social</option>
-                <option value="Several of these">Several of these</option>
-                <option value="Not sure yet">Not sure yet</option>
-              </select>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="bf-stage">Where are you now?</label>
-                <select class="form-select" id="bf-stage" name="contact[Stage]">
-                  <option value="">Select…</option>
-                  <option value="Idea / pre-launch">Idea or pre-launch</option>
-                  <option value="Launched, early traction">Launched, early traction</option>
-                  <option value="Growing, needs scale">Growing, needs to scale</option>
-                  <option value="Established, replatforming">Established, replatforming</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="bf-budget">Budget range</label>
-                <select class="form-select" id="bf-budget" name="contact[Budget]">
-                  <option value="">Select…</option>
-                  <option value="Under $10k">Under $10k</option>
-                  <option value="$10k-$25k">$10k, $25k</option>
-                  <option value="$25k-$75k">$25k, $75k</option>
-                  <option value="$75k+">$75k+</option>
-                  <option value="Retainer">Ongoing retainer</option>
-                  <option value="Not sure">Not sure yet</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label" for="bf-timeline">Timeline</label>
-                <select class="form-select" id="bf-timeline" name="contact[Timeline]">
-                  <option value="">Select…</option>
-                  <option value="ASAP">As soon as possible</option>
-                  <option value="1-3 months">1,3 months</option>
-                  <option value="3-6 months">3,6 months</option>
-                  <option value="Exploring">Just exploring</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="bf-how">How did you find us?</label>
-                <input class="form-input" type="text" id="bf-how" name="contact[Source]" placeholder="Referral, search, LinkedIn…">
-              </div>
-            </div>
-
-            <div class="form-group">
               <label class="form-label" for="bf-message">Tell us about it <span class="req" aria-hidden="true">*</span></label>
               <textarea class="form-textarea" id="bf-message" name="contact[body]" required aria-required="true"
-                placeholder="What are you building or selling, where are you stuck, and what would a good outcome look like in 90 days?"></textarea>
+                placeholder="What are you building or selling, and what would a good outcome look like?"></textarea>
             </div>
 
             <button type="submit" class="btn btn--on-ink btn--lg btn--block">

@@ -71,6 +71,23 @@
       },
       "block_order": ["m1", "m2", "m3", "m4", "m5", "m6"]
     },
+    "creative": {
+      "type": "creative-mosaic",
+      "settings": {
+        "kicker": "Creative in market",
+        "heading": "The creative behind the campaigns",
+        "subcopy": "Social sets, influencer and UGC briefs, research decks and 3D \u2014 produced in-house, next to the media team.",
+        "background": "white",
+        "anchor": "creative"
+      },
+      "blocks": {
+        "c1": { "type": "tile", "settings": { "title": "Social ad set", "tag": "Meta \u00b7 TikTok", "asset_file": "gdash-social.png", "size": "wide", "accent": "blue" } },
+        "c2": { "type": "tile", "settings": { "title": "Influencer & UGC", "tag": "Creator briefs", "asset_file": "gdash-influencer.png", "size": "medium", "accent": "coral" } },
+        "c3": { "type": "tile", "settings": { "title": "Audience research", "tag": "Strategy", "asset_file": "gdash-research.png", "size": "medium", "accent": "violet" } },
+        "c4": { "type": "tile", "settings": { "title": "3D product creative", "tag": "In-house 3D", "asset_file": "gdash-3d.png", "size": "wide", "accent": "amber" } }
+      },
+      "block_order": ["c1", "c2", "c3", "c4"]
+    },
     "packages": {
       "type": "tier-table",
       "settings": {
@@ -122,5 +139,5 @@
       }
     }
   },
-  "order": ["hero", "problems", "signature", "modules", "packages", "process", "cta"]
+  "order": ["hero", "problems", "signature", "modules", "creative", "packages", "process", "cta"]
 }

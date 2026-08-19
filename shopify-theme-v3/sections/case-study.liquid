@@ -46,6 +46,11 @@
             {{ section.settings.cta_label }}
             <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
+          {%- if section.settings.live_link != blank -%}
+            <a href="{{ section.settings.live_link }}" class="btn btn--ghost-ink btn--lg" target="_blank" rel="noopener">
+              {{ section.settings.live_label | default: 'Visit the live site' }} &nearr;
+            </a>
+          {%- endif -%}
           <a href="/pages/work" class="btn btn--ghost-ink btn--lg">All work</a>
         </div>
       {%- endif -%}
@@ -236,6 +241,8 @@
     { "type": "text", "id": "tags", "label": "Tags (comma-separated)", "default": "Shopify, Brand, Growth" },
     { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Start a similar project" },
     { "type": "text", "id": "cta_link", "label": "CTA link", "default": "/pages/contact" },
+    { "type": "text", "id": "live_label", "label": "Live site label", "default": "Visit the live site" },
+    { "type": "url", "id": "live_link", "label": "Live site URL", "info": "Optional. Shows a Visit-the-live-site button when set." },
     { "type": "text", "id": "hero_asset", "label": "Hero background asset", "info": "Theme asset filename, e.g. case-apphia.jpg" },
     { "type": "text", "id": "logo_asset", "label": "Logo asset", "info": "Small mark beside kicker, e.g. logo-apphia.png" },
     { "type": "select", "id": "accent", "label": "Accent", "default": "teal",

@@ -1,24 +1,30 @@
-<section class="logo-strip section--paper" {{ section.shopify_attributes }}>
-  <div class="container logo-row reveal">
-    {%- if section.settings.label != blank -%}<span class="logo-label">{{ section.settings.label }}</span>{%- endif -%}
-    {%- for block in section.blocks -%}
-      <div class="logo-item" {{ block.shopify_attributes }}>
-        {%- if block.settings.asset_file != blank -%}
-          <img src="{{ block.settings.asset_file | asset_url }}" alt="{{ block.settings.name | escape }}" loading="lazy" height="34" style="max-height:34px;width:auto">
-        {%- elsif block.settings.image != blank -%}
-          {{ block.settings.image | image_url: height: 68 | image_tag: loading: 'lazy', alt: block.settings.name }}
-        {%- else -%}
-          {{ block.settings.name }}{%- if block.settings.sub != blank -%}<small>{{ block.settings.sub }}</small>{%- endif -%}
-        {%- endif -%}
-      </div>
-    {%- endfor -%}
+<section class="logo-strip section--paper{% if section.settings.big %} logo-strip--big{% endif %}" {{ section.shopify_attributes }}>
+  <div class="container logo-strip-inner reveal">
+    {%- if section.settings.label != blank -%}<span class="logo-label{% if section.settings.big %} logo-label--center{% endif %}">{{ section.settings.label }}</span>{%- endif -%}
+    <div class="logo-row">
+      {%- for block in section.blocks -%}
+        <div class="logo-item" {{ block.shopify_attributes }}>
+          {%- if block.settings.asset_file != blank -%}
+            <img src="{{ block.settings.asset_file | asset_url }}" alt="{{ block.settings.name | escape }}" loading="lazy">
+          {%- elsif block.settings.image != blank -%}
+            {{ block.settings.image | image_url: height: 160 | image_tag: loading: 'lazy', alt: block.settings.name }}
+          {%- else -%}
+            {{ block.settings.name }}{%- if block.settings.sub != blank -%}<small>{{ block.settings.sub }}</small>{%- endif -%}
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
   </div>
 </section>
 
 {% schema %}
 {
   "name": "Client logos",
-  "settings": [ { "type": "text", "id": "label", "label": "Label", "default": "Trusted by" } ],
+  "settings": [
+    { "type": "text", "id": "label", "label": "Label", "default": "Trusted by" },
+    { "type": "checkbox", "id": "big", "label": "Large full-color logos", "default": false,
+      "info": "Shows logos big and in color instead of the small grayscale strip." }
+  ],
   "blocks": [
     { "type": "logo", "name": "Logo", "settings": [
       { "type": "image_picker", "id": "image", "label": "Logo image", "info": "SVG or transparent PNG. Falls back to the text name." },

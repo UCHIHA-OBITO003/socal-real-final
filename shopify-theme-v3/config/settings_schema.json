@@ -44,7 +44,7 @@
         "type": "textarea",
         "id": "brand_description",
         "label": "One-line description",
-        "default": "Digital product and growth studio in Los Angeles. We design and build web apps, mobile apps and storefronts \u2014 then run the marketplace, creative and paid media behind them."
+        "default": "Digital product and growth studio in Carlsbad, California. We design and build web apps, mobile apps and storefronts \u2014 then run the marketplace, creative and paid media behind them."
       }
     ]
   },
@@ -55,25 +55,25 @@
         "type": "text",
         "id": "contact_email",
         "label": "Email",
-        "default": "laks@socaldevices.com"
+        "default": "sales@socal.com"
       },
       {
         "type": "text",
         "id": "contact_phone",
         "label": "Phone",
-        "default": "(213) 204-1296"
+        "default": "+1 619 678 2329"
       },
       {
         "type": "text",
         "id": "address_city",
         "label": "City",
-        "default": "Los Angeles"
+        "default": "Carlsbad"
       },
       {
         "type": "text",
         "id": "address_region",
         "label": "State",
-        "default": "CA"
+        "default": "California"
       },
       {
         "type": "url",

@@ -87,7 +87,10 @@
               <h3 class="t-h3">{{ block.settings.title }}</h3>
               <span class="work-meta">{{ block.settings.meta }}</span>
             </div>
-            <span class="work-open"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            <span class="work-open{% if external %} work-open--live{% endif %}">
+              {%- if external -%}<span class="work-open-text">Visit site</span>{%- endif -%}
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </span>
           </div>
         </a>
       {%- endfor -%}
