@@ -1,0 +1,253 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-lab",
+      "settings": {
+        "line_1": "We turn ideas into",
+        "cycle_words": "apps.|storefronts.|brands.|revenue.",
+        "subcopy": "socal labs is a product studio and a growth team in one. We design and ship web apps, mobile apps and storefronts, then run the marketplace, creative and paid media that make them sell.",
+        "cta1_label": "Let's Build Together",
+        "cta1_link": "/pages/contact",
+        "cta2_label": "See our work",
+        "cta2_link": "/pages/work"
+      },
+      "blocks": {
+        "f1": { "type": "fact", "settings": { "icon": "i-zap", "accent": "blue", "text": "From Figma file to first sale" } },
+        "f2": { "type": "fact", "settings": { "icon": "i-code", "accent": "violet", "text": "Two-week sprints, staging you can watch" } },
+        "f3": { "type": "fact", "settings": { "icon": "i-cube", "accent": "coral", "text": "Creative, 3D and packaging made in-house" } },
+        "f4": { "type": "fact", "settings": { "icon": "i-location", "accent": "teal", "text": "Shipping for USA brands, coast to coast" } },
+        "t1": { "type": "tile", "settings": { "label": "Mobile apps", "link": "/pages/mobile-apps", "accent": "violet", "tagline": "iOS and Android, from UX concept to App Store release.", "brief": "Portrait 3:4. One app screen on a device." } },
+        "t2": { "type": "tile", "settings": { "label": "Web apps", "link": "/pages/web-apps", "accent": "blue", "tagline": "Dashboards, portals and internal tools your team keeps open.", "brief": "Portrait 3:4 crop of a dashboard or portal." } },
+        "t3": { "type": "tile", "settings": { "label": "Creative & 3D", "link": "/pages/creative-studio", "accent": "coral", "tagline": "Brand systems, packaging and 3D rendering, made in-house.", "brief": "Portrait 3:4. A render or packaging shot." } },
+        "t4": { "type": "tile", "settings": { "label": "E-commerce", "link": "/pages/websites", "accent": "teal", "tagline": "Shopify storefronts and D2C sites built to convert.", "brief": "Portrait 3:4. A storefront on mobile." } }
+      },
+      "block_order": ["f1", "f2", "f3", "f4", "t1", "t2", "t3", "t4"]
+    },
+    "partners": {
+      "type": "partners",
+      "settings": { "caption": "Brands we've built and grown." },
+      "blocks": {
+        "p1": { "type": "partner", "settings": { "name": "HITORK", "sub": "Hand tools" } },
+        "p2": { "type": "partner", "settings": { "name": "socal biomed", "sub": "Lab equipment" } },
+        "p3": { "type": "partner", "settings": { "name": "APPHIA", "sub": "Health" } },
+        "p4": { "type": "partner", "settings": { "name": "BROWN COWS", "sub": "Dairy & farmstay" } }
+      },
+      "block_order": ["p1", "p2", "p3", "p4"]
+    },
+    "services": {
+      "type": "services-grid",
+      "settings": {
+        "kicker": "What we do",
+        "heading": "Six crafts. One roof. Zero handoffs.",
+        "subcopy": "Most brands hire a dev shop, then a marketplace agency, then a creative studio, and spend a year translating between them. We're all three.",
+        "anchor": "services"
+      },
+      "blocks": {
+        "s1": { "type": "service", "settings": { "title": "Web Applications", "copy": "Dashboards, portals, internal tools and SaaS products. React and Next.js front ends on APIs we design, build and maintain.", "tags": "React, Next.js, Node, APIs", "icon": "i-code", "accent": "blue", "link": "/pages/web-apps" } },
+        "s2": { "type": "service", "settings": { "title": "Mobile Applications", "copy": "Native iOS and Android from UX concept to App Store and Play Store release. Built for the first screen, not a browser tab.", "tags": "iOS, Android, App Store, Play Store", "icon": "i-mobile", "accent": "violet", "link": "/pages/mobile-apps" } },
+        "s3": { "type": "service", "settings": { "title": "Websites & E-commerce", "copy": "Shopify storefronts, D2C sites, landing pages and marketing sites built to convert and easy for your team to run.", "tags": "Shopify, Headless, Landing pages", "icon": "i-cart", "accent": "teal", "link": "/pages/websites" } },
+        "s4": { "type": "service", "settings": { "title": "Creative & 3D", "copy": "Brand systems, product photography, packaging, ad creative and photoreal 3D rendering, produced in-house, not brokered out.", "tags": "Branding, Packaging, 3D, Motion", "icon": "i-cube", "accent": "coral", "link": "/pages/creative-studio" } },
+        "s5": { "type": "service", "settings": { "title": "Marketplace Growth", "copy": "Amazon, Walmart, eBay and Target+. Listing and A+ Content, PPC management, catalog health and marketplace operations.", "tags": "Amazon, Walmart, PPC, A+ Content", "icon": "i-globe", "accent": "amber", "link": "/pages/marketplace-growth" } },
+        "s6": { "type": "service", "settings": { "title": "Paid Media & Social", "copy": "Google, Meta and TikTok campaigns with creative that gets tested, plus the analytics to tell you which half worked.", "tags": "Google Ads, Meta, TikTok, GA4", "icon": "i-megaphone", "accent": "sun", "link": "/pages/paid-media" } }
+      },
+      "block_order": ["s1", "s2", "s3", "s4", "s5", "s6"]
+    },
+    "work": {
+      "type": "portfolio-rail",
+      "settings": {
+        "heading": "Selected work.",
+        "subcopy": "Built by us. Grown by us.",
+        "anchor": "work"
+      },
+      "blocks": {
+        "w1": { "type": "project", "settings": { "badge": "E-commerce · Brand · Growth", "title": "HiTork", "copy": "A hand-tool brand taken from catalog to storefront to marketplace.", "tone": "dark", "accent": "coral", "link": "https://www.thetoolcompany.com/", "asset_file": "hitork-hero.png" } },
+        "w3": { "type": "project", "settings": { "badge": "Web app · E-commerce", "title": "socal BioMed", "copy": "Our own lab-equipment brand, catalog platform and storefront.", "tone": "tint", "accent": "teal", "link": "https://www.socalbiomed.com/", "asset_file": "biomed-hero.png", "image_zoom": 100 } },
+        "w4": { "type": "project", "settings": { "badge": "Shopify · Packaging", "title": "Apphia Health", "copy": "Store, packaging and launch creative for a women's health brand.", "tone": "light", "accent": "violet", "link": "/pages/apphia", "asset_file": "apphia-site-path.png" } },
+        "w5": { "type": "project", "settings": { "badge": "Website · Ads", "title": "Brown Cows", "copy": "Dairy and agritourism brand, FarmStay booking site and local lead generation.", "tone": "tint", "accent": "sun", "link": "/pages/brown-cows", "asset_file": "brown-cows-hero.png" } }
+      },
+      "block_order": ["w1", "w3", "w4", "w5"]
+    },
+    "asp": {
+      "type": "app-store-proof",
+      "settings": {
+        "kicker": "iOS · The last mile",
+        "heading": "We take it all the way to the store.",
+        "subcopy": "Design, build, review, release. Your app doesn't stop at a repo, it ships with its listing, screenshots and submission handled.",
+        "app_name": "apphia",
+        "app_tagline": "Fertility Tracker & Pregnancy",
+        "app_initial": "A",
+        "phone_color": "silver",
+        "screen_asset": "apphia-store-screen.png",
+        "store_style": "apphia",
+        "shot_1_asset": "",
+        "shot_2_asset": "",
+        "caption": "Apphia Health — App Store listing, screenshots and submission handled end to end.",
+        "accent": "violet"
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "settings": {
+        "kicker": "In their words",
+        "heading": "What buyers and guests say about the brands we ship",
+        "subcopy": "Quotes from public Amazon reviews and guest feedback on Apphia, HiTork and Brown Cows.",
+        "background": "paper"
+      },
+      "blocks": {
+        "q1": { "type": "quote", "settings": { "quote": "Easy and convenient. Clear instructions, results in minutes, and a result window that is easy to read. Affording Made in USA quality at a better price.", "name": "Verified buyer", "role": "Amazon review", "company": "Apphia Health", "accent": "teal", "sample": false } },
+        "q2": { "type": "quote", "settings": { "quote": "As a part-time mechanic I was shocked at the quality and comfort for the price. I plan to look at their other tools.", "name": "Verified buyer", "role": "Amazon review", "company": "HiTork", "accent": "coral", "sample": false } },
+        "q3": { "type": "quote", "settings": { "quote": "Peaceful and rejuvenating stay in a mud cottage. Beautiful farm setting in Telangana.", "name": "Sunita Reddy", "role": "Guest", "company": "Google · Brown Cows", "accent": "sun", "sample": false } },
+        "q4": { "type": "quote", "settings": { "quote": "Midstream design simplifies testing. Result window is clear, no second-guessing. Bundle offers good value and peace of mind.", "name": "Tenesha D.", "role": "Verified purchase", "company": "Amazon USA · Apphia Health", "accent": "violet", "sample": false } },
+        "q5": { "type": "quote", "settings": { "quote": "Solid set especially for the price. Used it for suspension work, gave it a beating, still perfect. Accurate sizing and a real organizer tray.", "name": "Verified buyer", "role": "Amazon review", "company": "HiTork", "accent": "amber", "sample": false } },
+        "q6": { "type": "quote", "settings": { "quote": "Participated in milking and making butter. The A2 ghee is outstanding, pure and fragrant. Kids loved every moment.", "name": "Guest", "role": "Farm stay", "company": "Brown Cows Organic Dairy", "accent": "blue", "sample": false } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6"]
+    },
+    "capability": {
+      "type": "capability-split",
+      "settings": {
+        "kicker": "How the studio splits",
+        "heading": "We build it. Then we grow it.",
+        "subcopy": "Two halves of the same team. Most clients start on one side and end up using both.",
+        "background": "white"
+      },
+      "blocks": {
+        "b1": {
+          "type": "pillar",
+          "settings": {
+            "label": "Build",
+            "title": "Product engineering",
+            "copy": "Design and engineering for web apps, mobile apps and e-commerce front ends.",
+            "items": "Web applications, React, Next.js, Node, APIs\nMobile apps, iOS, Android, React Native\nWebsites, Shopify and headless e-commerce\nUI/UX and design systems\nIntegrations, analytics and automation",
+            "link_label": "See what we build",
+            "link": "/pages/web-apps",
+            "dark": true,
+            "accent": "blue"
+          }
+        },
+        "b2": {
+          "type": "pillar",
+          "settings": {
+            "label": "Grow",
+            "title": "Demand and revenue",
+            "copy": "The marketing, creative and marketplace work that turns what we built into sales.",
+            "items": "Amazon, Walmart, eBay and Target+\nGoogle, Meta and TikTok campaigns\nBrand, packaging and ad creative\n3D product rendering and motion\nAnalytics, CRO and reporting",
+            "link_label": "See how we grow it",
+            "link": "/pages/marketplace-growth",
+            "dark": false,
+            "accent": "coral"
+          }
+        }
+      },
+      "block_order": ["b1", "b2"]
+    },
+    "process": {
+      "type": "process",
+      "settings": {
+        "kicker": "How we work",
+        "heading": "Six steps, same every time",
+        "subcopy": "Same six steps on every engagement, build or growth. You always know which one you're in and what comes next.",
+        "anchor": "process",
+        "step_ms": 180,
+        "background": "white"
+      },
+      "blocks": {
+        "p1": { "type": "step", "settings": { "title": "Discovery", "copy": "Goals, users, constraints and the one number this project has to move.", "meta": "1–2 weeks", "icon": "i-search", "accent": "blue" } },
+        "p2": { "type": "step", "settings": { "title": "Definition", "copy": "Scope, flows and a fixed number, agreed before anyone opens a design file.", "meta": "1 week", "icon": "i-target", "accent": "violet" } },
+        "p3": { "type": "step", "settings": { "title": "Design", "copy": "A system, not a set of screens. Reviewed in prototype before it gets built.", "meta": "2–4 weeks", "icon": "i-pen", "accent": "teal" } },
+        "p4": { "type": "step", "settings": { "title": "Build", "copy": "Two-week increments on staging you can open whenever you like.", "meta": "4–12 weeks", "icon": "i-code", "accent": "coral" } },
+        "p5": { "type": "step", "settings": { "title": "Launch", "copy": "QA, accessibility pass, performance budget and tracking live from hour one.", "meta": "1 week", "icon": "i-rocket", "accent": "amber" } },
+        "p6": { "type": "step", "settings": { "title": "Grow", "copy": "Campaigns, creative and marketplace work against the number we agreed in step one.", "meta": "Ongoing", "icon": "i-trend", "accent": "sun" } }
+      },
+      "block_order": ["p1", "p2", "p3", "p4", "p5", "p6"]
+    },
+    "problems": {
+      "type": "problems",
+      "settings": {
+        "kicker": "Before you call",
+        "heading": "The reasons brands call us",
+        "subcopy": "Six sentences we hear on almost every first call, and what we do about each one.",
+        "background": "paper"
+      },
+      "blocks": {
+        "b1": { "type": "pain", "settings": { "accent": "blue", "pain": "My agency ships slowly and I never see progress.", "answer": "Fixed scope, two-week increments, and a staging URL you can open any day of the week." } },
+        "b2": { "type": "pain", "settings": { "accent": "violet", "pain": "The app works but nobody uses it.", "answer": "Usually a product problem, not an engineering one. We start at flows and instrumentation, not features." } },
+        "b3": { "type": "pain", "settings": { "accent": "teal", "pain": "My site looks fine and converts badly.", "answer": "Conversion work on the pages that carry traffic, copy, speed, creative and checkout, measured properly." } },
+        "b4": { "type": "pain", "settings": { "accent": "coral", "pain": "My creative looks cheap next to competitors.", "answer": "Brand, packaging, product imagery and 3D produced in-house, no three-week wait for a revision." } },
+        "b5": { "type": "pain", "settings": { "accent": "amber", "pain": "Amazon eats my margin and I can't see why.", "answer": "Campaign structure rebuilt around contribution profit, plus listing and catalog work that stops the leak upstream." } },
+        "b6": { "type": "pain", "settings": { "accent": "sun", "pain": "I have five vendors and nobody owns the number.", "answer": "One team across build, creative and growth. One report, one person accountable for the outcome." } }
+      },
+      "block_order": ["b1", "b2", "b3", "b4", "b5", "b6"]
+    },
+    "why": {
+      "type": "why",
+      "settings": {
+        "kicker": "Why socal labs",
+        "heading": "Why brands keep us on retainer",
+        "subcopy": "",
+        "background": "ink"
+      },
+      "blocks": {
+        "w1": { "type": "card", "settings": { "icon": "i-zap", "accent": "blue", "title": "No handoffs", "copy": "The team that ships the app is the team that runs the ads pointed at it. Nothing gets lost in translation between vendors." } },
+        "w2": { "type": "card", "settings": { "icon": "i-box", "accent": "teal", "title": "We sell products too", "copy": "We run our own e-commerce brand. Every recommendation has been tested on our own P&L before it reaches yours." } },
+        "w3": { "type": "card", "settings": { "icon": "i-code", "accent": "violet", "title": "Engineers, not templaters", "copy": "Real applications with real backends, not a page builder with a logo dropped on it." } },
+        "w4": { "type": "card", "settings": { "icon": "i-chart", "accent": "coral", "title": "Reporting in English", "copy": "What changed, what it cost, what happens next. Written by a person, not exported from a dashboard." } }
+      },
+      "block_order": ["w1", "w2", "w3", "w4"]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "kicker": "Straight answers",
+        "heading": "The questions you were going to ask anyway",
+        "subcopy": "If yours isn't here, ask it on the form, we answer every one.",
+        "accent": "blue",
+        "background": "white"
+      },
+      "blocks": {
+        "q1": { "type": "qa", "settings": { "question": "What does a project cost?", "answer": "<p>Discovery is a fixed, small fee. After it you get a scope and a number for the build, not a range that moves. Ongoing growth work runs monthly. We'd rather lose a deal on price than surprise you halfway through one.</p>" } },
+        "q2": { "type": "qa", "settings": { "question": "How long does a build take?", "answer": "<p>A marketing site or Shopify storefront: 4–8 weeks. A mobile app or web application: 12–20 weeks to a first release, depending on scope. Anyone quoting faster without seeing your requirements is guessing.</p>" } },
+        "q3": { "type": "qa", "settings": { "question": "Do I have to use you for both build and growth?", "answer": "<p>No. Plenty of clients use one side only. The reason we offer both is that the handoff between a dev shop and a marketing agency is where most projects lose a quarter.</p>" } },
+        "q4": { "type": "qa", "settings": { "question": "Who owns the code and the accounts?", "answer": "<p>You do, repositories, ad accounts, analytics, everything. We work inside your accounts where possible and hand over cleanly if you ever leave.</p>" } },
+        "q5": { "type": "qa", "settings": { "question": "Do you work with early-stage companies?", "answer": "<p>Yes, when the scope is real. We'd rather build a sharp first version than a full platform for an idea that hasn't met a customer.</p>" } },
+        "q6": { "type": "qa", "settings": { "question": "What happens after launch?", "answer": "<p>Either you take it in-house with documentation and a handover session, or we stay on a support and growth retainer. Both are normal; neither is locked in.</p>" } }
+      },
+      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6"]
+    },
+    "brief": {
+      "type": "lead-form",
+      "settings": {
+        "kicker": "The brief",
+        "heading": "Tell us what you're building.",
+        "subcopy": "Send the brief, or just the problem. We'll come back with an approach, a rough timeline and a number, before you commit to anything.",
+        "submit_label": "Send the brief",
+        "booking_label": "Prefer to talk? Book a 30-min call",
+        "note": "One reply from a person, within one business day. No sequence. If we're not the right fit we'll tell you who is.",
+        "anchor": "brief",
+        "accent": "violet",
+        "background": "paper"
+      },
+      "blocks": {
+        "p1": { "type": "point", "settings": { "text": "A written reply from a person, not an autoresponder" } },
+        "p2": { "type": "point", "settings": { "text": "An honest read on whether we're the right studio for it" } },
+        "p3": { "type": "point", "settings": { "text": "A rough approach and number before any commitment" } },
+        "p4": { "type": "point", "settings": { "text": "Within one business day" } }
+      },
+      "block_order": ["p1", "p2", "p3", "p4"]
+    }
+  },
+  "order": [
+    "hero",
+    "partners",
+    "services",
+    "work",
+    "asp",
+    "testimonials",
+    "capability",
+    "process",
+    "problems",
+    "why",
+    "faq",
+    "brief"
+  ]
+}

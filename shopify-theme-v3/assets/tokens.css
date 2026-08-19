@@ -1,0 +1,96 @@
+/* ============================================================================
+   socal labs — DESIGN TOKENS  v4
+   Tech-led digital product + growth studio.
+   Expressive palette: warm paper, near-black ink, one accent per service.
+   Editorial type: Space Grotesk display / Inter body.
+   ========================================================================== */
+
+:root {
+  /* --- Core ------------------------------------------------------------- */
+  --c-paper:      #F5F2EC;   /* warm off-white canvas — not corporate white */
+  --c-paper-2:    #EDE8DF;
+  --c-white:      #FFFFFF;
+  --c-ink:        #0E0E12;   /* near-black, not pure */
+  --c-ink-2:      #1A1A20;
+  --c-ink-3:      #2A2A33;
+
+  --c-text:       #0E0E12;
+  --c-text-2:     #4A4A55;   /* 8.1:1 on paper — AA */
+  --c-text-3:     #6B6B78;   /* 4.8:1 on paper — AA */
+  --c-on-ink:     #FFFFFF;
+  --c-on-ink-2:   rgba(255,255,255,.74);
+  --c-on-ink-3:   rgba(255,255,255,.64);   /* 5.4:1 on ink — AA for small labels */
+  --c-line:       #DDD7CC;
+  --c-line-2:     rgba(14,14,18,.10);
+  --c-line-ink:   rgba(255,255,255,.14);
+
+  /* --- Service accents ---------------------------------------------------
+     One per service. Each has a solid (marks, fills), a text-safe darkening
+     for use on paper, and a wash for tinted surfaces. Never mix two accents
+     in the same card. */
+  --a-blue:        #2B4EFF;  --a-blue-text:   #1E39C7;  --a-blue-wash:   #E6EAFF;
+  --a-violet:      #7B3FE4;  --a-violet-text: #5F2CB8;  --a-violet-wash: #F0E9FF;
+  --a-teal:        #00A98F;  --a-teal-text:   #00755F;  --a-teal-wash:   #DFF5F0;
+  --a-coral:       #FF5A45;  --a-coral-text:  #C63722;  --a-coral-wash:  #FFE9E5;
+  --a-amber:       #FF9E00;  --a-amber-text:  #8A5000;  --a-amber-wash:  #FFF1DB;
+  --a-sun:         #FFC53D;  --a-sun-text:    #7A5300;  --a-sun-wash:    #FFF6E0;
+
+  /* Default accent — overridden per section/card via --accent */
+  --accent:      var(--a-blue);
+  --accent-text: var(--a-blue-text);
+  --accent-wash: var(--a-blue-wash);
+
+  /* --- Semantic ---------------------------------------------------------- */
+  --c-ok:        #16794F;  --c-ok-wash:   #E3F5EC;
+  --c-err:       #C0342A;  --c-err-wash:  #FCEAE8;
+
+  /* --- Type -------------------------------------------------------------- */
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-body:    'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --fs-mega:    clamp(44px, 7.4vw, 106px);  /* editorial hero */
+  --fs-hero:    clamp(40px, 6.4vw, 88px);
+  --fs-h1:      clamp(34px, 5vw, 62px);
+  --fs-h2:      clamp(30px, 4vw, 52px);
+  --fs-h3:      clamp(21px, 2.3vw, 28px);
+  --fs-h4:      19px;
+  --fs-lead:    clamp(17px, 1.5vw, 21px);
+  --fs-body:    16px;
+  --fs-sm:      14px;
+  --fs-xs:      13px;
+  --fs-kicker:  12px;
+  --fs-micro:   11px;   /* uppercase tracked labels only; reading text never below 14px */
+
+  --lh-mega: 0.92;  --lh-hero: 0.98;  --lh-head: 1.08;  --lh-body: 1.6;
+  --ls-mega: -.05em; --ls-tight: -.04em; --ls-snug: -.02em; --ls-wide: .16em;
+
+  /* --- Space ------------------------------------------------------------- */
+  --sp-1:4px;   --sp-2:8px;   --sp-3:12px;  --sp-4:16px;  --sp-5:20px;
+  --sp-6:24px;  --sp-8:32px;  --sp-10:40px; --sp-12:48px; --sp-16:64px;
+  --sp-20:80px; --sp-24:96px; --sp-32:128px;
+
+  --container:   1280px;
+  --container-wide: 1560px;
+  --gutter:      28px;
+  --section-gap: clamp(80px, 9vw, 150px);
+  --nav-h:       76px;
+
+  /* --- Shape ------------------------------------------------------------- */
+  --r-xs:4px; --r-sm:8px; --r-md:14px; --r-lg:22px; --r-xl:32px; --r-2xl:44px; --r-pill:999px;
+
+  --sh-xs:    0 1px 2px rgba(14,14,18,.05);
+  --sh-card:  0 2px 20px rgba(14,14,18,.05);
+  --sh-hover: 0 24px 60px rgba(14,14,18,.14);
+  --sh-float: 0 32px 80px rgba(14,14,18,.16);
+
+  /* --- Motion ------------------------------------------------------------ */
+  --dur-fast: 180ms; --dur: 320ms; --dur-slow: 620ms;
+  --ease:     cubic-bezier(.22,.61,.36,1);
+  --ease-io:  cubic-bezier(.65,.05,.36,1);
+
+  --z-sticky: 60; --z-menu: 120; --z-modal: 200;
+}
+
+@media (max-width: 767px) {
+  :root { --gutter: 20px; --nav-h: 62px; }
+}

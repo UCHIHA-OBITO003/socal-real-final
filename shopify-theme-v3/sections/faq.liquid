@@ -1,0 +1,58 @@
+<section class="section {% if section.settings.background == 'ink' %}section--ink{% elsif section.settings.background == 'white' %}section--white{% else %}section--paper{% endif %}">
+  <div class="container">
+    <div class="head-split reveal">
+      <div>
+        {%- if section.settings.kicker != blank -%}<span class="kicker">{{ section.settings.kicker }}</span>{%- endif -%}
+        <h2 class="t-h2" style="margin-top:var(--sp-5)">{{ section.settings.heading }}</h2>
+      </div>
+      {%- if section.settings.subcopy != blank -%}<p>{{ section.settings.subcopy }}</p>{%- endif -%}
+    </div>
+    <div class="faq-list reveal">
+      {%- for block in section.blocks -%}
+        <details class="faq-item" style="--accent:var(--a-{{ section.settings.accent }})" {{ block.shopify_attributes }}>
+          <summary>{{ block.settings.question }}</summary>
+          <div class="faq-answer">{{ block.settings.answer }}</div>
+        </details>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{%- if section.blocks.size > 0 -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for block in section.blocks -%}
+    { "@type": "Question", "name": {{ block.settings.question | json }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ block.settings.answer | strip_html | json }} } }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "FAQ",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Straight answers" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "The questions you were going to ask anyway" },
+    { "type": "textarea", "id": "subcopy", "label": "Subcopy", "default": "If yours isn't here, ask it on the form, we answer every one." },
+    { "type": "select", "id": "accent", "label": "Accent", "default": "blue",
+      "options": [
+        { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+        { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+        { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" } ] },
+    { "type": "select", "id": "background", "label": "Background", "default": "white",
+      "options": [ { "value": "paper", "label": "Paper" }, { "value": "white", "label": "White" }, { "value": "ink", "label": "Dark" } ] }
+  ],
+  "blocks": [
+    { "type": "qa", "name": "Question", "settings": [
+      { "type": "text", "id": "question", "label": "Question", "default": "How much does a project cost?" },
+      { "type": "richtext", "id": "answer", "label": "Answer", "default": "<p>It depends on scope. We give a fixed number after discovery, not before.</p>" } ] }
+  ],
+  "presets": [{ "name": "FAQ" }]
+}
+{% endschema %}

@@ -1,0 +1,381 @@
+{
+  "name": "Studio (alias)",
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "cta_label": "Discuss Your Project",
+        "cta_link": "/pages/contact",
+        "accent": "violet",
+        "background": "paper",
+        "dark": false,
+        "kicker": "Studio",
+        "heading": "A small team that does the whole job.",
+        "subcopy": "socal labs is a digital product and growth studio in Los Angeles. We design, build and then grow, because the gap between those three is where most projects die.",
+        "cta2_label": "See our work",
+        "cta2_link": "/pages/work",
+        "want_banner": false,
+        "asset_file": "gdash-graphic.png",
+        "image_alt": "socal labs studio work"
+      }
+    },
+    "problems": {
+      "type": "problems",
+      "settings": {
+        "kicker": "Why a studio",
+        "heading": "Why brands hire one team instead of five vendors",
+        "subcopy": "The handoff tax is real, and expensive.",
+        "background": "white"
+      },
+      "blocks": {
+        "b1": {
+          "type": "pain",
+          "settings": {
+            "accent": "violet",
+            "pain": "I have five vendors and nobody owns the number.",
+            "answer": "One team across build, creative and growth. One report, one person accountable for the outcome."
+          }
+        },
+        "b2": {
+          "type": "pain",
+          "settings": {
+            "accent": "blue",
+            "pain": "Dev ships, then marketing invents a different story.",
+            "answer": "The people who build the product run the campaigns pointed at it, same brief, same metric."
+          }
+        },
+        "b3": {
+          "type": "pain",
+          "settings": {
+            "accent": "coral",
+            "pain": "Creative waits three weeks for a revision.",
+            "answer": "In-house creative next to media and product, test sets weekly, not quarterly."
+          }
+        },
+        "b4": {
+          "type": "pain",
+          "settings": {
+            "accent": "teal",
+            "pain": "Account managers translate; makers never hear me.",
+            "answer": "You talk to the people doing the work. No relay."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ]
+    },
+    "services": {
+      "type": "services-grid",
+      "settings": {
+        "kicker": "Capability map",
+        "heading": "Six services. One studio.",
+        "subcopy": "Equal weight, we don't lead with one channel and bolt the rest on.",
+        "anchor": "capabilities"
+      },
+      "blocks": {
+        "s1": {
+          "type": "service",
+          "settings": {
+            "title": "Web Applications",
+            "copy": "Dashboards, portals, internal tools and SaaS products. React and Next.js front ends on APIs we design, build and maintain.",
+            "tags": "React, Next.js, Node, APIs",
+            "icon": "i-code",
+            "accent": "blue",
+            "link": "/pages/web-apps"
+          }
+        },
+        "s2": {
+          "type": "service",
+          "settings": {
+            "title": "Mobile Applications",
+            "copy": "iOS and Android from UX concept to App Store release. Native where it matters, React Native where it makes sense.",
+            "tags": "iOS, Android, React Native",
+            "icon": "i-mobile",
+            "accent": "violet",
+            "link": "/pages/mobile-apps"
+          }
+        },
+        "s3": {
+          "type": "service",
+          "settings": {
+            "title": "Websites & E-commerce",
+            "copy": "Shopify storefronts, D2C sites, landing pages and marketing sites built to convert and easy for your team to run.",
+            "tags": "Shopify, Headless, Landing pages",
+            "icon": "i-cart",
+            "accent": "teal",
+            "link": "/pages/websites"
+          }
+        },
+        "s4": {
+          "type": "service",
+          "settings": {
+            "title": "Creative & 3D",
+            "copy": "Brand systems, product photography, packaging, ad creative and photoreal 3D, produced in-house, next to the campaigns.",
+            "tags": "Branding, Packaging, 3D, Motion",
+            "icon": "i-cube",
+            "accent": "coral",
+            "link": "/pages/creative-studio"
+          }
+        },
+        "s5": {
+          "type": "service",
+          "settings": {
+            "title": "Marketplace Growth",
+            "copy": "Amazon, Walmart, eBay and Target+. Listings, A+ Content, PPC, catalog health and operations, run like a P&L.",
+            "tags": "Amazon, Walmart, PPC, A+",
+            "icon": "i-globe",
+            "accent": "amber",
+            "link": "/pages/marketplace-growth"
+          }
+        },
+        "s6": {
+          "type": "service",
+          "settings": {
+            "title": "Paid Media & Social",
+            "copy": "Google, Meta and TikTok with creative tested in-house, plus analytics that reconcile with contribution profit.",
+            "tags": "Google, Meta, TikTok, CRO",
+            "icon": "i-megaphone",
+            "accent": "sun",
+            "link": "/pages/paid-media"
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6"
+      ]
+    },
+    "pillars": {
+      "type": "modules",
+      "settings": {
+        "kicker": "Inside each pillar",
+        "heading": "What expertise actually covers",
+        "subcopy": "Checklist substance from v1 expertise, Labs accents and equal weight across pillars.",
+        "background": "paper",
+        "align": "split",
+        "anchor": "pillars"
+      },
+      "blocks": {
+        "p1": {
+          "type": "module",
+          "settings": {
+            "title": "Web & apps",
+            "copy": "Shopify themes · custom sites · portals · React/Next apps · APIs · auth · analytics · ongoing support.",
+            "icon": "i-code",
+            "accent": "blue"
+          }
+        },
+        "p2": {
+          "type": "module",
+          "settings": {
+            "title": "Mobile",
+            "copy": "UI/UX · Swift / Kotlin / React Native · store submission · push · offline · payments · CRM hooks.",
+            "icon": "i-mobile",
+            "accent": "violet"
+          }
+        },
+        "p3": {
+          "type": "module",
+          "settings": {
+            "title": "E-commerce sites",
+            "copy": "Editable Shopify sections · landing pages · CRO · speed · migrations · lead-gen and booking flows.",
+            "icon": "i-cart",
+            "accent": "teal"
+          }
+        },
+        "p4": {
+          "type": "module",
+          "settings": {
+            "title": "Creative",
+            "copy": "Product & lifestyle photography · A+ / Brand Store · packaging · 3D renders · motion · ad sets.",
+            "icon": "i-camera",
+            "accent": "coral"
+          }
+        },
+        "p5": {
+          "type": "module",
+          "settings": {
+            "title": "Marketplace",
+            "copy": "Listing SEO · Sponsored ads · A+ & Store · catalog & FBA health · Walmart / eBay / Target+ expansion.",
+            "icon": "i-globe",
+            "accent": "amber"
+          }
+        },
+        "p6": {
+          "type": "module",
+          "settings": {
+            "title": "Paid & CRO",
+            "copy": "Google Search/Shopping/PMax · Meta & TikTok · influencer/UGC · landing CRO · full-funnel analytics.",
+            "icon": "i-megaphone",
+            "accent": "sun"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6"
+      ]
+    },
+    "process": {
+      "type": "process",
+      "settings": {
+        "kicker": "How engagements run",
+        "heading": "Audit → Scale",
+        "subcopy": "Same sequence whether we're shipping an app, a storefront or a marketplace account.",
+        "background": "white",
+        "step_ms": 180,
+        "anchor": "process"
+      },
+      "blocks": {
+        "p1": {
+          "type": "step",
+          "settings": {
+            "title": "Audit",
+            "copy": "Current product, channels and numbers reviewed in writing, what to fix first.",
+            "accent": "blue",
+            "icon": "i-search"
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "title": "Strategy",
+            "copy": "Scope, sequence and the one metric the work has to move.",
+            "accent": "violet",
+            "icon": "i-target"
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "title": "Build",
+            "copy": "Product, creative or campaigns, shipped in increments you can open.",
+            "accent": "teal",
+            "icon": "i-code"
+          }
+        },
+        "p4": {
+          "type": "step",
+          "settings": {
+            "title": "Launch",
+            "copy": "Go live with tracking, QA and a clear owner for day one.",
+            "accent": "coral",
+            "icon": "i-rocket"
+          }
+        },
+        "p5": {
+          "type": "step",
+          "settings": {
+            "title": "Optimize",
+            "copy": "Weekly iteration on creative, conversion and spend, not set-and-forget.",
+            "accent": "amber",
+            "icon": "i-chart"
+          }
+        },
+        "p6": {
+          "type": "step",
+          "settings": {
+            "title": "Scale",
+            "copy": "New surfaces, channels and markets once the foundation is earning.",
+            "accent": "sun",
+            "icon": "i-trend"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6"
+      ]
+    },
+    "why": {
+      "type": "why",
+      "settings": {
+        "kicker": "How we operate",
+        "heading": "What working with us is actually like",
+        "subcopy": "",
+        "background": "ink"
+      },
+      "blocks": {
+        "w1": {
+          "type": "card",
+          "settings": {
+            "icon": "i-zap",
+            "accent": "blue",
+            "title": "No handoffs",
+            "copy": "The team that ships the product is the team that runs the growth. Nothing is lost in translation between vendors."
+          }
+        },
+        "w2": {
+          "type": "card",
+          "settings": {
+            "icon": "i-box",
+            "accent": "teal",
+            "title": "We sell products too",
+            "copy": "We run our own e-commerce brand. Every recommendation has been tested on our own P&L first."
+          }
+        },
+        "w3": {
+          "type": "card",
+          "settings": {
+            "icon": "i-users",
+            "accent": "violet",
+            "title": "You talk to the makers",
+            "copy": "No account manager relaying messages. You speak to the people doing the work."
+          }
+        },
+        "w4": {
+          "type": "card",
+          "settings": {
+            "icon": "i-shield",
+            "accent": "coral",
+            "title": "You own everything",
+            "copy": "Repositories, ad accounts, analytics, source files. We hand over cleanly if you ever leave."
+          }
+        }
+      },
+      "block_order": [
+        "w1",
+        "w2",
+        "w3",
+        "w4"
+      ]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "kicker": "Next step",
+        "heading": "Want to work together?",
+        "subcopy": "Tell us what you're building.",
+        "cta_label": "Work With Us",
+        "cta_link": "/pages/contact",
+        "accent": "violet",
+        "background": "paper"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "problems",
+    "services",
+    "pillars",
+    "process",
+    "why",
+    "cta"
+  ]
+}

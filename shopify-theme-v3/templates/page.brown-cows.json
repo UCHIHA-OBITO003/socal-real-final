@@ -1,0 +1,194 @@
+{
+  "name": "Brown Cows",
+  "sections": {
+    "case": {
+      "type": "case-study",
+      "settings": {
+        "kicker": "Case study · Portfolio proof",
+        "heading": "Brown Cows Organic Dairy",
+        "lead": "Organic dairy and FarmStay brand, conversion-focused Shopify/web experience for farm stays, learning retreats, products, and Google reviews presentation.",
+        "tags": "Shopify / Web, FarmStay UX, Brand Design, Reviews UI, Telangana",
+        "cta_label": "Start a similar project",
+        "cta_link": "/pages/contact",
+        "hero_asset": "case-brown-cows.jpg",
+        "logo_asset": "logo-brown-cows.png",
+        "accent": "sun",
+        "problem_kicker": "The challenge",
+        "problem_heading": "Rural brand. Digital booking experience.",
+        "problem_copy": "Brown Cows needed a premium digital home for farm stays, learning retreats, and A2 dairy products, warm rural branding with clear paths to book, explore, and trust the farm experience.",
+        "success_items": "Hero-led FarmStay homepage that sells “rural luxury”\nClear CTAs for stays, farm visits, and products\nGoogle reviews surfaced as social proof on-site\nBrand footer with contact, policies, and WhatsApp path",
+        "work_kicker": "Work delivered",
+        "work_heading": "Shopify/web system for FarmStay + dairy brand",
+        "work_subcopy": "Website and brand UX modules for experiential and product brands, booking-ready pages, reviews, and conversion paths under one partner.",
+        "snapshots": "FarmStay site live|Shopify / Web\nReviews UI live|Google social proof\nBrand system live|Hero · Footer · CTA",
+        "work_note": "Results shown are qualitative delivery outcomes. No unverified booking or revenue percentages are published here. Google review content below is client-site UI / public review presentation, not socal labs performance KPIs.",
+        "gallery_kicker": "Visuals",
+        "gallery_heading": "Work in market",
+        "gallery_subcopy": "Selected screens from the Brown Cows Organic Dairy FarmStay experience.",
+        "quotes_kicker": "Guest reviews",
+        "quotes_heading": "What guests say about Brown Cows",
+        "quotes_subcopy": "Public Google-style guest feedback, used here as brand social proof, not as agency performance metrics.",
+        "quotes_snapshots": "5★ presentation|Guest review cards\nFarm stay · Retreat · Ghee|Themes guests mention\nTelangana|Gouripally · Medak",
+        "quotes_note": "Review themes are adapted from public guest feedback presented on the Brown Cows site for portfolio context. Not socal labs performance KPIs."
+      },
+      "blocks": {
+        "m1": {
+          "type": "module",
+          "settings": {
+            "title": "FarmStay homepage",
+            "copy": "Hero storytelling, dual CTAs (stays + farm visit), and warm brand navigation for Explore / Retreat / Products.",
+            "icon": "i-code",
+            "accent": "sun"
+          }
+        },
+        "m2": {
+          "type": "module",
+          "settings": {
+            "title": "Shopify / web UX",
+            "copy": "Booking-oriented flows, product discovery, and policy pages that support guest confidence.",
+            "icon": "i-cart",
+            "accent": "teal"
+          }
+        },
+        "m3": {
+          "type": "module",
+          "settings": {
+            "title": "Brand visual system",
+            "copy": "Earthy palette, farm photography framing, and consistent logo/lockup across hero and footer.",
+            "icon": "i-pen",
+            "accent": "amber"
+          }
+        },
+        "m4": {
+          "type": "module",
+          "settings": {
+            "title": "Google reviews UI",
+            "copy": "On-site testimonial grid with star ratings and a clear path to “See all reviews on Google.”",
+            "icon": "i-handshake",
+            "accent": "blue"
+          }
+        },
+        "m5": {
+          "type": "module",
+          "settings": {
+            "title": "Conversion CTA",
+            "copy": "Adventure banner (“Ready for Your Farm Adventure?”) driving exploration and bookings.",
+            "icon": "i-megaphone",
+            "accent": "coral"
+          }
+        },
+        "m6": {
+          "type": "module",
+          "settings": {
+            "title": "Footer & contact",
+            "copy": "Explore / policies / contact columns plus WhatsApp and location for Gouripally, Medak, Telangana.",
+            "icon": "i-mail",
+            "accent": "violet"
+          }
+        },
+        "g1": {
+          "type": "gallery",
+          "settings": {
+            "asset_file": "brown-cows-hero.png",
+            "caption": "Homepage, FarmStay hero, dual CTAs, Why Choose FarmStay",
+            "wide": true
+          }
+        },
+        "g2": {
+          "type": "gallery",
+          "settings": {
+            "asset_file": "brown-cows-footer.png",
+            "caption": "CTA + footer, adventure banner, explore links, contact, WhatsApp",
+            "wide": true
+          }
+        },
+        "g3": {
+          "type": "gallery",
+          "settings": {
+            "asset_file": "brown-cows-reviews.png",
+            "caption": "Guest reviews UI, star ratings and Google social proof",
+            "wide": true
+          }
+        },
+        "q1": {
+          "type": "quote",
+          "settings": {
+            "title": "Hands-on dairy experience",
+            "quote": "Participated in milking and making butter. The A2 ghee is outstanding, pure and fragrant.",
+            "name": "Lakshmi Prasad",
+            "meta": "Google · Hyderabad · March 2025",
+            "accent": "sun"
+          }
+        },
+        "q2": {
+          "type": "quote",
+          "settings": {
+            "title": "Learning retreat for kids",
+            "quote": "A 2-day learning retreat focused on organic farming and Gir cows. Kids loved every moment.",
+            "name": "Ramesh Babu",
+            "meta": "Google · Bangalore · January 2025",
+            "accent": "teal"
+          }
+        },
+        "q3": {
+          "type": "quote",
+          "settings": {
+            "title": "Peaceful mud cottage stay",
+            "quote": "Peaceful and rejuvenating stay in a mud cottage. Beautiful farm setting in Telangana.",
+            "name": "Sunita Reddy",
+            "meta": "Google · Mumbai · February 2025",
+            "accent": "coral"
+          }
+        },
+        "q4": {
+          "type": "quote",
+          "settings": {
+            "title": "Gir cows & pure ghee",
+            "quote": "Professional and kind team. Indigenous Gir breed cows, and the ghee is pure gold.",
+            "name": "Anand Krishnamurthy",
+            "meta": "Google · Chennai · December 2024",
+            "accent": "blue"
+          }
+        },
+        "q5": {
+          "type": "quote",
+          "settings": {
+            "title": "Ethical farming & yoga",
+            "quote": "Ethical dairy farming and sustainable living. Sunrise yoga by the fields was unforgettable.",
+            "name": "Priya Venkatesh",
+            "meta": "Google · Pune · November 2024",
+            "accent": "violet"
+          }
+        },
+        "q6": {
+          "type": "quote",
+          "settings": {
+            "title": "Kids loved the calves",
+            "quote": "Farm stay where children fed calves. Night sky and hospitality were unmatched.",
+            "name": "Vikram Singh",
+            "meta": "Google · Delhi · October 2024",
+            "accent": "amber"
+          }
+        }
+      },
+      "block_order": [
+        "m1", "m2", "m3", "m4", "m5", "m6",
+        "g1", "g2", "g3",
+        "q1", "q2", "q3", "q4", "q5", "q6"
+      ]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "kicker": "Start a similar project",
+        "heading": "Ready for a FarmStay-ready brand site?",
+        "subcopy": "Tell us what you're building. We'll map Shopify/web experience, reviews UX, and conversion paths like Brown Cows.",
+        "cta_label": "Discuss Your Project",
+        "cta_link": "/pages/contact",
+        "accent": "sun",
+        "background": "paper"
+      }
+    }
+  },
+  "order": ["case", "cta"]
+}

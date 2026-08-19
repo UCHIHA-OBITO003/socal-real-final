@@ -1,0 +1,65 @@
+<section class="section {% if section.settings.background == 'ink' %}section--ink{% elsif section.settings.background == 'white' %}section--white{% else %}section--paper{% endif %}"
+         {% if section.settings.anchor != blank %}id="{{ section.settings.anchor | handle }}"{% endif %}
+         {{ section.shopify_attributes }}>
+  <div class="container">
+    <div class="head-split reveal">
+      <div>
+        {%- if section.settings.kicker != blank -%}<span class="kicker">{{ section.settings.kicker }}</span>{%- endif -%}
+        <h2 class="t-h2" style="margin-top:var(--sp-5)">{{ section.settings.heading }}</h2>
+      </div>
+      {%- if section.settings.subcopy != blank -%}<p>{{ section.settings.subcopy }}</p>{%- endif -%}
+    </div>
+
+    <div class="channel-mix reveal">
+      <div class="channel-mix__bar" aria-hidden="true">
+        {%- for block in section.blocks -%}
+          <span class="channel-mix__seg" style="flex:{{ block.settings.pct | default: 25 }};--accent:var(--a-{{ block.settings.accent }})" title="{{ block.settings.name }} {{ block.settings.pct }}%"></span>
+        {%- endfor -%}
+      </div>
+      <div class="channel-mix__grid reveal-stagger">
+        {%- for block in section.blocks -%}
+          <div class="channel-mix__item" style="--accent:var(--a-{{ block.settings.accent }});--accent-wash:var(--a-{{ block.settings.accent }}-wash);--accent-text:var(--a-{{ block.settings.accent }}-text)" {{ block.shopify_attributes }}>
+            <div class="channel-mix__head">
+              <span class="channel-mix__pct">{{ block.settings.pct }}%</span>
+              <h3>{{ block.settings.name }}</h3>
+            </div>
+            <p>{{ block.settings.copy }}</p>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Channel mix",
+  "max_blocks": 5,
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Channel mix" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "How spend is typically split" },
+    { "type": "textarea", "id": "subcopy", "label": "Subcopy" },
+    { "type": "text", "id": "anchor", "label": "Anchor id" },
+    { "type": "select", "id": "background", "label": "Background", "default": "white",
+      "options": [ { "value": "paper", "label": "Paper" }, { "value": "white", "label": "White" }, { "value": "ink", "label": "Dark" } ] }
+  ],
+  "blocks": [
+    {
+      "type": "channel",
+      "name": "Channel",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Channel name", "default": "Google Ads" },
+        { "type": "range", "id": "pct", "label": "Budget share %", "min": 5, "max": 60, "step": 5, "default": 40 },
+        { "type": "textarea", "id": "copy", "label": "Copy", "default": "Search, Shopping and Performance Max structured by contribution profit." },
+        { "type": "select", "id": "accent", "label": "Accent", "default": "sun",
+          "options": [
+            { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+            { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+            { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" }
+          ]}
+      ]
+    }
+  ],
+  "presets": [{ "name": "Channel mix" }]
+}
+{% endschema %}

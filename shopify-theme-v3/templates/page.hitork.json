@@ -1,0 +1,128 @@
+{
+  "name": "HITORK",
+  "sections": {
+    "case": {
+      "type": "case-study",
+      "settings": {
+        "kicker": "Case study · Portfolio proof",
+        "heading": "HITORK",
+        "lead": "HITORK hand tools (The Tool Company), Los Angeles, storefront, product creative and marketplace growth built to earn trust.",
+        "tags": "E-commerce, Brand, Growth, Storefront, Product Creative, Marketplace Growth",
+        "cta_label": "Start a similar project",
+        "cta_link": "/pages/contact",
+        "hero_asset": "hitork-hero.png",
+        "logo_asset": "logo-hitork.png",
+        "accent": "coral",
+        "problem_kicker": "The challenge",
+        "problem_heading": "Premium hand tools. Competitive marketplace.",
+        "problem_copy": "HITORK needed a clear storefront system and product creative that communicated quality and durability while standing out in a crowded hand tools market.",
+        "success_items": "Clean storefront with premium product presentation\nProduct creative that emphasizes quality and durability\nMarketplace growth strategy and execution\nBrand system that builds trust with professionals",
+        "work_kicker": "Work delivered",
+        "work_heading": "Full-funnel brand system for e-commerce",
+        "work_subcopy": "Scoped modules for storefront, product creative, and marketplace growth under one partner.",
+        "snapshots": "Storefront live|Shopify\nProduct creative live|Marketplace\nGrowth strategy live|Performance",
+        "work_note": "Results shown are qualitative delivery outcomes. No unverified ROAS or lift percentages are published here.",
+        "gallery_kicker": "Visuals",
+        "gallery_heading": "Work in market",
+        "gallery_subcopy": "Selected screens from the HITORK storefront and product creative.",
+        "quotes_kicker": "Customer feedback",
+        "quotes_heading": "What customers say",
+        "quotes_subcopy": "Customer feedback for HITORK, used here as brand social proof.",
+        "quotes_snapshots": "Quality tools|Customer feedback\nDurable design|Product reviews\nGreat value|Marketplace response",
+        "quotes_note": "Customer quotes are paraphrased from marketplace feedback for portfolio context."
+      },
+      "blocks": {
+        "m1": {
+          "type": "module",
+          "settings": {
+            "title": "Shopify storefront",
+            "copy": "Storefront design with premium product presentation and conversion-focused layout.",
+            "icon": "i-cart",
+            "accent": "coral"
+          }
+        },
+        "m2": {
+          "type": "module",
+          "settings": {
+            "title": "Product creative",
+            "copy": "Product photography and creative that emphasizes quality and durability.",
+            "icon": "i-pen",
+            "accent": "teal"
+          }
+        },
+        "m3": {
+          "type": "module",
+          "settings": {
+            "title": "Marketplace growth",
+            "copy": "Growth strategy and execution for marketplace presence and performance.",
+            "icon": "i-megaphone",
+            "accent": "blue"
+          }
+        },
+        "m4": {
+          "type": "module",
+          "settings": {
+            "title": "Brand system",
+            "copy": "Consistent brand system across storefront and marketplace channels.",
+            "icon": "i-cube",
+            "accent": "violet"
+          }
+        },
+        "g1": {
+          "type": "gallery",
+          "settings": {
+            "asset_file": "hitork-hero.png",
+            "caption": "Storefront hero, premium hand tools",
+            "wide": true
+          }
+        },
+        "g2": {
+          "type": "gallery",
+          "settings": {
+            "asset_file": "hitork-product.png",
+            "caption": "Product photography, wrench set",
+            "wide": false
+          }
+        },
+        "q1": {
+          "type": "quote",
+          "settings": {
+            "title": "Quality tools",
+            "quote": "Great quality tools, exactly what I needed for my workshop.",
+            "name": "Professional",
+            "meta": "Verified Customer",
+            "accent": "coral"
+          }
+        },
+        "q2": {
+          "type": "quote",
+          "settings": {
+            "title": "Durable design",
+            "quote": "Solid construction, these tools will last a long time.",
+            "name": "Customer",
+            "meta": "Verified Purchase",
+            "accent": "teal"
+          }
+        }
+      },
+      "block_order": [
+        "m1", "m2", "m3", "m4",
+        "g1", "g2",
+        "q1", "q2"
+      ]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "kicker": "Start a similar project",
+        "heading": "Ready for premium e-commerce that builds trust?",
+        "subcopy": "Tell us what you're building. We'll map storefront, creative, and growth systems like HITORK, and say honestly if we're the right fit.",
+        "cta_label": "Discuss Your Project",
+        "cta_link": "/pages/contact",
+        "accent": "coral",
+        "background": "paper"
+      }
+    }
+  },
+  "order": ["case", "cta"]
+}

@@ -1,0 +1,166 @@
+{%- comment -%}
+  App Store phone proof — CSS iPhone frame with listing UI or screen image inside.
+{%- endcomment -%}
+
+{%- assign phone_color = section.settings.phone_color | default: 'silver' -%}
+
+<section class="asp section--white" data-asp {{ section.shopify_attributes }}>
+  <div class="container">
+    <div class="section-head section-head--center">
+      {%- if section.settings.kicker != blank -%}
+        <p class="kicker asp-stage" style="--i:0;--accent:var(--a-{{ section.settings.accent }})">{{ section.settings.kicker }}</p>
+      {%- endif -%}
+      <h2 class="t-h2 asp-stage" style="--i:1">{{ section.settings.heading }}</h2>
+      {%- if section.settings.subcopy != blank -%}
+        <p class="asp-stage" style="--i:2">{{ section.settings.subcopy }}</p>
+      {%- endif -%}
+    </div>
+    <div class="asp-device">
+      <div class="phone-xl phone-xl--{{ phone_color }} asp-stage" style="--i:3">
+        <span class="phone-btn pb-action"></span><span class="phone-btn pb-volup"></span><span class="phone-btn pb-voldn"></span><span class="phone-btn pb-power"></span><span class="phone-btn pb-camera"></span>
+        <span class="phone-bezel">
+          <span class="phone-island"></span>
+          <span class="phone-glare"></span>
+          <span class="phone-screen">
+            {%- if section.settings.screen_asset != blank -%}
+              <img
+                class="phone-screen-fill"
+                src="{{ section.settings.screen_asset | asset_url }}"
+                alt="{{ section.settings.app_name | default: 'Apphia' | escape }} App Store listing"
+                loading="lazy"
+                width="390"
+                height="844"
+              >
+            {%- elsif section.settings.store_style == 'apphia' -%}
+              <span class="store-ui store-ui--apphia">
+                <span class="app-top"><span>9:41</span><span class="app-status-r"><span>5G</span><span class="app-signal"><i></i><i></i><i></i></span><span class="app-batt"></span></span></span>
+                <span class="store-nav asp-card" style="--i:4">
+                  <span class="store-back">&lsaquo; Explore</span>
+                  <span class="store-nav-actions" aria-hidden="true">
+                    <svg class="store-nav-ico" viewBox="0 0 24 24"><use href="#i-arrow"/></svg>
+                    <svg class="store-nav-ico" viewBox="0 0 24 24"><use href="#i-search"/></svg>
+                  </span>
+                </span>
+                <span class="store-head asp-card" style="--i:5">
+                  <span class="store-icon" aria-hidden="true"><span class="store-icon-hex">{{ section.settings.app_initial | default: 'A' }}</span></span>
+                  <span class="store-id">
+                    <b>{{ section.settings.app_name | default: 'Apphia' }}</b>
+                    <span class="store-dev">socal labs</span>
+                    <span class="store-tag">{{ section.settings.app_tagline | default: "Early Detection · Women's Health" }}</span>
+                  </span>
+                  <span class="store-actions">
+                    <span class="store-get">VIEW</span>
+                    <span class="store-dl" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></span>
+                  </span>
+                </span>
+                <span class="store-desc asp-card" style="--i:6">Clear results in minutes, a weeks indicator, and guidance when early detection matters most.</span>
+                <span class="store-info asp-card" style="--i:7">
+                  <span class="store-stat"><span class="store-stat-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-chart"/></svg></span><b>Age</b><i>12+</i></span>
+                  <span class="store-stat"><span class="store-stat-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-box"/></svg></span><b>Category</b><i>Health</i></span>
+                  <span class="store-stat store-stat--peek"><span class="store-stat-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-users"/></svg></span><b>Developer</b><i>socal labs</i></span>
+                </span>
+                <span class="store-shots asp-card" style="--i:8">
+                  {%- if section.settings.shot_1_asset != blank -%}
+                    <span class="store-shot"><img src="{{ section.settings.shot_1_asset | asset_url }}" alt="" loading="lazy"></span>
+                  {%- elsif section.settings.shot_1 != blank -%}
+                    {{ section.settings.shot_1 | image_url: width: 400 | image_tag: class: 'store-shot', loading: 'lazy', alt: section.settings.app_name }}
+                  {%- else -%}
+                    <span class="store-shot"><span class="store-shot-brief"><span class="img-brief-tag"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-camera"/></svg></span><span>{{ section.settings.shot_1_brief | default: 'App screenshot 1.' }}</span></span></span>
+                  {%- endif -%}
+                  {%- if section.settings.shot_2_asset != blank -%}
+                    <span class="store-shot"><img src="{{ section.settings.shot_2_asset | asset_url }}" alt="" loading="lazy"></span>
+                  {%- elsif section.settings.shot_2 != blank -%}
+                    {{ section.settings.shot_2 | image_url: width: 400 | image_tag: class: 'store-shot', loading: 'lazy', alt: section.settings.app_name }}
+                  {%- else -%}
+                    <span class="store-shot"><span class="store-shot-brief"><span class="img-brief-tag"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-camera"/></svg></span><span>{{ section.settings.shot_2_brief | default: 'App screenshot 2.' }}</span></span></span>
+                  {%- endif -%}
+                </span>
+                <span class="store-reviews asp-card" style="--i:9">
+                  <span class="store-reviews-head"><b>Ratings &amp; Reviews</b><span>4.7 ★</span></span>
+                  <span class="store-reviews-score">4.7 out of 5 stars</span>
+                  <span class="store-review"><b>@HealthyMama</b><span class="store-stars">★★★★★</span><i>Fast results and a clear weeks indicator when timing matters.</i></span>
+                  <span class="store-review"><b>@CheckInCare</b><span class="store-stars">★★★★☆</span><i>Clean UI and easy data entry. Very reliable overall.</i></span>
+                </span>
+              </span>
+            {%- else -%}
+              <span class="store-ui">
+                <span class="app-top"><span>9:41</span><span class="app-status-r"><span class="app-signal"><i></i><i></i><i></i></span><span class="app-batt"></span></span></span>
+                <span class="store-back asp-card" style="--i:4">&lsaquo; Search</span>
+                <span class="store-head asp-card" style="--i:5">
+                  <span class="store-icon" aria-hidden="true">{{ section.settings.app_initial | default: 'F' }}</span>
+                  <span class="store-id"><b>{{ section.settings.app_name | default: 'Fieldbase' }}</b><span>{{ section.settings.app_tagline | default: 'Field service, offline-first' }}</span></span>
+                  <span class="store-get">GET</span>
+                </span>
+                <span class="store-info asp-card" style="--i:6">
+                  <span><i>4+</i><b>Age</b></span>
+                  <span><i>Business</i><b>Category</b></span>
+                  <span><i>socal labs</i><b>Developer</b></span>
+                </span>
+                <span class="store-shots asp-card" style="--i:7">
+                  {%- if section.settings.shot_1_asset != blank -%}
+                    <span class="store-shot"><img src="{{ section.settings.shot_1_asset | asset_url }}" alt="" loading="lazy"></span>
+                  {%- elsif section.settings.shot_1 != blank -%}
+                    {{ section.settings.shot_1 | image_url: width: 400 | image_tag: class: 'store-shot', loading: 'lazy', alt: section.settings.app_name }}
+                  {%- else -%}
+                    <span class="store-shot"><span class="store-shot-brief"><span class="img-brief-tag"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-camera"/></svg></span><span>{{ section.settings.shot_1_brief | default: 'Jobs list screen, portrait capture.' }}</span></span></span>
+                  {%- endif -%}
+                  {%- if section.settings.shot_2_asset != blank -%}
+                    <span class="store-shot"><img src="{{ section.settings.shot_2_asset | asset_url }}" alt="" loading="lazy"></span>
+                  {%- elsif section.settings.shot_2 != blank -%}
+                    {{ section.settings.shot_2 | image_url: width: 400 | image_tag: class: 'store-shot', loading: 'lazy', alt: section.settings.app_name }}
+                  {%- else -%}
+                    <span class="store-shot"><span class="store-shot-brief"><span class="img-brief-tag"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-camera"/></svg></span><span>{{ section.settings.shot_2_brief | default: 'Job detail with offline badge.' }}</span></span></span>
+                  {%- endif -%}
+                </span>
+              </span>
+            {%- endif -%}
+          </span>
+        </span>
+      </div>
+    </div>
+    {%- if section.settings.caption != blank -%}
+      <p class="asp-caption asp-stage" style="--i:5">{{ section.settings.caption }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "App Store proof",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "iOS · The last mile" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "We take it all the way to the store." },
+    { "type": "textarea", "id": "subcopy", "label": "Subcopy", "default": "Design, build, review, release. Your app doesn't stop at a repo, it ships with its listing, screenshots and submission handled." },
+    { "type": "select", "id": "phone_color", "label": "Phone frame", "default": "silver",
+      "options": [
+        { "value": "silver", "label": "Silver" },
+        { "value": "orange", "label": "Cosmic Orange" },
+        { "value": "blue", "label": "Blue" },
+        { "value": "teal", "label": "Teal" }
+      ]},
+    { "type": "text", "id": "screen_asset", "label": "Screen image asset", "info": "App Store screenshot shown inside the iPhone screen, e.g. apphia-store-screen.png" },
+    { "type": "select", "id": "store_style", "label": "Built-in store UI", "default": "fieldbase",
+      "options": [
+        { "value": "fieldbase", "label": "Fieldbase (default)" },
+        { "value": "apphia", "label": "Apphia (component UI)" }
+      ],
+      "info": "Used when Screen image asset is empty." },
+    { "type": "text", "id": "app_name", "label": "App name", "default": "Fieldbase" },
+    { "type": "text", "id": "app_tagline", "label": "App tagline", "default": "Field service, offline-first" },
+    { "type": "text", "id": "app_initial", "label": "Icon letter", "default": "F" },
+    { "type": "image_picker", "id": "shot_1", "label": "Screenshot 1" },
+    { "type": "text", "id": "shot_1_asset", "label": "Or screenshot 1 asset" },
+    { "type": "text", "id": "shot_1_brief", "label": "Shot 1 brief" },
+    { "type": "image_picker", "id": "shot_2", "label": "Screenshot 2" },
+    { "type": "text", "id": "shot_2_asset", "label": "Or screenshot 2 asset" },
+    { "type": "text", "id": "shot_2_brief", "label": "Shot 2 brief" },
+    { "type": "textarea", "id": "caption", "label": "Caption", "default": "Apphia Health — App Store listing, screenshots and submission handled end to end." },
+    { "type": "select", "id": "accent", "label": "Accent", "default": "blue",
+      "options": [
+        { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+        { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" }
+      ]}
+  ],
+  "presets": [{ "name": "App Store proof" }]
+}
+{% endschema %}

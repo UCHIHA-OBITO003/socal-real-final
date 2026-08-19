@@ -1,0 +1,6 @@
+{
+  "general": {
+    "404": { "title": "We couldn't find that page", "subtext": "The link may be old, or the page may have moved." },
+    "password_page": { "login_form_heading": "Enter store using password" }
+  }
+}

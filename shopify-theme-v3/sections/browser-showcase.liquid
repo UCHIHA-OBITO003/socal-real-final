@@ -1,0 +1,72 @@
+<section class="section {% if section.settings.background == 'ink' %}section--ink{% elsif section.settings.background == 'white' %}section--white{% else %}section--paper{% endif %}"
+         {% if section.settings.anchor != blank %}id="{{ section.settings.anchor | handle }}"{% endif %}
+         {{ section.shopify_attributes }}>
+  <div class="container">
+    <div class="head-split reveal">
+      <div>
+        {%- if section.settings.kicker != blank -%}<span class="kicker">{{ section.settings.kicker }}</span>{%- endif -%}
+        <h2 class="t-h2" style="margin-top:var(--sp-5)">{{ section.settings.heading }}</h2>
+      </div>
+      {%- if section.settings.subcopy != blank -%}<p>{{ section.settings.subcopy }}</p>{%- endif -%}
+    </div>
+
+    <div class="browser-showcase reveal-stagger">
+      {%- for block in section.blocks -%}
+        <div class="browser-showcase__item" style="--accent:var(--a-{{ block.settings.accent }});--accent-wash:var(--a-{{ block.settings.accent }}-wash);--accent-text:var(--a-{{ block.settings.accent }}-text)" {{ block.shopify_attributes }}>
+          <div class="browser-frame">
+            <div class="browser-frame__chrome">
+              <span class="browser-frame__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="browser-frame__url">{{ block.settings.url | default: 'yoursite.com' }}</span>
+            </div>
+            <div class="browser-frame__screen">
+              {%- if block.settings.asset_file != blank -%}
+                <img src="{{ block.settings.asset_file | asset_url }}" alt="{{ block.settings.title | escape }}" loading="lazy" width="1200" height="750">
+              {%- elsif block.settings.image != blank -%}
+                {{ block.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', alt: block.settings.title }}
+              {%- endif -%}
+            </div>
+          </div>
+          <div class="browser-showcase__body">
+            <h3>{{ block.settings.title }}</h3>
+            <p>{{ block.settings.copy }}</p>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Browser showcase",
+  "max_blocks": 4,
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Use cases" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Typical website projects" },
+    { "type": "textarea", "id": "subcopy", "label": "Subcopy" },
+    { "type": "text", "id": "anchor", "label": "Anchor id" },
+    { "type": "select", "id": "background", "label": "Background", "default": "white",
+      "options": [ { "value": "paper", "label": "Paper" }, { "value": "white", "label": "White" }, { "value": "ink", "label": "Dark" } ] }
+  ],
+  "blocks": [
+    {
+      "type": "browser",
+      "name": "Browser",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Shopify storefront" },
+        { "type": "textarea", "id": "copy", "label": "Copy", "default": "Online Store 2.0 with editable sections your team can run." },
+        { "type": "text", "id": "url", "label": "Address bar URL", "default": "yourbrand.com" },
+        { "type": "image_picker", "id": "image", "label": "Screenshot" },
+        { "type": "text", "id": "asset_file", "label": "Or theme asset filename" },
+        { "type": "select", "id": "accent", "label": "Accent", "default": "teal",
+          "options": [
+            { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+            { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+            { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" }
+          ]}
+      ]
+    }
+  ],
+  "presets": [{ "name": "Browser showcase" }]
+}
+{% endschema %}

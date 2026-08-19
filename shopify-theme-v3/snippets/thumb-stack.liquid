@@ -1,0 +1,17 @@
+{%- comment -%}
+  Blurred ambient thumbnail + sharp foreground image.
+  Usage: {% render 'thumb-stack', src: url, alt: 'Label', width: 900, height: 675 %}
+{%- endcomment -%}
+<span class="thumb-stack{% if class != blank %} {{ class }}{% endif %}">
+  <span class="thumb-stack__blur" aria-hidden="true">
+    <img src="{{ src }}" alt="" loading="lazy" width="{{ width | default: 900 }}" height="{{ height | default: 675 }}">
+  </span>
+  <span class="thumb-stack__veil" aria-hidden="true"></span>
+  <span class="thumb-stack__sharp">
+    <img src="{{ src }}"
+         alt="{{ alt | escape }}"
+         loading="{{ loading | default: 'lazy' }}"
+         width="{{ width | default: 900 }}"
+         height="{{ height | default: 675 }}">
+  </span>
+</span>

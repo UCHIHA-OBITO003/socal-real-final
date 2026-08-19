@@ -1,0 +1,43 @@
+{%- comment -%}
+  IMAGE BRIEF PLACEHOLDER
+
+  Renders where a real image should go, and tells whoever is filling the site
+  exactly what to put there, subject, aspect, minimum pixels, max file size.
+  It disappears the moment an image is uploaded to the block's image_picker.
+
+  This is deliberately not a pretty grey box. A placeholder that doesn't say
+  what it wants gets ignored; one that reads like a shot list gets filled.
+
+  Params:
+    label, slot name, e.g. "HiTork · hero"          (required)
+    brief, one line on what the photo should show    (required)
+    ratio, e.g. "24:9"                               (required)
+    min_w, minimum width in px, e.g. 1600            (required)
+    weight, max file size, defaults to "250 KB"
+    tone, 'light' (default) or 'dark'
+{%- endcomment -%}
+
+{%- liquid
+  assign weight = weight | default: '250 KB'
+  assign tone = tone | default: 'light'
+-%}
+
+<span class="img-brief{% if tone == 'dark' %} img-brief--dark{% endif %}" role="note">
+  <span class="img-brief-inner">
+    <span class="img-brief-tag">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-camera"/></svg>
+      Image needed
+    </span>
+    <span class="img-brief-label">{{ label }}</span>
+    <span class="img-brief-copy">{{ brief }}</span>
+    <span class="img-brief-specs">
+      <span><b>Ratio</b>{{ ratio }}</span>
+      <span><b>Min width</b>{{ min_w }}px</span>
+      <span><b>Max size</b>{{ weight }}</span>
+      <span><b>Format</b>JPG / WebP</span>
+    </span>
+    {%- if request.design_mode -%}
+      <span class="img-brief-how">Upload in Customize → this section → Image</span>
+    {%- endif -%}
+  </span>
+</span>

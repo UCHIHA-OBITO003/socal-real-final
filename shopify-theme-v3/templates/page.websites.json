@@ -1,0 +1,153 @@
+{
+  "name": "Websites & E-commerce",
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "cta_label": "Build My Website",
+        "cta_link": "/pages/contact",
+        "accent": "teal",
+        "background": "paper",
+        "dark": false,
+        "kicker": "Websites & e-commerce",
+        "heading": "Storefronts and sites built to convert.",
+        "subcopy": "Shopify, headless e-commerce, D2C sites and landing pages, fast, editable by your team, and instrumented from day one.",
+        "cta2_label": "What we build",
+        "cta2_link": "#what-we-build",
+        "want_banner": true,
+        "asset_file": "websites-hero.png",
+        "image_alt": "E-commerce and brand storefront work"
+      }
+    },
+    "problems": {
+      "type": "problems",
+      "settings": {
+        "kicker": "Typical calls",
+        "heading": "Why sites look fine and convert badly",
+        "subcopy": "The gaps we fix on most website and Shopify projects.",
+        "background": "white"
+      },
+      "blocks": {
+        "b1": {
+          "type": "pain",
+          "settings": {
+            "accent": "teal",
+            "pain": "My site looks fine and converts badly.",
+            "answer": "Conversion work on the pages that carry traffic, copy, speed, creative and checkout, measured properly."
+          }
+        },
+        "b2": {
+          "type": "pain",
+          "settings": {
+            "accent": "blue",
+            "pain": "Every content change needs a developer.",
+            "answer": "Online Store 2.0 sections your team can edit, without opening a ticket."
+          }
+        },
+        "b3": {
+          "type": "pain",
+          "settings": {
+            "accent": "coral",
+            "pain": "Paid traffic lands on a homepage that does nothing.",
+            "answer": "Landing pages built for one offer and one conversion event, then iterated."
+          }
+        },
+        "b4": {
+          "type": "pain",
+          "settings": {
+            "accent": "amber",
+            "pain": "Migration fear, we'll lose SEO and history.",
+            "answer": "Redirect maps, content parity and analytics verified before cutover."
+          }
+        }
+      },
+      "block_order": ["b1", "b2", "b3", "b4"]
+    },
+    "modules": {
+      "type": "modules",
+      "settings": {
+        "kicker": "What we build",
+        "heading": "E-commerce and marketing sites",
+        "subcopy": "Shopify Online Store 2.0, landing pages for paid traffic, and D2C brand sites.",
+        "background": "paper",
+        "align": "split",
+        "anchor": "what-we-build"
+      },
+      "blocks": {
+        "m1": { "type": "module", "settings": { "title": "Shopify storefronts", "copy": "Online Store 2.0 themes with editable sections, your team runs the site without calling us.", "icon": "i-cart", "accent": "teal" } },
+        "m2": { "type": "module", "settings": { "title": "Headless e-commerce", "copy": "Shopify or e-commerce APIs behind a Next.js front end when performance or bespoke UX justifies it.", "icon": "i-code", "accent": "blue" } },
+        "m3": { "type": "module", "settings": { "title": "D2C brand sites", "copy": "The brand story your marketplace listing has no room for, plus the checkout behind it.", "icon": "i-globe", "accent": "violet" } },
+        "m4": { "type": "module", "settings": { "title": "Landing pages", "copy": "Single-purpose pages for paid campaigns, built and tested against one conversion goal.", "icon": "i-target", "accent": "coral" } },
+        "m5": { "type": "module", "settings": { "title": "Migrations & replatforms", "copy": "Moving off WooCommerce, Magento or a custom build without losing SEO or history.", "icon": "i-shield", "accent": "amber" } },
+        "m6": { "type": "module", "settings": { "title": "CRO & speed", "copy": "Conversion and performance work on the pages that already carry traffic.", "icon": "i-zap", "accent": "sun" } }
+      },
+      "block_order": ["m1", "m2", "m3", "m4", "m5", "m6"]
+    },
+    "signature": {
+      "type": "browser-showcase",
+      "settings": {
+        "kicker": "Use cases",
+        "heading": "Typical website projects",
+        "subcopy": "Shopify storefronts, headless e-commerce and landing pages we've shipped.",
+        "background": "white",
+        "anchor": "use-cases"
+      },
+      "blocks": {
+        "b1": { "type": "browser", "settings": { "title": "Shopify storefront", "copy": "Online Store 2.0 with editable sections your team can run.", "url": "socalbiomed.com", "asset_file": "biomed-hero.png", "accent": "teal" } },
+        "b2": { "type": "browser", "settings": { "title": "D2C brand site", "copy": "Story, PDP and checkout for a brand that also sells on marketplaces.", "url": "brown-cows.com", "asset_file": "brown-cows-hero.png", "accent": "sun" } },
+        "b3": { "type": "browser", "settings": { "title": "Brand & packaging", "copy": "The brand story your marketplace listing has no room for.", "url": "apphiahealth.com", "asset_file": "websites-hero.png", "accent": "violet" } }
+      },
+      "block_order": ["b1", "b2", "b3"]
+    },
+    "packages": {
+      "type": "tier-table",
+      "settings": {
+        "kicker": "Engagement shapes",
+        "heading": "Launch · Brand · Full site",
+        "subcopy": "Typically 4–8 weeks depending on scope.",
+        "background": "paper",
+        "anchor": "packages",
+        "cta_label": "Get a Custom Proposal",
+        "cta_link": "/pages/contact"
+      },
+      "blocks": {
+        "pk1": { "type": "tier", "settings": { "title": "Launch Pack", "included": "Core templates, editable sections, analytics events and a clean handover.", "best_for": "A fast storefront or landing page go-live.", "accent": "teal" } },
+        "pk2": { "type": "tier", "settings": { "title": "Brand Pack", "included": "Full design system, key templates, PDP/collection polish and CRO baseline.", "best_for": "Brands needing a polished D2C presence.", "accent": "blue" } },
+        "pk3": { "type": "tier", "settings": { "title": "Full site", "included": "Migration or rebuild, redirects, apps and a post-launch iteration window.", "best_for": "Replatforms and full Shopify rebuilds.", "accent": "violet" } }
+      },
+      "block_order": ["pk1", "pk2", "pk3"]
+    },
+    "process": {
+      "type": "process",
+      "settings": {
+        "kicker": "Build process",
+        "heading": "How a site project runs",
+        "subcopy": "Typically 4,8 weeks.",
+        "background": "white",
+        "step_ms": 180
+      },
+      "blocks": {
+        "p1": { "type": "step", "settings": { "title": "Discovery", "copy": "Audience, offer, current numbers and the conversion goal.", "accent": "blue", "icon": "i-search" } },
+        "p2": { "type": "step", "settings": { "title": "Structure", "copy": "Sitemap, page flows and content plan agreed first.", "accent": "violet", "icon": "i-target" } },
+        "p3": { "type": "step", "settings": { "title": "Design", "copy": "Design system and key templates, reviewed in prototype.", "accent": "teal", "icon": "i-pen" } },
+        "p4": { "type": "step", "settings": { "title": "Build", "copy": "Theme or front end, editable sections, real content in staging.", "accent": "coral", "icon": "i-code" } },
+        "p5": { "type": "step", "settings": { "title": "QA", "copy": "Devices, accessibility, Core Web Vitals and analytics events.", "accent": "amber", "icon": "i-check" } },
+        "p6": { "type": "step", "settings": { "title": "Launch", "copy": "Redirects, tracking and a handover doc your team can follow.", "accent": "sun", "icon": "i-rocket" } }
+      },
+      "block_order": ["p1", "p2", "p3", "p4", "p5", "p6"]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "kicker": "Next step",
+        "heading": "Need a storefront that earns its keep?",
+        "subcopy": "Send us the current site. We'll tell you rebuild vs a hard week of work.",
+        "cta_label": "Build My Website",
+        "cta_link": "/pages/contact",
+        "accent": "teal",
+        "background": "paper"
+      }
+    }
+  },
+  "order": ["hero", "problems", "signature", "modules", "packages", "process", "cta"]
+}

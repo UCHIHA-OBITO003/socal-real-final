@@ -1,0 +1,251 @@
+{
+  "name": "Creative Studio",
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "cta_label": "Bring My Vision to Life",
+        "cta_link": "/pages/contact",
+        "accent": "coral",
+        "background": "paper",
+        "dark": true,
+        "kicker": "Creative studio",
+        "heading": "Creative that does a job, not just a mood board.",
+        "subcopy": "Brand systems, packaging, product imagery, ad creative and photoreal 3D, made in-house, next to the people running the campaigns.",
+        "cta2_label": "What we produce",
+        "cta2_link": "#what-we-produce",
+        "want_banner": true,
+        "asset_file": "creative-studio-hero.png",
+        "image_alt": "FemiCheck ovulation test kit — packaging, product shot and feature callouts"
+      }
+    },
+    "signature": {
+      "type": "creative-mosaic",
+      "settings": {
+        "kicker": "Work in market",
+        "heading": "Not just a mood board",
+        "subcopy": "Packaging, 3D renders, brand systems and listing creative — finished work, not concepts.",
+        "background": "paper",
+        "anchor": "use-cases"
+      },
+      "blocks": {
+        "t1": { "type": "tile", "settings": { "title": "FemiCheck packaging", "tag": "3D render", "asset_file": "hitork-product.png", "size": "large", "accent": "coral" } },
+        "t2": { "type": "tile", "settings": { "title": "Product photography", "tag": "Listing launch", "asset_file": "creative-studio-hero.png", "size": "medium", "accent": "amber" } },
+        "t3": { "type": "tile", "settings": { "title": "Brand system", "tag": "Identity", "asset_file": "apphia-site-path.png", "size": "wide", "accent": "violet" } },
+        "t4": { "type": "tile", "settings": { "title": "Amazon A+", "tag": "Infographics", "asset_file": "apphia-amazon-listing.png", "size": "medium", "accent": "teal" } }
+      },
+      "block_order": ["t1", "t2", "t3", "t4"]
+    },
+    "problems": {
+      "type": "problems",
+      "settings": {
+        "kicker": "Before the shoot",
+        "heading": "Why creative underperforms",
+        "subcopy": "The gaps we see before a shoot or A+ rebuild.",
+        "background": "white"
+      },
+      "blocks": {
+        "b1": {
+          "type": "pain",
+          "settings": {
+            "accent": "coral",
+            "pain": "Generic product photos lose to lifestyle competition.",
+            "answer": "Category-aware studio and lifestyle shots, shot or rendered for how buyers browse."
+          }
+        },
+        "b2": {
+          "type": "pain",
+          "settings": {
+            "accent": "amber",
+            "pain": "Low CTR, weak main images get scrolled past.",
+            "answer": "Main-image systems tested against competitors, not one hero photo and hope."
+          }
+        },
+        "b3": {
+          "type": "pain",
+          "settings": {
+            "accent": "violet",
+            "pain": "No brand story on the listing or site.",
+            "answer": "A+ modules, Brand Store and site creative that answer objections in order."
+          }
+        },
+        "b4": {
+          "type": "pain",
+          "settings": {
+            "accent": "teal",
+            "pain": "Low conversion from unclear value props.",
+            "answer": "Infographics, hierarchy and motion that make the offer obvious in three seconds."
+          }
+        }
+      },
+      "block_order": ["b1", "b2", "b3", "b4"]
+    },
+    "modules": {
+      "type": "modules",
+      "settings": {
+        "kicker": "What we produce",
+        "heading": "From identity to the ad that runs on Tuesday",
+        "subcopy": "Photography, 3D, packaging and paid creative, produced by the same studio that runs growth.",
+        "background": "paper",
+        "align": "split",
+        "anchor": "what-we-produce"
+      },
+      "blocks": {
+        "m1": {
+          "type": "module",
+          "settings": {
+            "title": "Brand & identity",
+            "copy": "Logo, palette, type and the rules that keep it consistent when six people are using it.",
+            "icon": "i-pen",
+            "accent": "coral"
+          }
+        },
+        "m2": {
+          "type": "module",
+          "settings": {
+            "title": "Packaging",
+            "copy": "Retail and e-commerce packaging, including unboxing and insert design.",
+            "icon": "i-box",
+            "accent": "amber"
+          }
+        },
+        "m3": {
+          "type": "module",
+          "settings": {
+            "title": "Product photography",
+            "copy": "Studio, lifestyle and scale shots shot to the conventions of your category.",
+            "icon": "i-camera",
+            "accent": "violet"
+          }
+        },
+        "m4": {
+          "type": "module",
+          "settings": {
+            "title": "3D rendering",
+            "copy": "Photoreal renders of every colourway, angle and configuration, no reshoot required.",
+            "icon": "i-cube",
+            "accent": "blue"
+          }
+        },
+        "m5": {
+          "type": "module",
+          "settings": {
+            "title": "Ad creative",
+            "copy": "Static and video concepts for Meta, TikTok, Google and Amazon, delivered in test-ready sets.",
+            "icon": "i-megaphone",
+            "accent": "sun"
+          }
+        },
+        "m6": {
+          "type": "module",
+          "settings": {
+            "title": "Motion & video",
+            "copy": "Product demos, explainers and motion graphics for listings, ads and social.",
+            "icon": "i-zap",
+            "accent": "teal"
+          }
+        }
+      },
+      "block_order": ["m1", "m2", "m3", "m4", "m5", "m6"]
+    },
+    "packages": {
+      "type": "tier-table",
+      "settings": {
+        "kicker": "Creative packages",
+        "heading": "Launch · Brand · Full Studio",
+        "subcopy": "Start with a Launch Pack, step up to Brand, or run Full Studio on retainer.",
+        "background": "white",
+        "anchor": "packages",
+        "cta_label": "Get a Custom Proposal",
+        "cta_link": "/pages/contact"
+      },
+      "blocks": {
+        "pk1": { "type": "tier", "settings": { "title": "Launch Pack", "included": "Product images, basic A+ modules, infographic panels and one revision round.", "best_for": "New ASIN or listing relaunch.", "accent": "coral" } },
+        "pk2": { "type": "tier", "settings": { "title": "Brand Pack", "included": "Premium A+, Brand Store design, expanded image set, short video ad and two revision rounds.", "best_for": "Brands building a full listing presence.", "accent": "amber" } },
+        "pk3": { "type": "tier", "settings": { "title": "Full Studio", "included": "Ongoing images, full A+ & Store, video and motion, packaging and a retainer cadence.", "best_for": "Brands needing continuous creative output.", "accent": "violet" } }
+      },
+      "block_order": ["pk1", "pk2", "pk3"]
+    },
+    "process": {
+      "type": "process",
+      "settings": {
+        "kicker": "How creative runs",
+        "heading": "Brief to handover",
+        "subcopy": "Revision rounds agreed up front, so nobody is surprised at round four.",
+        "background": "paper",
+        "step_ms": 180,
+        "anchor": ""
+      },
+      "blocks": {
+        "p1": {
+          "type": "step",
+          "settings": {
+            "title": "Brief",
+            "copy": "Product, audience, objection and where the asset will run.",
+            "accent": "blue",
+            "icon": "i-search"
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "title": "Research",
+            "copy": "Category conventions, competitor creative and review mining.",
+            "accent": "violet",
+            "icon": "i-search"
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "title": "Concept",
+            "copy": "Directions presented before production starts.",
+            "accent": "teal",
+            "icon": "i-pen"
+          }
+        },
+        "p4": {
+          "type": "step",
+          "settings": {
+            "title": "Production",
+            "copy": "Shooting, rendering and design to the approved direction.",
+            "accent": "coral",
+            "icon": "i-code"
+          }
+        },
+        "p5": {
+          "type": "step",
+          "settings": {
+            "title": "Revision",
+            "copy": "Two rounds included, scoped in the brief.",
+            "accent": "amber",
+            "icon": "i-gear"
+          }
+        },
+        "p6": {
+          "type": "step",
+          "settings": {
+            "title": "Handover",
+            "copy": "Final assets, source files and every platform size you need.",
+            "accent": "sun",
+            "icon": "i-users"
+          }
+        }
+      },
+      "block_order": ["p1", "p2", "p3", "p4", "p5", "p6"]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "kicker": "Next step",
+        "heading": "Send us the creative you want to beat.",
+        "subcopy": "We'll come back with what we'd change and why, before you commit to anything.",
+        "cta_label": "Bring My Vision to Life",
+        "cta_link": "/pages/contact",
+        "accent": "coral",
+        "background": "paper"
+      }
+    }
+  },
+  "order": ["hero", "signature", "problems", "modules", "packages", "process", "cta"]
+}

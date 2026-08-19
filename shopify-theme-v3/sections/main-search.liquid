@@ -1,0 +1,19 @@
+<section class="section">
+  <div class="container">
+    <h1 class="t-h1">Search</h1>
+    <form action="{{ routes.search_url }}" method="get" role="search" style="max-width:520px;margin-top:var(--sp-6)">
+      <label class="form-label" for="q">Search this site</label>
+      <input class="form-input" type="search" id="q" name="q" value="{{ search.terms | escape }}" placeholder="Search…">
+      <button type="submit" class="btn btn--primary mt-8">Search</button>
+    </form>
+    {% if search.performed %}
+      <p class="mt-8">{{ search.results_count }} result(s) for &ldquo;{{ search.terms }}&rdquo;.</p>
+      <div class="grid mt-8">
+        {% for item in search.results %}
+          <a class="card card--hover" href="{{ item.url }}"><h3 class="t-h3">{{ item.title }}</h3></a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+{% schema %}{ "name": "Search" }{% endschema %}

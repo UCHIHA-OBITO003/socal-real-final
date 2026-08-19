@@ -1,0 +1,165 @@
+{%- comment -%}
+  Theme 3 hero — cycling word + fact list + image tile band.
+{%- endcomment -%}
+
+<section class="hero" data-hero-reveal {{ section.shopify_attributes }}>
+  <span class="hero-blob hero-blob--1" aria-hidden="true"></span>
+  <span class="hero-blob hero-blob--2" aria-hidden="true"></span>
+  <span class="hero-glow" data-hero-glow aria-hidden="true"></span>
+
+  <div class="container-wide hero-inner">
+    <h1 class="t-mega">
+      <span class="line-mask"><span>{{ section.settings.line_1 | default: 'We turn ideas into' }}</span></span>
+      <span class="line-mask">
+        <span class="cycle" data-cycle>
+          {%- assign words = section.settings.cycle_words | default: 'apps.|storefronts.|brands.|revenue.' | split: '|' -%}
+          {%- for w in words -%}
+            <span class="cycle-word{% if forloop.first %} is-on{% endif %}" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}">{{ w | strip }}</span>
+          {%- endfor -%}
+        </span>
+      </span>
+    </h1>
+
+    <div class="hero-sub">
+      <div>
+        <p class="t-lead">{{ section.settings.subcopy }}</p>
+        <div class="hero-actions">
+          <a href="{{ section.settings.cta1_link | default: '/pages/contact' }}" class="btn btn--primary btn--lg" data-magnetic>
+            {{ section.settings.cta1_label | default: "Let's Build Together" }}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          {%- if section.settings.cta2_label != blank -%}
+            <a href="{{ section.settings.cta2_link | default: '/pages/work' }}" class="btn btn--outline btn--lg" data-magnetic>{{ section.settings.cta2_label }}</a>
+          {%- endif -%}
+        </div>
+      </div>
+
+      {%- assign has_facts = false -%}
+      {%- for block in section.blocks -%}{%- if block.type == 'fact' -%}{%- assign has_facts = true -%}{%- endif -%}{%- endfor -%}
+      {%- if has_facts -%}
+        <ul class="hero-facts">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'fact' -%}
+              <li class="hero-fact" style="--accent:var(--a-{{ block.settings.accent }})" {{ block.shopify_attributes }}>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#{{ block.settings.icon }}"/></svg>
+                {{ block.settings.text }}
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+
+    {%- assign tiles = 0 -%}
+    {%- for block in section.blocks -%}{%- if block.type == 'tile' -%}{%- assign tiles = tiles | plus: 1 -%}{%- endif -%}{%- endfor -%}
+    {%- if tiles > 0 -%}
+      <div class="hero-band reveal-stagger">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'tile' -%}
+            {%- capture tile_class -%}hero-tile{% if block.settings.asset_file == blank and block.settings.image == blank %} hero-tile--text{% endif %}{% if block.settings.image_fit == 'cover' %} hero-tile--fit-cover{% endif %}{% if block.settings.image_zoom != blank and block.settings.image_zoom != '100' %} hero-tile--zoom{% endif %}{% if block.settings.link != blank %} hero-tile--link{% endif %}{%- endcapture -%}
+            {%- capture tile_style -%}--accent:var(--a-{{ block.settings.accent }});--accent-wash:var(--a-{{ block.settings.accent }}-wash);--accent-text:var(--a-{{ block.settings.accent }}-text){% if block.settings.image_zoom != blank and block.settings.image_zoom != '100' %};--tile-zoom:{{ block.settings.image_zoom | append: '%' }}{% endif %}{%- endcapture -%}
+            {%- if block.settings.link != blank -%}
+              <a href="{{ block.settings.link }}" class="{{ tile_class | strip }}" style="{{ tile_style }}" {{ block.shopify_attributes }}>
+            {%- else -%}
+              <div class="{{ tile_class | strip }}" style="{{ tile_style }}" {{ block.shopify_attributes }}>
+            {%- endif -%}
+              {%- if block.settings.asset_file != blank -%}
+                {%- assign tile_src = block.settings.asset_file | asset_url -%}
+                {% render 'thumb-stack',
+                     src: tile_src,
+                     alt: block.settings.label,
+                     width: 700,
+                     height: 933,
+                     class: 'hero-tile-stack' %}
+              {%- elsif block.settings.image != blank -%}
+                {%- assign tile_src = block.settings.image | image_url: width: 700 -%}
+                {% render 'thumb-stack',
+                     src: tile_src,
+                     alt: block.settings.label,
+                     width: 700,
+                     height: 933,
+                     class: 'hero-tile-stack' %}
+              {%- else -%}
+                <div class="hero-tile-panel">
+                  {%- if request.design_mode -%}
+                    <span class="hero-tile-panel-tag"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-camera"/></svg>Image needed</span>
+                  {%- endif -%}
+                  <span class="hero-tile-panel-heading">{{ block.settings.label }}</span>
+                  {%- if block.settings.tagline != blank -%}
+                    <p class="hero-tile-panel-copy">{{ block.settings.tagline }}</p>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+              {%- if block.settings.label != blank -%}
+                {%- if block.settings.image != blank or block.settings.asset_file != blank -%}
+                  <span class="hero-tile-label">{{ block.settings.label }}</span>
+                {%- endif -%}
+              {%- endif -%}
+            {%- if block.settings.link != blank -%}
+              </a>
+            {%- else -%}
+              </div>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero (Labs v3)",
+  "settings": [
+    { "type": "text", "id": "line_1", "label": "Headline line 1", "default": "We turn ideas into" },
+    { "type": "text", "id": "cycle_words", "label": "Cycling words (pipe-separated)", "default": "apps.|storefronts.|brands.|revenue." },
+    { "type": "textarea", "id": "subcopy", "label": "Subcopy", "default": "socal labs is a product studio and a growth team in one. We design and ship web apps, mobile apps and storefronts, then run the marketplace, creative and paid media that make them sell." },
+    { "type": "text", "id": "cta1_label", "label": "Primary CTA", "default": "Let's Build Together" },
+    { "type": "text", "id": "cta1_link", "label": "Primary CTA link", "default": "/pages/contact" },
+    { "type": "text", "id": "cta2_label", "label": "Secondary CTA", "default": "See our work" },
+    { "type": "text", "id": "cta2_link", "label": "Secondary CTA link", "default": "/pages/work" }
+  ],
+  "blocks": [
+    {
+      "type": "fact",
+      "name": "Fact",
+      "settings": [
+        { "type": "text", "id": "text", "label": "Text", "default": "From Figma file to first sale" },
+        { "type": "text", "id": "icon", "label": "Icon id", "default": "i-zap" },
+        { "type": "select", "id": "accent", "label": "Accent", "default": "blue",
+          "options": [
+            { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+            { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+            { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" }
+          ]}
+      ]
+    },
+    {
+      "type": "tile",
+      "name": "Hero tile",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Mobile apps" },
+        { "type": "url", "id": "link", "label": "Link", "info": "e.g. /pages/mobile-apps" },
+        { "type": "textarea", "id": "tagline", "label": "Short detail (shown until an image is added)" },
+        { "type": "textarea", "id": "brief", "label": "Image brief (customizer only, replaced by tagline on live site)" },
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "asset_file", "label": "Or theme asset filename" },
+        { "type": "select", "id": "image_fit", "label": "Image fit", "default": "contain",
+          "options": [
+            { "value": "contain", "label": "Contain (show full image)" },
+            { "value": "cover", "label": "Cover (crop to fill)" }
+          ]},
+        { "type": "range", "id": "image_zoom", "label": "Image zoom %", "min": 100, "max": 200, "step": 5, "default": 100,
+          "info": "Zoom in to crop device frames. 125% works well for phone mockups." },
+        { "type": "select", "id": "accent", "label": "Accent", "default": "violet",
+          "options": [
+            { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+            { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+            { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" }
+          ]}
+      ]
+    }
+  ],
+  "presets": [{ "name": "Hero (Labs v3)" }]
+}
+{% endschema %}

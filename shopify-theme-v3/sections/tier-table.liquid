@@ -1,0 +1,75 @@
+<section class="section {% if section.settings.background == 'ink' %}section--ink{% elsif section.settings.background == 'white' %}section--white{% else %}section--paper{% endif %}"
+         {% if section.settings.anchor != blank %}id="{{ section.settings.anchor | handle }}"{% endif %}
+         {{ section.shopify_attributes }}>
+  <div class="container">
+    <div class="head-split reveal">
+      <div>
+        {%- if section.settings.kicker != blank -%}<span class="kicker">{{ section.settings.kicker }}</span>{%- endif -%}
+        <h2 class="t-h2" style="margin-top:var(--sp-5)">{{ section.settings.heading }}</h2>
+      </div>
+      {%- if section.settings.subcopy != blank -%}<p>{{ section.settings.subcopy }}</p>{%- endif -%}
+    </div>
+
+    <div class="tier-table reveal-stagger">
+      <div class="tier-table__head" aria-hidden="true">
+        <span>Tier</span>
+        <span>What's included</span>
+        <span>Best for</span>
+      </div>
+      {%- for block in section.blocks -%}
+        <div class="tier-table__row" style="--accent:var(--a-{{ block.settings.accent }});--accent-wash:var(--a-{{ block.settings.accent }}-wash);--accent-text:var(--a-{{ block.settings.accent }}-text)" {{ block.shopify_attributes }}>
+          <div class="tier-table__tier">
+            <span class="tier-table__dot" aria-hidden="true"></span>
+            <h3>{{ block.settings.title }}</h3>
+          </div>
+          <p class="tier-table__included">{{ block.settings.included }}</p>
+          <p class="tier-table__best">{{ block.settings.best_for }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.cta_label != blank -%}
+      <div class="center mt-16 reveal">
+        <a href="{{ section.settings.cta_link | default: '/pages/contact' }}" class="btn btn--primary btn--lg">
+          {{ section.settings.cta_label }}
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Tier table",
+  "max_blocks": 5,
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Engagement shapes" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Pick a starting point" },
+    { "type": "textarea", "id": "subcopy", "label": "Subcopy" },
+    { "type": "text", "id": "anchor", "label": "Anchor id", "default": "packages" },
+    { "type": "select", "id": "background", "label": "Background", "default": "paper",
+      "options": [ { "value": "paper", "label": "Paper" }, { "value": "white", "label": "White" }, { "value": "ink", "label": "Dark" } ] },
+    { "type": "text", "id": "cta_label", "label": "CTA label" },
+    { "type": "url", "id": "cta_link", "label": "CTA link" }
+  ],
+  "blocks": [
+    {
+      "type": "tier",
+      "name": "Tier",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Tier name", "default": "Build Pack" },
+        { "type": "textarea", "id": "included", "label": "What's included", "default": "Discovery, fixed scope and a first production release on staging." },
+        { "type": "text", "id": "best_for", "label": "Best for", "default": "A defined v1 with a clear launch date." },
+        { "type": "select", "id": "accent", "label": "Accent", "default": "blue",
+          "options": [
+            { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+            { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+            { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" }
+          ]}
+      ]
+    }
+  ],
+  "presets": [{ "name": "Tier table" }]
+}
+{% endschema %}

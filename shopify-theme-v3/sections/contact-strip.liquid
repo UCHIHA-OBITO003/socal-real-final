@@ -1,0 +1,40 @@
+<section class="cstrip" {{ section.shopify_attributes }}>
+  {%- if settings.contact_email != blank -%}
+    <a class="cstrip-item" href="mailto:{{ settings.contact_email }}" style="--accent-wash:var(--a-blue-wash);--accent-text:var(--a-blue-text)">
+      <span class="cstrip-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg></span>
+      <span><span class="cstrip-label">Email</span><span class="cstrip-value">{{ settings.contact_email }}</span></span>
+    </a>
+  {%- endif -%}
+  {%- if settings.contact_phone != blank -%}
+    <a class="cstrip-item" href="tel:{{ settings.contact_phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' }}" style="--accent-wash:var(--a-violet-wash);--accent-text:var(--a-violet-text)">
+      <span class="cstrip-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg></span>
+      <span><span class="cstrip-label">Phone</span><span class="cstrip-value">{{ settings.contact_phone }}</span></span>
+    </a>
+  {%- endif -%}
+  <div class="cstrip-item" style="--accent-wash:var(--a-teal-wash);--accent-text:var(--a-teal-text)">
+    <span class="cstrip-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-location"/></svg></span>
+    <span><span class="cstrip-label">Studio</span><span class="cstrip-value">{{ settings.address_city }}, {{ settings.address_region }}</span></span>
+  </div>
+  {%- if settings.booking_url != blank -%}
+    <a class="cstrip-item" href="{{ settings.booking_url }}" rel="noopener" target="_blank" style="--accent-wash:var(--a-coral-wash);--accent-text:var(--a-coral-text)">
+      <span class="cstrip-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar"/></svg></span>
+      <span><span class="cstrip-label">Book</span><span class="cstrip-value">30-min intro call</span></span>
+    </a>
+  {%- else -%}
+    <a class="cstrip-item" href="{{ section.settings.fallback_link | default: '/pages/contact' }}" style="--accent-wash:var(--a-coral-wash);--accent-text:var(--a-coral-text)">
+      <span class="cstrip-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      <span><span class="cstrip-label">Get started</span><span class="cstrip-value">Discuss Your Project</span></span>
+    </a>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Contact strip",
+  "settings": [
+    { "type": "paragraph", "content": "Email, phone, studio location and booking link are set once in Theme settings → Contact. The booking tile hides itself until a real booking URL exists." },
+    { "type": "url", "id": "fallback_link", "label": "Fallback CTA link" }
+  ],
+  "presets": [{ "name": "Contact strip" }]
+}
+{% endschema %}

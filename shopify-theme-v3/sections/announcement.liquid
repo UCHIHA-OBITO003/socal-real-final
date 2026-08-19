@@ -1,0 +1,31 @@
+<div class="ann" data-announcement style="--accent:var(--a-{{ section.settings.accent }})" {{ section.shopify_attributes }}>
+  <div class="container">
+    <span>{{ section.settings.message }}</span>
+    {%- if section.settings.link_label != blank -%}
+      <a href="{{ section.settings.link_url | default: '/pages/contact' }}">
+        {{ section.settings.link_label }}
+        <svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
+      </a>
+    {%- endif -%}
+    {%- if section.settings.dismissible -%}
+      <button type="button" class="ann-x" aria-label="Dismiss announcement" data-announcement-dismiss>&times;</button>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Announcement bar",
+  "settings": [
+    { "type": "text", "id": "message", "label": "Message", "default": "Digital product & growth studio · Los Angeles" },
+    { "type": "text", "id": "link_label", "label": "Link label", "default": "Let's Build Together" },
+    { "type": "url",  "id": "link_url",   "label": "Link" },
+    { "type": "select", "id": "accent", "label": "Link colour", "default": "sun",
+      "options": [
+        { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+        { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+        { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" } ] },
+    { "type": "checkbox", "id": "dismissible", "label": "Allow visitors to dismiss", "default": true }
+  ]
+}
+{% endschema %}

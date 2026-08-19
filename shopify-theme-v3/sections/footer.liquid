@@ -1,0 +1,78 @@
+<footer class="site-footer" {{ section.shopify_attributes }}>
+  <div class="container-wide">
+    {%- if section.settings.mega_line != blank -%}
+      <div class="footer-mega reveal">
+        <a href="{{ section.settings.mega_link | default: '/pages/contact' }}">{{ section.settings.mega_line }}</a>
+      </div>
+    {%- endif -%}
+
+    <div class="footer-grid">
+      <div>
+        <a href="{{ routes.root_url }}" class="nav-brand" style="margin-bottom:var(--sp-5)">
+          <span class="nav-mark" style="background:#fff;color:var(--c-ink)"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-lab"/></svg></span>
+          <span class="nav-name" style="color:#fff">{{ settings.brand_name | default: shop.name }}<small style="color:var(--c-on-ink-3)">{{ settings.brand_tagline }}</small></span>
+        </a>
+        <p class="footer-about">{{ section.settings.about }}</p>
+        <div class="footer-social">
+          {%- if settings.social_linkedin != blank -%}<a href="{{ settings.social_linkedin }}" aria-label="LinkedIn" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-linkedin"/></svg></a>{%- endif -%}
+          {%- if settings.social_instagram != blank -%}<a href="{{ settings.social_instagram }}" aria-label="Instagram" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-instagram"/></svg></a>{%- endif -%}
+          {%- if settings.contact_email != blank -%}<a href="mailto:{{ settings.contact_email }}" aria-label="Email us"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg></a>{%- endif -%}
+        </div>
+      </div>
+
+      {%- for block in section.blocks -%}
+        <div {{ block.shopify_attributes }}>
+          <div class="footer-col-title">{{ block.settings.title }}</div>
+          {%- assign col_menu = linklists[block.settings.menu] -%}
+          {%- if col_menu.links.size > 0 -%}
+            {%- for link in col_menu.links -%}
+              <a href="{{ link.url }}" class="footer-link">{{ link.title }}</a>
+            {%- endfor -%}
+          {%- elsif block.settings.title == 'Services' or block.settings.menu == 'footer' -%}
+            <a href="/pages/web-apps" class="footer-link">Web apps</a>
+            <a href="/pages/mobile-apps" class="footer-link">Mobile apps</a>
+            <a href="/pages/websites" class="footer-link">Websites &amp; e-commerce</a>
+            <a href="/pages/creative-studio" class="footer-link">Creative studio</a>
+            <a href="/pages/marketplace-growth" class="footer-link">Marketplace growth</a>
+            <a href="/pages/paid-media" class="footer-link">Paid media</a>
+          {%- else -%}
+            <a href="/pages/studio" class="footer-link">Studio</a>
+            <a href="/pages/work" class="footer-link">Work</a>
+            <a href="/pages/contact" class="footer-link">Contact</a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+
+      <div>
+        <div class="footer-col-title">Get in touch</div>
+        {%- if settings.contact_email != blank -%}<a href="mailto:{{ settings.contact_email }}" class="footer-link">{{ settings.contact_email }}</a>{%- endif -%}
+        {%- if settings.contact_phone != blank -%}<a href="tel:{{ settings.contact_phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' }}" class="footer-link">{{ settings.contact_phone }}</a>{%- endif -%}
+        <p class="footer-link" style="opacity:.7">{{ settings.address_city }}, {{ settings.address_region }}</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; {{ 'now' | date: '%Y' }} {{ settings.brand_name | default: shop.name }}</span>
+      <span>{{ section.settings.legal }}</span>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "max_blocks": 3,
+  "settings": [
+    { "type": "text", "id": "mega_line", "label": "Big line", "default": "Got something to build?" },
+    { "type": "url", "id": "mega_link", "label": "Big line link" },
+    { "type": "textarea", "id": "about", "label": "About text",
+      "default": "socal labs is a digital product and growth studio in Los Angeles. We design and build web apps, mobile apps and storefronts, then run the marketplace, creative and paid media behind them." },
+    { "type": "text", "id": "legal", "label": "Legal line", "default": "Privacy · Terms" }
+  ],
+  "blocks": [
+    { "type": "menu", "name": "Menu column", "settings": [
+      { "type": "text", "id": "title", "label": "Column title", "default": "Services" },
+      { "type": "link_list", "id": "menu", "label": "Menu", "default": "footer" } ] }
+  ]
+}
+{% endschema %}

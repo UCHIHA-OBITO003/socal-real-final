@@ -1,0 +1,82 @@
+{%- comment -%}
+  Build / Grow split. Keeps the two halves of the business legible without
+  ranking one above the other, the dark panel is "Build" because that's the
+  tech-led emphasis; swap the `dark` setting if that ever changes.
+{%- endcomment -%}
+
+<section class="section {% if section.settings.background == 'white' %}section--white{% else %}section--paper{% endif %}">
+  <div class="container">
+    <div class="section-head section-head--center reveal">
+      {%- if section.settings.kicker != blank -%}<span class="kicker">{{ section.settings.kicker }}</span>{%- endif -%}
+      <h2 class="t-h2">{{ section.settings.heading }}</h2>
+      {%- if section.settings.subcopy != blank -%}<p>{{ section.settings.subcopy }}</p>{%- endif -%}
+    </div>
+
+    <div class="cap-split reveal-stagger">
+      {%- for block in section.blocks -%}
+        {%- assign a = block.settings.accent -%}
+        <div class="cap {% if block.settings.dark %}cap--build{% else %}cap--grow{% endif %}"
+             style="--accent:var(--a-{{ a }});--accent-text:var(--a-{{ a }}-text);--accent-wash:var(--a-{{ a }}-wash)"
+             {{ block.shopify_attributes }}>
+          <span class="cap-label">{{ block.settings.label }}</span>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.copy }}</p>
+          <ul class="cap-list">
+            {%- assign lines = block.settings.items | newline_to_br | split: '<br />' -%}
+            {%- for l in lines -%}
+              {%- assign li = l | strip -%}
+              {%- if li != blank -%}<li>{{ li }}</li>{%- endif -%}
+            {%- endfor -%}
+          </ul>
+          {%- if block.settings.link_label != blank -%}
+            <div class="cap-foot">
+              <a href="{{ block.settings.link | default: '#' }}" class="link-arrow">
+                {{ block.settings.link_label }}
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Build / Grow split",
+  "max_blocks": 2,
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "How the studio splits" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "We build it. Then we grow it." },
+    { "type": "textarea", "id": "subcopy", "label": "Subcopy",
+      "default": "Two halves of the same team. Most clients start on one side and end up using both." },
+    { "type": "select", "id": "background", "label": "Background", "default": "paper",
+      "options": [ { "value": "paper", "label": "Paper" }, { "value": "white", "label": "White" } ] }
+  ],
+  "blocks": [
+    {
+      "type": "pillar",
+      "name": "Pillar",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Build" },
+        { "type": "text", "id": "title", "label": "Title", "default": "Product engineering" },
+        { "type": "textarea", "id": "copy", "label": "Copy",
+          "default": "Design and engineering for web apps, mobile apps and e-commerce front ends." },
+        { "type": "textarea", "id": "items", "label": "List (one per line)",
+          "default": "Web applications, React, Next.js, APIs\nMobile apps, iOS, Android, React Native\nWebsites & Shopify storefronts\nUI/UX design systems\nIntegrations, analytics and automation" },
+        { "type": "text", "id": "link_label", "label": "Link label", "default": "See what we build" },
+        { "type": "text",  "id": "link", "label": "Link", "default": "/pages/web-apps" },
+        { "type": "checkbox", "id": "dark", "label": "Dark panel", "default": false },
+        { "type": "select", "id": "accent", "label": "Accent", "default": "blue",
+          "options": [
+            { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+            { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+            { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" }
+          ]}
+      ]
+    }
+  ],
+  "presets": [{ "name": "Build / Grow split" }]
+}
+{% endschema %}

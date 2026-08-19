@@ -1,0 +1,54 @@
+{%- comment -%}
+  Brand / platform marquee. Supports text items and logo assets (from theme 1).
+{%- endcomment -%}
+
+<div class="marquee{% if section.settings.style == 'paper' %} marquee--paper{% endif %}{% if section.settings.mode == 'brands' %} marquee--brands{% endif %}"
+     style="--accent:var(--a-{{ section.settings.accent }});--marquee-dur:{{ section.settings.speed }}s"
+     data-marquee
+     {{ section.shopify_attributes }}>
+  <div class="marquee-track">
+    <div class="marquee-group">
+      {%- for block in section.blocks -%}
+        <span class="marquee-item{% if block.settings.asset_file != blank or block.settings.image != blank %} marquee-item--logo{% endif %}">
+          {%- if block.settings.asset_file != blank -%}
+            <img src="{{ block.settings.asset_file | asset_url }}" alt="{{ block.settings.text | escape }}" loading="lazy" height="28">
+          {%- elsif block.settings.image != blank -%}
+            {{ block.settings.image | image_url: height: 56 | image_tag: loading: 'lazy', alt: block.settings.text }}
+          {%- else -%}
+            {{ block.settings.text }}
+          {%- endif -%}
+        </span>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Marquee strip",
+  "settings": [
+    { "type": "select", "id": "style", "label": "Style", "default": "ink",
+      "options": [ { "value": "ink", "label": "Dark" }, { "value": "paper", "label": "Paper" } ] },
+    { "type": "select", "id": "mode", "label": "Content mode", "default": "brands",
+      "options": [
+        { "value": "text", "label": "Text capabilities" },
+        { "value": "brands", "label": "Brand / platform logos" }
+      ] },
+    { "type": "select", "id": "accent", "label": "Dot colour", "default": "coral",
+      "options": [
+        { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+        { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+        { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" }
+      ]},
+    { "type": "range", "id": "speed", "label": "Loop duration", "min": 20, "max": 80, "step": 2, "unit": "s", "default": 38 }
+  ],
+  "blocks": [
+    { "type": "item", "name": "Item", "settings": [
+      { "type": "text", "id": "text", "label": "Label / alt text", "default": "Brand" },
+      { "type": "image_picker", "id": "image", "label": "Logo image" },
+      { "type": "text", "id": "asset_file", "label": "Or theme asset filename", "info": "e.g. platform-amazon.png" }
+    ] }
+  ],
+  "presets": [{ "name": "Marquee strip" }]
+}
+{% endschema %}

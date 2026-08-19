@@ -1,0 +1,42 @@
+{
+  "name": "Catalog",
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "kicker": "Our catalog",
+        "heading": "Explore our products",
+        "subcopy": "Browse our complete collection of products and find exactly what you need for your next project.",
+        "cta_label": "Contact team",
+        "cta_link": "/pages/contact",
+        "cta2_label": "",
+        "cta2_link": "",
+        "accent": "blue",
+        "background": "paper",
+        "dark": false,
+        "want_banner": false,
+        "banner_brief": "Wide banner for the Catalog page, showcasing featured products or category highlights. 24:9, minimum 2000px."
+      }
+    },
+    "catalog": {
+      "type": "main-catalog",
+      "settings": {
+        "show_filters": true,
+        "products_per_page": 12
+      }
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "kicker": "Need help?",
+        "heading": "Can't find what you're looking for?",
+        "subcopy": "Our team is here to help you find the perfect products for your needs.",
+        "cta_label": "Contact us",
+        "cta_link": "/pages/contact",
+        "accent": "blue",
+        "background": "paper"
+      }
+    }
+  },
+  "order": ["hero", "catalog", "cta"]
+}

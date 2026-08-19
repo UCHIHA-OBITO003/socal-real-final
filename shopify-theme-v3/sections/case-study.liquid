@@ -1,0 +1,323 @@
+{%- comment -%}
+  Reusable Labs case study, hero, challenge, work modules, gallery, quotes.
+  Used by page.apphia / page.brown-cows (and future cases).
+{%- endcomment -%}
+
+{% render 'icons' %}
+
+{%- assign accent = section.settings.accent | default: 'teal' -%}
+
+<section class="case-study"
+         style="--accent:var(--a-{{ accent }});--accent-text:var(--a-{{ accent }}-text);--accent-wash:var(--a-{{ accent }}-wash)"
+         {{ section.shopify_attributes }}>
+
+  <div class="case-study__hero section--ink{% if section.settings.hero_asset != blank %} case-study__hero--media{% endif %}" id="overview">
+    {%- if section.settings.hero_asset != blank -%}
+      <div class="case-study__hero-bg" aria-hidden="true">
+        <img src="{{ section.settings.hero_asset | asset_url }}" alt="" loading="eager" width="2000" height="1200">
+      </div>
+    {%- endif -%}
+    <div class="container">
+      {%- if section.settings.kicker != blank or section.settings.logo_asset != blank -%}
+        <div class="case-study__kicker-row">
+          {%- if section.settings.logo_asset != blank -%}
+            <img class="case-study__logo" src="{{ section.settings.logo_asset | asset_url }}" alt="" width="48" height="48" loading="eager">
+          {%- endif -%}
+          {%- if section.settings.kicker != blank -%}
+            <span class="kicker kicker--on-ink">{{ section.settings.kicker }}</span>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      <h1 class="t-hero" style="color:#fff;margin-top:var(--sp-5)">{{ section.settings.heading }}</h1>
+      {%- if section.settings.lead != blank -%}
+        <p class="t-lead" style="color:var(--c-on-ink-2);max-width:40rem;margin-top:var(--sp-5)">{{ section.settings.lead }}</p>
+      {%- endif -%}
+      {%- if section.settings.tags != blank -%}
+        <div class="case-study__tags">
+          {%- assign tag_list = section.settings.tags | split: ', ' -%}
+          {%- for tag in tag_list -%}
+            <span class="case-study__tag">{{ tag | strip }}</span>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+      {%- if section.settings.cta_label != blank -%}
+        <div class="hero-actions" style="margin-top:var(--sp-8)">
+          <a href="{{ section.settings.cta_link | default: '/pages/contact' }}" class="btn btn--on-ink btn--lg">
+            {{ section.settings.cta_label }}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          <a href="/pages/work" class="btn btn--ghost-ink btn--lg">All work</a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="section section--paper" id="problem">
+    <div class="container">
+      <div class="head-split reveal">
+        <div>
+          {%- if section.settings.problem_kicker != blank -%}<span class="kicker">{{ section.settings.problem_kicker }}</span>{%- endif -%}
+          <h2 class="t-h2" style="margin-top:var(--sp-5)">{{ section.settings.problem_heading }}</h2>
+        </div>
+        <p>{{ section.settings.problem_copy }}</p>
+      </div>
+      {%- if section.settings.success_items != blank -%}
+        <div class="case-study__success reveal">
+          <h3 class="case-study__success-title">What success looked like</h3>
+          <ul class="case-study__list">
+            {%- assign items = section.settings.success_items | split: '
+' -%}
+            {%- for item in items -%}
+              {%- assign line = item | strip -%}
+              {%- if line != blank -%}
+                <li>{{ line }}</li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="section section--white" id="work-delivered">
+    <div class="container">
+      <div class="head-split reveal">
+        <div>
+          {%- if section.settings.work_kicker != blank -%}<span class="kicker">{{ section.settings.work_kicker }}</span>{%- endif -%}
+          <h2 class="t-h2" style="margin-top:var(--sp-5)">{{ section.settings.work_heading }}</h2>
+        </div>
+        {%- if section.settings.work_subcopy != blank -%}<p>{{ section.settings.work_subcopy }}</p>{%- endif -%}
+      </div>
+
+      <div class="module-grid reveal-stagger">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'module' -%}
+            {%- assign a = block.settings.accent | default: accent -%}
+            <div class="module" style="--accent:var(--a-{{ a }});--accent-text:var(--a-{{ a }}-text);--accent-wash:var(--a-{{ a }}-wash)" {{ block.shopify_attributes }}>
+              <span class="svc-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#{{ block.settings.icon }}"/></svg></span>
+              <h3>{{ block.settings.title }}</h3>
+              <p>{{ block.settings.copy }}</p>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      {%- if section.settings.snapshots != blank -%}
+        <div class="case-study__snapshots reveal">
+          {%- assign snaps = section.settings.snapshots | split: '
+' -%}
+          {%- for snap in snaps -%}
+            {%- assign sline = snap | strip -%}
+            {%- if sline != blank -%}
+              {%- assign parts = sline | split: '|' -%}
+              <span class="case-study__snap">
+                {{ parts[0] | strip }}
+                {%- if parts.size > 1 -%}<em>{{ parts[1] | strip }}</em>{%- endif -%}
+              </span>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.work_note != blank -%}
+        <p class="case-study__note reveal">{{ section.settings.work_note }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- assign has_gallery = false -%}
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'gallery' -%}{%- assign has_gallery = true -%}{%- endif -%}
+  {%- endfor -%}
+
+  {%- if has_gallery -%}
+    <div class="section section--paper" id="gallery">
+      <div class="container">
+        <div class="head-split reveal">
+          <div>
+            {%- if section.settings.gallery_kicker != blank -%}<span class="kicker">{{ section.settings.gallery_kicker }}</span>{%- endif -%}
+            <h2 class="t-h2" style="margin-top:var(--sp-5)">{{ section.settings.gallery_heading }}</h2>
+          </div>
+          {%- if section.settings.gallery_subcopy != blank -%}<p>{{ section.settings.gallery_subcopy }}</p>{%- endif -%}
+        </div>
+        <div class="case-study__gallery reveal-stagger">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'gallery' -%}
+              <figure class="case-study__fig{% if block.settings.wide %} case-study__fig--wide{% endif %}" {{ block.shopify_attributes }}>
+                {%- if block.settings.asset_file != blank -%}
+                  <img src="{{ block.settings.asset_file | asset_url }}"
+                       alt="{{ block.settings.caption | escape }}"
+                       loading="lazy" width="1200" height="800">
+                {%- elsif block.settings.image != blank -%}
+                  {{ block.settings.image | image_url: width: 1600 | image_tag:
+                       widths: '600,900,1200,1600', sizes: '(min-width: 900px) 50vw, 100vw',
+                       loading: 'lazy', alt: block.settings.caption | default: section.settings.heading }}
+                {%- endif -%}
+                {%- if block.settings.caption != blank -%}
+                  <figcaption>{{ block.settings.caption }}</figcaption>
+                {%- endif -%}
+              </figure>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- assign has_quotes = false -%}
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'quote' -%}{%- assign has_quotes = true -%}{%- endif -%}
+  {%- endfor -%}
+
+  {%- if has_quotes -%}
+    <div class="section section--white" id="reviews">
+      <div class="container">
+        <div class="head-split reveal">
+          <div>
+            {%- if section.settings.quotes_kicker != blank -%}<span class="kicker">{{ section.settings.quotes_kicker }}</span>{%- endif -%}
+            <h2 class="t-h2" style="margin-top:var(--sp-5)">{{ section.settings.quotes_heading }}</h2>
+          </div>
+          {%- if section.settings.quotes_subcopy != blank -%}<p>{{ section.settings.quotes_subcopy }}</p>{%- endif -%}
+        </div>
+
+        {%- if section.settings.quotes_snapshots != blank -%}
+          <div class="case-study__snapshots reveal">
+            {%- assign qsnaps = section.settings.quotes_snapshots | split: '
+' -%}
+            {%- for snap in qsnaps -%}
+              {%- assign sline = snap | strip -%}
+              {%- if sline != blank -%}
+                {%- assign parts = sline | split: '|' -%}
+                <span class="case-study__snap">
+                  {{ parts[0] | strip }}
+                  {%- if parts.size > 1 -%}<em>{{ parts[1] | strip }}</em>{%- endif -%}
+                </span>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+        <div class="quote-grid reveal-stagger">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'quote' -%}
+              {%- assign a = block.settings.accent | default: accent -%}
+              <figure class="quote" style="--accent:var(--a-{{ a }});--accent-text:var(--a-{{ a }}-text);--accent-wash:var(--a-{{ a }}-wash)" {{ block.shopify_attributes }}>
+                <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+                {%- if block.settings.title != blank -%}<p class="case-study__quote-title">{{ block.settings.title }}</p>{%- endif -%}
+                <blockquote>{{ block.settings.quote }}</blockquote>
+                <figcaption class="quote-by">
+                  <span class="quote-avatar quote-avatar--initial" aria-hidden="true">{{ block.settings.name | slice: 0 }}</span>
+                  <span>
+                    <b>{{ block.settings.name }}</b>
+                    <span>{{ block.settings.meta }}</span>
+                  </span>
+                </figcaption>
+              </figure>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+        {%- if section.settings.quotes_note != blank -%}
+          <p class="case-study__note reveal">{{ section.settings.quotes_note }}</p>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Case study",
+  "settings": [
+    { "type": "header", "content": "Hero" },
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Case study · Portfolio proof" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Case study" },
+    { "type": "textarea", "id": "lead", "label": "Lead" },
+    { "type": "text", "id": "tags", "label": "Tags (comma-separated)", "default": "Shopify, Brand, Growth" },
+    { "type": "text", "id": "cta_label", "label": "CTA label", "default": "Start a similar project" },
+    { "type": "text", "id": "cta_link", "label": "CTA link", "default": "/pages/contact" },
+    { "type": "text", "id": "hero_asset", "label": "Hero background asset", "info": "Theme asset filename, e.g. case-apphia.jpg" },
+    { "type": "text", "id": "logo_asset", "label": "Logo asset", "info": "Small mark beside kicker, e.g. logo-apphia.png" },
+    { "type": "select", "id": "accent", "label": "Accent", "default": "teal",
+      "options": [
+        { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+        { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+        { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" } ] },
+
+    { "type": "header", "content": "Challenge" },
+    { "type": "text", "id": "problem_kicker", "label": "Kicker", "default": "The challenge" },
+    { "type": "text", "id": "problem_heading", "label": "Heading", "default": "The problem we solved" },
+    { "type": "textarea", "id": "problem_copy", "label": "Copy" },
+    { "type": "textarea", "id": "success_items", "label": "Success items (one per line)" },
+
+    { "type": "header", "content": "Work delivered" },
+    { "type": "text", "id": "work_kicker", "label": "Kicker", "default": "Work delivered" },
+    { "type": "text", "id": "work_heading", "label": "Heading", "default": "What we shipped" },
+    { "type": "textarea", "id": "work_subcopy", "label": "Subcopy" },
+    { "type": "textarea", "id": "snapshots", "label": "Snapshots (Label|Meta, one per line)" },
+    { "type": "textarea", "id": "work_note", "label": "Footnote" },
+
+    { "type": "header", "content": "Gallery" },
+    { "type": "text", "id": "gallery_kicker", "label": "Kicker", "default": "Visuals" },
+    { "type": "text", "id": "gallery_heading", "label": "Heading", "default": "Work in market" },
+    { "type": "textarea", "id": "gallery_subcopy", "label": "Subcopy" },
+
+    { "type": "header", "content": "Quotes" },
+    { "type": "text", "id": "quotes_kicker", "label": "Kicker", "default": "Feedback" },
+    { "type": "text", "id": "quotes_heading", "label": "Heading", "default": "What people say" },
+    { "type": "textarea", "id": "quotes_subcopy", "label": "Subcopy" },
+    { "type": "textarea", "id": "quotes_snapshots", "label": "Snapshots (Label|Meta, one per line)" },
+    { "type": "textarea", "id": "quotes_note", "label": "Footnote" }
+  ],
+  "blocks": [
+    {
+      "type": "module",
+      "name": "Work module",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Module" },
+        { "type": "textarea", "id": "copy", "label": "Copy" },
+        { "type": "select", "id": "icon", "label": "Icon", "default": "i-box",
+          "options": [
+            { "value": "i-cart", "label": "E-commerce" }, { "value": "i-code", "label": "Code" },
+            { "value": "i-pen", "label": "Design" }, { "value": "i-cube", "label": "3D" },
+            { "value": "i-megaphone", "label": "Ads" }, { "value": "i-chart", "label": "Analytics" },
+            { "value": "i-camera", "label": "Creative" }, { "value": "i-globe", "label": "Marketplaces" },
+            { "value": "i-handshake", "label": "Partnership" }, { "value": "i-mail", "label": "Contact" },
+            { "value": "i-users", "label": "Users" }, { "value": "i-box", "label": "Product" },
+            { "value": "i-zap", "label": "Automation" }, { "value": "i-mobile", "label": "Mobile" } ] },
+        { "type": "select", "id": "accent", "label": "Accent", "default": "teal",
+          "options": [
+            { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+            { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+            { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" } ] }
+      ]
+    },
+    {
+      "type": "gallery",
+      "name": "Gallery image",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image (theme editor)" },
+        { "type": "text", "id": "asset_file", "label": "Or theme asset filename", "info": "e.g. apphia-site-path.png" },
+        { "type": "text", "id": "caption", "label": "Caption" },
+        { "type": "checkbox", "id": "wide", "label": "Full width", "default": false }
+      ]
+    },
+    {
+      "type": "quote",
+      "name": "Quote",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "textarea", "id": "quote", "label": "Quote", "default": "Quote text." },
+        { "type": "text", "id": "name", "label": "Name", "default": "Customer" },
+        { "type": "text", "id": "meta", "label": "Meta", "default": "Verified purchase" },
+        { "type": "select", "id": "accent", "label": "Accent", "default": "teal",
+          "options": [
+            { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+            { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+            { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" } ] }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Case study" }]
+}
+{% endschema %}

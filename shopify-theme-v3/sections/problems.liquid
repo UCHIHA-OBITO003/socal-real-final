@@ -1,0 +1,44 @@
+<section class="section {% if section.settings.background == 'ink' %}section--ink{% elsif section.settings.background == 'white' %}section--white{% else %}section--paper{% endif %}">
+  <div class="container">
+    <div class="head-split reveal">
+      <div>
+        {%- if section.settings.kicker != blank -%}<span class="kicker">{{ section.settings.kicker }}</span>{%- endif -%}
+        <h2 class="t-h2" style="margin-top:var(--sp-5)">{{ section.settings.heading }}</h2>
+      </div>
+      <p>{{ section.settings.subcopy }}</p>
+    </div>
+    <div class="pain-grid reveal-stagger">
+      {%- for block in section.blocks -%}
+        <div class="pain-card" style="--accent:var(--a-{{ block.settings.accent }})" {{ block.shopify_attributes }}>
+          <p class="pain-quote">&ldquo;{{ block.settings.pain }}&rdquo;</p>
+          <p class="pain-answer">{{ block.settings.answer }}</p>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Problems we fix",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Before you call" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "The reasons brands call us" },
+    { "type": "textarea", "id": "subcopy", "label": "Subcopy", "default": "Six sentences we hear on almost every first call, and what we do about each one." },
+    { "type": "select", "id": "background", "label": "Background", "default": "white",
+      "options": [ { "value": "paper", "label": "Paper" }, { "value": "white", "label": "White" }, { "value": "ink", "label": "Dark" } ] }
+  ],
+  "blocks": [
+    { "type": "pain", "name": "Pain point", "settings": [
+      { "type": "text", "id": "pain", "label": "What the client says", "default": "My agency ships slowly." },
+      { "type": "textarea", "id": "answer", "label": "What we do about it", "default": "Fixed scope, two-week increments, staging you can look at whenever you like." },
+      { "type": "select", "id": "accent", "label": "Accent", "default": "coral",
+        "options": [
+          { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+          { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+          { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" } ] } ]}
+  ],
+  "presets": [{ "name": "Problems we fix" }]
+}
+{% endschema %}

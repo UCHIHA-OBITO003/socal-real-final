@@ -1,0 +1,136 @@
+{%- comment -%}
+  Shared hero for every inner page. One section, all pages.
+{%- endcomment -%}
+<section class="page-hero {% if section.settings.dark %}page-hero--ink{% elsif section.settings.background == 'white' %}section--white{% else %}section--paper{% endif %}"
+         style="--accent:var(--a-{{ section.settings.accent }});--accent-text:var(--a-{{ section.settings.accent }}-text);--accent-wash:var(--a-{{ section.settings.accent }}-wash)">
+  <div class="container-wide">
+    <div class="page-hero-grid reveal">
+      <div>
+        {%- if section.settings.kicker != blank -%}<span class="kicker">{{ section.settings.kicker }}</span>{%- endif -%}
+        <h1 class="t-hero">{{ section.settings.heading }}</h1>
+      </div>
+      <div>
+        <p class="t-lead">{{ section.settings.subcopy }}</p>
+        <div class="hero-actions">
+          <a href="{{ section.settings.cta_link | default: '/pages/contact' }}"
+             class="btn {% if section.settings.dark %}btn--on-ink{% else %}btn--primary{% endif %} btn--lg">
+            {{ section.settings.cta_label }}
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          {%- if section.settings.cta2_label != blank -%}
+            <a href="{{ section.settings.cta2_link }}"
+               class="btn {% if section.settings.dark %}btn--ghost-ink{% else %}btn--outline{% endif %} btn--lg">{{ section.settings.cta2_label }}</a>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+
+    {%- if section.settings.banner_visual == 'amazon_growth' -%}
+      <div class="page-hero-banner page-hero-banner--amazon reveal">
+        {% render 'amazon-growth-visual' %}
+      </div>
+    {%- elsif section.settings.asset_file != blank -%}
+      {%- if section.settings.banner_url != blank -%}
+        <div class="page-hero-banner page-hero-banner--browser reveal">
+          <div class="browser-frame">
+            <div class="browser-frame__chrome">
+              <span class="browser-frame__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="browser-frame__url">{{ section.settings.banner_url }}</span>
+            </div>
+            <div class="browser-frame__screen browser-frame__screen--fit thumb-stack">
+              {%- assign hero_src = section.settings.asset_file | asset_url -%}
+              <span class="thumb-stack__blur" aria-hidden="true"><img src="{{ hero_src }}" alt="" loading="eager" width="2000" height="1250"></span>
+              <span class="thumb-stack__veil" aria-hidden="true"></span>
+              <span class="thumb-stack__sharp page-hero-browser__sharp">
+                <img src="{{ hero_src }}"
+                     alt="{{ section.settings.image_alt | default: section.settings.heading | escape }}"
+                     loading="eager"
+                     width="2000" height="1250">
+              </span>
+            </div>
+          </div>
+        </div>
+      {%- else -%}
+        <div class="page-hero-banner reveal">
+          <img src="{{ section.settings.asset_file | asset_url }}"
+               alt="{{ section.settings.image_alt | default: section.settings.heading | escape }}"
+               loading="eager"
+               width="2000" height="1125">
+        </div>
+      {%- endif -%}
+    {%- elsif section.settings.image != blank -%}
+      {%- if section.settings.banner_url != blank -%}
+        <div class="page-hero-banner page-hero-banner--browser reveal">
+          <div class="browser-frame">
+            <div class="browser-frame__chrome">
+              <span class="browser-frame__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="browser-frame__url">{{ section.settings.banner_url }}</span>
+            </div>
+            <div class="browser-frame__screen browser-frame__screen--fit thumb-stack">
+              {%- assign hero_src = section.settings.image | image_url: width: 2000 -%}
+              <span class="thumb-stack__blur" aria-hidden="true"><img src="{{ hero_src }}" alt="" loading="eager" width="2000" height="1250"></span>
+              <span class="thumb-stack__veil" aria-hidden="true"></span>
+              <span class="thumb-stack__sharp page-hero-browser__sharp">
+                <img src="{{ hero_src }}"
+                     alt="{{ section.settings.image_alt | default: section.settings.heading | escape }}"
+                     loading="eager"
+                     width="2000" height="1250">
+              </span>
+            </div>
+          </div>
+        </div>
+      {%- else -%}
+        <div class="page-hero-banner reveal">
+          {{ section.settings.image | image_url: width: 2000 | image_tag:
+               widths: '800,1200,1600,2000', sizes: '100vw', loading: 'eager',
+               alt: section.settings.image_alt | default: section.settings.heading }}
+        </div>
+      {%- endif -%}
+    {%- elsif section.settings.want_banner -%}
+      <div class="page-hero-banner page-hero-banner--brief reveal">
+        {% render 'image-brief',
+             label: section.settings.heading,
+             brief: section.settings.banner_brief,
+             ratio: '24:9', min_w: 2000,
+             tone: section.settings.dark %}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Page hero",
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Web & mobile applications" },
+    { "type": "textarea", "id": "subcopy", "label": "Subcopy" },
+    { "type": "text", "id": "cta_label", "label": "Primary CTA", "default": "Discuss Your Project" },
+    { "type": "text", "id": "cta_link", "label": "Primary CTA link", "default": "/pages/contact" },
+    { "type": "text", "id": "cta2_label", "label": "Secondary CTA" },
+    { "type": "text", "id": "cta2_link", "label": "Secondary CTA link" },
+    { "type": "header", "content": "Look" },
+    { "type": "select", "id": "banner_visual", "label": "Banner visual", "default": "image",
+      "options": [
+        { "value": "image", "label": "Image / asset" },
+        { "value": "amazon_growth", "label": "Amazon growth dashboard (built-in)" }
+      ]},
+    { "type": "checkbox", "id": "want_banner", "label": "Show a banner image slot", "default": false },
+    { "type": "image_picker", "id": "image", "label": "Banner image", "info": "Wide 24:9 project shot. Optional." },
+    { "type": "text", "id": "asset_file", "label": "Or theme asset filename", "info": "e.g. gdash-graphic.png, used when Image is empty" },
+    { "type": "text", "id": "banner_url", "label": "Browser frame URL", "info": "Optional. Shows the banner inside a browser chrome frame, e.g. socalbiomed.com" },
+    { "type": "textarea", "id": "banner_brief", "label": "Banner image brief",
+      "default": "Wide hero shot for this page, real work, shot or rendered. Landscape, nothing important in the outer 10%." },
+    { "type": "text", "id": "image_alt", "label": "Image alt text" },
+    { "type": "checkbox", "id": "dark", "label": "Dark background", "default": false },
+    { "type": "select", "id": "background", "label": "Light background", "default": "paper",
+      "options": [ { "value": "paper", "label": "Paper" }, { "value": "white", "label": "White" } ] },
+    { "type": "select", "id": "accent", "label": "Accent", "default": "blue",
+      "options": [
+        { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+        { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+        { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" } ] }
+  ],
+  "presets": [{ "name": "Page hero" }]
+}
+{% endschema %}

@@ -1,0 +1,143 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "socal labs \u2014 Theme 3",
+    "theme_version": "3.0.0",
+    "theme_author": "socal labs",
+    "theme_documentation_url": "https://socaldevices.com",
+    "theme_support_url": "https://socaldevices.com"
+  },
+  {
+    "name": "Brand",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo",
+        "info": "SVG or transparent PNG, about 400px wide. Leave empty to use the built-in wordmark."
+      },
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon",
+        "info": "Square, at least 96\u00d796."
+      },
+      {
+        "type": "image_picker",
+        "id": "share_image",
+        "label": "Social share image",
+        "info": "1200\u00d7630. Used when the site is shared on LinkedIn, Slack, WhatsApp."
+      },
+      {
+        "type": "text",
+        "id": "brand_name",
+        "label": "Brand name",
+        "default": "socal labs"
+      },
+      {
+        "type": "text",
+        "id": "brand_tagline",
+        "label": "Tagline",
+        "default": "Digital product & growth studio"
+      },
+      {
+        "type": "textarea",
+        "id": "brand_description",
+        "label": "One-line description",
+        "default": "Digital product and growth studio in Los Angeles. We design and build web apps, mobile apps and storefronts \u2014 then run the marketplace, creative and paid media behind them."
+      }
+    ]
+  },
+  {
+    "name": "Contact",
+    "settings": [
+      {
+        "type": "text",
+        "id": "contact_email",
+        "label": "Email",
+        "default": "laks@socaldevices.com"
+      },
+      {
+        "type": "text",
+        "id": "contact_phone",
+        "label": "Phone",
+        "default": "(213) 204-1296"
+      },
+      {
+        "type": "text",
+        "id": "address_city",
+        "label": "City",
+        "default": "Los Angeles"
+      },
+      {
+        "type": "text",
+        "id": "address_region",
+        "label": "State",
+        "default": "CA"
+      },
+      {
+        "type": "url",
+        "id": "booking_url",
+        "label": "Booking link (Calendly / Cal.com)",
+        "info": "Leave empty until you have a real booking link. Booking buttons hide themselves rather than linking nowhere."
+      }
+    ]
+  },
+  {
+    "name": "Social",
+    "settings": [
+      {
+        "type": "url",
+        "id": "social_linkedin",
+        "label": "LinkedIn"
+      },
+      {
+        "type": "url",
+        "id": "social_instagram",
+        "label": "Instagram"
+      }
+    ]
+  },
+  {
+    "name": "Analytics",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Paste an ID to switch a tag on. Empty fields load nothing at all."
+      },
+      {
+        "type": "text",
+        "id": "ga4_id",
+        "label": "GA4 measurement ID",
+        "info": "G-XXXXXXXXXX"
+      },
+      {
+        "type": "text",
+        "id": "gtm_id",
+        "label": "Google Tag Manager ID",
+        "info": "GTM-XXXXXXX"
+      },
+      {
+        "type": "text",
+        "id": "google_ads_id",
+        "label": "Google Ads conversion ID",
+        "info": "AW-XXXXXXXXX"
+      },
+      {
+        "type": "text",
+        "id": "meta_pixel_id",
+        "label": "Meta Pixel ID"
+      },
+      {
+        "type": "text",
+        "id": "linkedin_partner_id",
+        "label": "LinkedIn Insight partner ID"
+      },
+      {
+        "type": "text",
+        "id": "tiktok_pixel_id",
+        "label": "TikTok Pixel ID"
+      }
+    ]
+  }
+]

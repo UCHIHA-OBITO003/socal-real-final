@@ -1,0 +1,156 @@
+{
+  "name": "Web Applications",
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "cta_label": "Build My App",
+        "cta_link": "/pages/contact",
+        "accent": "blue",
+        "background": "paper",
+        "dark": true,
+        "kicker": "Web applications",
+        "heading": "Software your team will use.",
+        "subcopy": "Dashboards, portals, internal tools and SaaS products, designed properly and engineered to be maintained, not just demoed.",
+        "cta2_label": "See what we build",
+        "cta2_link": "#what-we-build",
+        "want_banner": true,
+        "asset_file": "web-apps-hero.png",
+        "banner_url": "socalbiomed.com",
+        "image_alt": "socal BioMed Waverly CL4M mini centrifuge product page"
+      }
+    },
+    "problems": {
+      "type": "problems",
+      "settings": {
+        "kicker": "Where projects stall",
+        "heading": "Why most internal tools fail",
+        "subcopy": "None of these are solved by another spreadsheet.",
+        "background": "white"
+      },
+      "blocks": {
+        "b1": {
+          "type": "pain",
+          "settings": {
+            "accent": "blue",
+            "pain": "We shipped a demo. Nobody uses it in production.",
+            "answer": "Discovery starts with the job to be done and the metric, not a feature list. Staging you can open every week."
+          }
+        },
+        "b2": {
+          "type": "pain",
+          "settings": {
+            "accent": "violet",
+            "pain": "Every change needs the original freelancer.",
+            "answer": "Tests, docs and a handover. You own the repo. We can leave cleanly."
+          }
+        },
+        "b3": {
+          "type": "pain",
+          "settings": {
+            "accent": "coral",
+            "pain": "Integrations are duct tape, they break every month.",
+            "answer": "APIs designed, versioned and monitored by the same team that ships the UI."
+          }
+        },
+        "b4": {
+          "type": "pain",
+          "settings": {
+            "accent": "teal",
+            "pain": "The numbers in the meeting don't match the database.",
+            "answer": "Reporting and pipelines built with the product, not bolted on after launch."
+          }
+        }
+      },
+      "block_order": ["b1", "b2", "b3", "b4"]
+    },
+    "modules": {
+      "type": "modules",
+      "settings": {
+        "kicker": "What we build",
+        "heading": "From a single tool to a whole platform",
+        "subcopy": "Stack we ship most often: React, Next.js, Node, PostgreSQL, and well-documented APIs.",
+        "background": "paper",
+        "align": "split",
+        "anchor": "what-we-build"
+      },
+      "blocks": {
+        "m1": { "type": "module", "settings": { "title": "Internal tools & admin", "copy": "Operations dashboards, back offices and approval flows that replace a spreadsheet nobody trusts.", "icon": "i-gear", "accent": "blue" } },
+        "m2": { "type": "module", "settings": { "title": "Customer portals", "copy": "Account areas, billing views and self-service that takes work off your support team.", "icon": "i-users", "accent": "violet" } },
+        "m3": { "type": "module", "settings": { "title": "SaaS products", "copy": "Multi-tenant products with auth, billing, roles and the boring infrastructure that makes them sellable.", "icon": "i-box", "accent": "teal" } },
+        "m4": { "type": "module", "settings": { "title": "APIs & integrations", "copy": "The layer between your systems, designed, documented and versioned rather than bolted on.", "icon": "i-code", "accent": "coral" } },
+        "m5": { "type": "module", "settings": { "title": "Data & reporting", "copy": "Pipelines and dashboards so the numbers in the meeting reconcile with the numbers in the database.", "icon": "i-chart", "accent": "amber" } },
+        "m6": { "type": "module", "settings": { "title": "Rescue & rebuild", "copy": "Inheriting something half-finished. We audit first and tell you honestly whether to fix or restart.", "icon": "i-shield", "accent": "sun" } }
+      },
+      "block_order": ["m1", "m2", "m3", "m4", "m5", "m6"]
+    },
+    "signature": {
+      "type": "stack-diagram",
+      "settings": {
+        "kicker": "Architecture",
+        "heading": "Where this usually starts",
+        "subcopy": "From a single tool to a whole platform — each layer built to be maintained.",
+        "background": "white",
+        "anchor": "use-cases"
+      },
+      "blocks": {
+        "l1": { "type": "layer", "settings": { "title": "Frontend", "tags": "React|Next.js|TypeScript", "caption": "Dashboards, portals and customer-facing apps built for daily use.", "accent": "blue" } },
+        "l2": { "type": "layer", "settings": { "title": "API layer", "tags": "Node|REST|GraphQL", "caption": "Auth, billing, integrations — designed and versioned, not bolted on.", "accent": "violet" } },
+        "l3": { "type": "layer", "settings": { "title": "Data", "tags": "PostgreSQL|Redis|ETL", "caption": "Pipelines and reporting so meeting numbers match the database.", "accent": "teal" } },
+        "l4": { "type": "layer", "settings": { "title": "Infrastructure", "tags": "AWS|Vercel|CI/CD", "caption": "Deploy, monitor and hand over — or stay on retainer.", "accent": "coral" } }
+      },
+      "block_order": ["l1", "l2", "l3", "l4"]
+    },
+    "packages": {
+      "type": "tier-table",
+      "settings": {
+        "kicker": "Engagement shapes",
+        "heading": "Build · Launch · Retain",
+        "subcopy": "Scope agreed in discovery. Exact deliverables written before code starts.",
+        "background": "paper",
+        "anchor": "packages",
+        "cta_label": "Discuss Your Project",
+        "cta_link": "/pages/contact"
+      },
+      "blocks": {
+        "pk1": { "type": "tier", "settings": { "title": "Build Pack", "included": "Discovery, fixed scope, design system and a first production release on staging you can open.", "best_for": "A defined v1 with a clear launch date.", "accent": "blue" } },
+        "pk2": { "type": "tier", "settings": { "title": "Launch Pack", "included": "Hardening, analytics, docs and go-live, plus a two-week hypercare window.", "best_for": "Teams ready to ship to production.", "accent": "violet" } },
+        "pk3": { "type": "tier", "settings": { "title": "Retain", "included": "Monthly product increments, monitoring and a backlog you can see.", "best_for": "Products that need ongoing development.", "accent": "teal" } }
+      },
+      "block_order": ["pk1", "pk2", "pk3"]
+    },
+    "process": {
+      "type": "process",
+      "settings": {
+        "kicker": "Build process",
+        "heading": "From brief to production",
+        "subcopy": "Fixed scope, fixed sequence, staging you can open whenever you like.",
+        "background": "white",
+        "step_ms": 180,
+        "anchor": ""
+      },
+      "blocks": {
+        "p1": { "type": "step", "settings": { "title": "Discovery", "copy": "Users, goals, constraints and the metric this has to move.", "accent": "blue", "icon": "i-search" } },
+        "p2": { "type": "step", "settings": { "title": "Definition", "copy": "Flows, scope and a fixed number, before design starts.", "accent": "violet", "icon": "i-target" } },
+        "p3": { "type": "step", "settings": { "title": "Design", "copy": "A system and a clickable prototype, reviewed before build.", "accent": "teal", "icon": "i-pen" } },
+        "p4": { "type": "step", "settings": { "title": "Build", "copy": "Two-week increments on staging, with tests as we go.", "accent": "coral", "icon": "i-code" } },
+        "p5": { "type": "step", "settings": { "title": "Hardening", "copy": "Performance, accessibility, security review and QA.", "accent": "amber", "icon": "i-check" } },
+        "p6": { "type": "step", "settings": { "title": "Launch & support", "copy": "Deploy, monitor, document, hand over or stay on retainer.", "accent": "sun", "icon": "i-rocket" } }
+      },
+      "block_order": ["p1", "p2", "p3", "p4", "p5", "p6"]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "kicker": "Next step",
+        "heading": "Got a system that needs building?",
+        "subcopy": "Send us the problem, even if the spec doesn't exist yet.",
+        "cta_label": "Build My App",
+        "cta_link": "/pages/contact",
+        "accent": "blue",
+        "background": "paper"
+      }
+    }
+  },
+  "order": ["hero", "problems", "signature", "modules", "packages", "process", "cta"]
+}

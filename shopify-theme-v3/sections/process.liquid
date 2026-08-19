@@ -1,0 +1,112 @@
+{%- comment -%}
+  Process, animated flow.
+
+  A connected pipeline: nodes joined by a track that draws itself once, plus a
+  pulse that travels the line. Activation is IntersectionObserver + CSS
+  transition-delay, NOT scroll-linked position writes, so it can't thrash
+  layout or fight the Shopify theme editor.
+
+  Horizontal on desktop, vertical on mobile, and fully static under
+  prefers-reduced-motion (every node renders in its active state immediately).
+{%- endcomment -%}
+
+{%- liquid
+  assign bg = section.settings.background
+  assign count = section.blocks.size
+-%}
+
+<section class="section {% if bg == 'ink' %}section--ink{% elsif bg == 'white' %}section--white{% else %}section--paper{% endif %}"
+         {% if section.settings.anchor != blank %}id="{{ section.settings.anchor | handle }}"{% endif %}>
+  <div class="container">
+    <div class="head-split reveal">
+      <div>
+        {%- if section.settings.kicker != blank -%}<span class="kicker">{{ section.settings.kicker }}</span>{%- endif -%}
+        <h2 class="t-h2" style="margin-top:var(--sp-5)">{{ section.settings.heading }}</h2>
+      </div>
+      <p>{{ section.settings.subcopy }}</p>
+    </div>
+
+    <ol class="flow"
+        style="--flow-count:{{ count }};--flow-step:{{ section.settings.step_ms }}ms"
+        data-flow>
+      <span class="flow-track" aria-hidden="true">
+        <span class="flow-track-fill"></span>
+        <span class="flow-pulse"></span>
+      </span>
+
+      {%- for block in section.blocks -%}
+        <li class="flow-node"
+            style="--accent:var(--a-{{ block.settings.accent }});--accent-text:var(--a-{{ block.settings.accent }}-text);--accent-wash:var(--a-{{ block.settings.accent }}-wash);--i:{{ forloop.index0 }}"
+            {{ block.shopify_attributes }}>
+          <span class="flow-dot" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><use href="#{{ block.settings.icon }}"/></svg>
+          </span>
+          <span class="flow-card">
+            <span class="flow-num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+            <h3 class="t-h4">{{ block.settings.title }}</h3>
+            <p>{{ block.settings.copy }}</p>
+            {%- if block.settings.meta != blank -%}
+              <span class="flow-meta">{{ block.settings.meta }}</span>
+            {%- endif -%}
+          </span>
+        </li>
+      {%- endfor -%}
+    </ol>
+
+    {%- if section.settings.cta_label != blank -%}
+      <div class="center mt-16 reveal">
+        <a href="{{ section.settings.cta_link | default: '/pages/contact' }}"
+           class="btn {% if bg == 'ink' %}btn--on-ink{% else %}btn--primary{% endif %} btn--lg">
+          {{ section.settings.cta_label }}
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Process flow",
+  "max_blocks": 8,
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "How we work" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Six steps, same every time" },
+    { "type": "textarea", "id": "subcopy", "label": "Subcopy",
+      "default": "Same six steps on every engagement, build or growth. You always know which one you're in and what comes next." },
+    { "type": "text", "id": "anchor", "label": "Anchor id" },
+    { "type": "range", "id": "step_ms", "label": "Delay between steps", "min": 80, "max": 400, "step": 20, "unit": "ms", "default": 180,
+      "info": "How fast the flow lights up. Ignored when the visitor has reduced motion enabled." },
+    { "type": "select", "id": "background", "label": "Background", "default": "white",
+      "options": [ { "value": "paper", "label": "Paper" }, { "value": "white", "label": "White" }, { "value": "ink", "label": "Dark" } ] },
+    { "type": "text", "id": "cta_label", "label": "CTA label" },
+    { "type": "url",  "id": "cta_link",  "label": "CTA link" }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Discovery" },
+        { "type": "textarea", "id": "copy", "label": "Copy", "default": "Goals, users, constraints and the one number this project has to move." },
+        { "type": "text", "id": "meta", "label": "Duration / note", "info": "Optional. Shows as a small pill, e.g. \"1,2 weeks\"." },
+        { "type": "select", "id": "icon", "label": "Icon", "default": "i-search",
+          "options": [
+            { "value": "i-search", "label": "Discovery" }, { "value": "i-target", "label": "Definition" },
+            { "value": "i-pen", "label": "Design" }, { "value": "i-code", "label": "Build" },
+            { "value": "i-check", "label": "QA" }, { "value": "i-rocket", "label": "Launch" },
+            { "value": "i-chart", "label": "Measure" }, { "value": "i-trend", "label": "Grow" },
+            { "value": "i-gear", "label": "Operate" }, { "value": "i-users", "label": "Handover" }
+          ]},
+        { "type": "select", "id": "accent", "label": "Accent", "default": "blue",
+          "options": [
+            { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+            { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+            { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" }
+          ]}
+      ]
+    }
+  ],
+  "presets": [{ "name": "Process flow" }]
+}
+{% endschema %}

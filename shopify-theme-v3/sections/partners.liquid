@@ -1,0 +1,39 @@
+{%- comment -%}
+  Trusted-by partners row (Theme 3). Text marks, not logo pills.
+{%- endcomment -%}
+
+<section class="partners section--paper2" {{ section.shopify_attributes }}>
+  <div class="container">
+    {%- if section.settings.caption != blank -%}
+      <p class="partners-caption reveal">{{ section.settings.caption }}</p>
+    {%- endif -%}
+    <div class="partners-row reveal-stagger">
+      {%- for block in section.blocks -%}
+        <div class="partner" {{ block.shopify_attributes }}>
+          <span class="partner-mark">{{ block.settings.name }}</span>
+          {%- if block.settings.sub != blank -%}<span class="partner-sub">{{ block.settings.sub }}</span>{%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Partners",
+  "settings": [
+    { "type": "text", "id": "caption", "label": "Caption", "default": "Trusted by product brands." }
+  ],
+  "blocks": [
+    {
+      "type": "partner",
+      "name": "Partner",
+      "settings": [
+        { "type": "text", "id": "name", "label": "Name", "default": "HITORK" },
+        { "type": "text", "id": "sub", "label": "Subtitle", "default": "Hand tools" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Partners" }]
+}
+{% endschema %}

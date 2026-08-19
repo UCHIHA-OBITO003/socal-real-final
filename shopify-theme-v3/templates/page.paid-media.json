@@ -1,0 +1,126 @@
+{
+  "name": "Paid Media & Social",
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "cta_label": "Book a Strategy Call",
+        "cta_link": "/pages/contact",
+        "accent": "sun",
+        "background": "paper",
+        "dark": false,
+        "kicker": "Paid media & social",
+        "heading": "Campaigns judged on profit, not impressions.",
+        "subcopy": "Google, Meta and TikTok, with creative made next door and analytics that reconcile with your accounts.",
+        "cta2_label": "What we run",
+        "cta2_link": "#what-we-run",
+        "want_banner": true,
+        "asset_file": "gdash-social.png",
+        "image_alt": "Paid media and social campaign creative"
+      }
+    },
+    "problems": {
+      "type": "problems",
+      "settings": {
+        "kicker": "When spend goes quiet",
+        "heading": "Why paid spend goes quiet",
+        "subcopy": "What we untangle on most paid media audits.",
+        "background": "white"
+      },
+      "blocks": {
+        "b1": { "type": "pain", "settings": { "accent": "sun", "pain": "We're spending and can't tell what's working.", "answer": "Structure and reporting tied to contribution profit, not vanity ROAS screenshots." } },
+        "b2": { "type": "pain", "settings": { "accent": "coral", "pain": "Creative is stuck in a vendor queue.", "answer": "Test-ready sets produced in-house next to the media team, weekly, not quarterly." } },
+        "b3": { "type": "pain", "settings": { "accent": "blue", "pain": "Channels don't talk to each other.", "answer": "Google, Meta and TikTok planned as one funnel with shared learning and landing pages." } },
+        "b4": { "type": "pain", "settings": { "accent": "teal", "pain": "Traffic lands on a page that wasn't built for the offer.", "answer": "Landing pages and CRO owned by the same team buying the traffic." } }
+      },
+      "block_order": ["b1", "b2", "b3", "b4"]
+    },
+    "signature": {
+      "type": "channel-mix",
+      "settings": {
+        "kicker": "Channel mix",
+        "heading": "How spend is typically split",
+        "subcopy": "Google, Meta and TikTok planned as one funnel — not three separate retainers.",
+        "background": "white",
+        "anchor": "channel-mix"
+      },
+      "blocks": {
+        "c1": { "type": "channel", "settings": { "name": "Google Ads", "pct": 40, "copy": "Search, Shopping and Performance Max structured by contribution profit.", "accent": "sun" } },
+        "c2": { "type": "channel", "settings": { "name": "Meta", "pct": 35, "copy": "Prospecting and retention with creative tested in proper sets.", "accent": "blue" } },
+        "c3": { "type": "channel", "settings": { "name": "TikTok", "pct": 25, "copy": "Native-feeling creative built for the platform, not resized from Meta.", "accent": "violet" } }
+      },
+      "block_order": ["c1", "c2", "c3"]
+    },
+    "modules": {
+      "type": "modules",
+      "settings": {
+        "kicker": "Channels & work",
+        "heading": "What we run",
+        "subcopy": "Paid search and social plus influencer and landing-page work.",
+        "background": "paper",
+        "align": "split",
+        "anchor": "what-we-run"
+      },
+      "blocks": {
+        "m1": { "type": "module", "settings": { "title": "Google Ads", "copy": "Search, Shopping and Performance Max, structured so you can see what each part is actually buying.", "icon": "i-megaphone", "accent": "sun" } },
+        "m2": { "type": "module", "settings": { "title": "Meta", "copy": "Prospecting and retention with creative tested in proper sets, not one ad at a time.", "icon": "i-social", "accent": "blue" } },
+        "m3": { "type": "module", "settings": { "title": "TikTok", "copy": "Native-feeling creative and campaigns built for the platform rather than resized from Meta.", "icon": "i-zap", "accent": "violet" } },
+        "m4": { "type": "module", "settings": { "title": "Influencer & UGC", "copy": "Creator briefs, seeding and usage rights so paid and organic creative feed each other.", "icon": "i-users", "accent": "coral" } },
+        "m5": { "type": "module", "settings": { "title": "Analytics & attribution", "copy": "GA4, GTM, server-side events and reporting that ties spend to contribution profit.", "icon": "i-chart", "accent": "teal" } },
+        "m6": { "type": "module", "settings": { "title": "Landing pages & CRO", "copy": "The page the traffic lands on, built and iterated by the same team buying the traffic.", "icon": "i-target", "accent": "amber" } }
+      },
+      "block_order": ["m1", "m2", "m3", "m4", "m5", "m6"]
+    },
+    "packages": {
+      "type": "tier-table",
+      "settings": {
+        "kicker": "Engagement shapes",
+        "heading": "Audit · Always-on · Full funnel",
+        "subcopy": "Start with a cut list. Scale only where margin holds.",
+        "background": "white",
+        "anchor": "packages",
+        "cta_label": "Book a Strategy Call",
+        "cta_link": "/pages/contact"
+      },
+      "blocks": {
+        "pk1": { "type": "tier", "settings": { "title": "Audit Pack", "included": "Accounts, tracking and creative reviewed — what we'd cut in week one, in writing.", "best_for": "Brands spending without knowing what's working.", "accent": "sun" } },
+        "pk2": { "type": "tier", "settings": { "title": "Always-on", "included": "Weekly optimisation across Google/Meta/TikTok with in-house creative testing.", "best_for": "Active advertisers ready for ongoing management.", "accent": "blue" } },
+        "pk3": { "type": "tier", "settings": { "title": "Full funnel", "included": "Media + landing pages + CRO + influencer/UGC under one cadence.", "best_for": "Brands wanting one team for traffic and conversion.", "accent": "coral" } }
+      },
+      "block_order": ["pk1", "pk2", "pk3"]
+    },
+    "process": {
+      "type": "process",
+      "settings": {
+        "kicker": "How paid runs",
+        "heading": "Test to scale",
+        "subcopy": "Creative and media move together, not as separate retainers that never talk.",
+        "background": "paper",
+        "step_ms": 180,
+        "anchor": "process"
+      },
+      "blocks": {
+        "p1": { "type": "step", "settings": { "title": "Audit", "copy": "Accounts, tracking and creative reviewed against contribution profit.", "accent": "blue", "icon": "i-search" } },
+        "p2": { "type": "step", "settings": { "title": "Structure", "copy": "Campaign architecture, budgets and naming that you can actually read.", "accent": "violet", "icon": "i-target" } },
+        "p3": { "type": "step", "settings": { "title": "Creative", "copy": "Test-ready sets produced in-house for each channel.", "accent": "teal", "icon": "i-camera" } },
+        "p4": { "type": "step", "settings": { "title": "Launch", "copy": "Go live with conversion events verified and learning caps set.", "accent": "coral", "icon": "i-rocket" } },
+        "p5": { "type": "step", "settings": { "title": "Iterate", "copy": "Weekly creative and bid changes based on what actually converted.", "accent": "amber", "icon": "i-chart" } },
+        "p6": { "type": "step", "settings": { "title": "Scale", "copy": "Increase spend where margin holds; cut where it doesn't.", "accent": "sun", "icon": "i-trend" } }
+      },
+      "block_order": ["p1", "p2", "p3", "p4", "p5", "p6"]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "kicker": "Next step",
+        "heading": "Spending and not sure what's working?",
+        "subcopy": "Send us access. We'll tell you what we'd cut in week one.",
+        "cta_label": "Book a Strategy Call",
+        "cta_link": "/pages/contact",
+        "accent": "sun",
+        "background": "paper"
+      }
+    }
+  },
+  "order": ["hero", "problems", "signature", "modules", "packages", "process", "cta"]
+}

@@ -1,0 +1,42 @@
+{%- comment -%}
+  Organization + LocalBusiness structured data. Values come from theme settings
+  so the client can edit them without a developer.
+{%- endcomment -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": {{ settings.brand_name | default: shop.name | json }},
+  "url": {{ shop.url | json }},
+  {%- if settings.logo != blank %}
+  "logo": {{ settings.logo | image_url: width: 600 | prepend: 'https:' | json }},
+  {%- endif %}
+  "description": {{ settings.brand_description | default: shop.description | json }},
+  "email": {{ settings.contact_email | json }},
+  {%- if settings.contact_phone != blank %}
+  "telephone": {{ settings.contact_phone | json }},
+  {%- endif %}
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": {{ settings.address_city | default: 'Los Angeles' | json }},
+    "addressRegion": {{ settings.address_region | default: 'CA' | json }},
+    "addressCountry": "US"
+  },
+  "areaServed": "US",
+  "knowsAbout": [
+    "Web application development",
+    "Mobile app development",
+    "Shopify and e-commerce development",
+    "UI/UX design",
+    "Brand and 3D product creative",
+    "Amazon and marketplace growth",
+    "Paid media and performance marketing"
+  ],
+  "sameAs": [
+    {%- assign socials = '' -%}
+    {%- if settings.social_linkedin != blank %}{{ settings.social_linkedin | json }}{% assign socials = 'y' %}{% endif -%}
+    {%- if settings.social_instagram != blank %}{% if socials == 'y' %},{% endif %}{{ settings.social_instagram | json }}{% endif -%}
+  ]
+}
+</script>

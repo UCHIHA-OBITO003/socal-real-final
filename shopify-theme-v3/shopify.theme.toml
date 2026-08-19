@@ -1,0 +1,6 @@
+# Shopify CLI defaults for the live socal labs v3 theme.
+# Always run `shopify theme push` from this directory (or use scripts/deploy_theme_v3_live.ps1).
+
+[environments.default]
+store = "sarvs-store-nudaxw98.myshopify.com"
+theme = "149129429034"

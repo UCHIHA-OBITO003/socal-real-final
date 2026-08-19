@@ -1,0 +1,131 @@
+{
+  "name": "Work",
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "cta_label": "Discuss Your Project",
+        "cta_link": "/pages/contact",
+        "accent": "blue",
+        "background": "paper",
+        "dark": false,
+        "kicker": "Selected work",
+        "heading": "What we've built.",
+        "subcopy": "Apps, storefronts, brand systems and the growth work behind them. Case studies are added as clients approve them for publication.",
+        "cta2_label": "View projects",
+        "cta2_link": "#projects",
+        "want_banner": false,
+        "banner_brief": "Wide banner for the Work page, a montage or the single strongest piece of work. 24:9, minimum 2000px."
+      }
+    },
+    "work": {
+      "type": "work",
+      "settings": {
+        "kicker": "Projects",
+        "heading": "Selected projects",
+        "subcopy": "",
+        "anchor": "projects",
+        "background": "paper",
+        "all_label": "",
+        "all_link": ""
+      },
+      "blocks": {
+        "w1": {
+          "type": "project",
+          "settings": {
+            "badge": "E-commerce · Brand · Growth",
+            "title": "HITORK",
+            "meta": "HITORK hand tools (The Tool Company), Los Angeles, storefront, product creative and marketplace growth",
+            "span": "wide",
+            "accent": "coral",
+            "link": "/pages/hitork",
+            "brief": "Wide hero for the HiTork work. Best option: the wrench set shot flat on a dark surface, or the Amazon A+ module rendered on screen. Landscape, nothing important in the outer 10%.",
+            "asset_file": "hitork-hero.png",
+            "image_alt": "HITORK storefront, The Tool Company"
+          }
+        },
+        "w2": {
+          "type": "project",
+          "settings": {
+            "badge": "Web app · E-commerce",
+            "title": "socal BioMed",
+            "meta": "Our own lab-equipment brand, catalog platform, storefront and paid media",
+            "span": "half",
+            "accent": "blue",
+            "link": "https://www.socalbiomed.com/",
+            "brief": "The BioMed catalog platform or storefront on a laptop, a real screen, not a mockup template. Straight-on or slight angle.",
+            "asset_file": "biomed-hero.png",
+            "image_zoom": 100,
+            "image_alt": "socal BioMed Waverly CL4M mini centrifuge product page"
+          }
+        },
+        "w3": {
+          "type": "project",
+          "settings": {
+            "badge": "E-commerce · Packaging",
+            "title": "Apphia Health",
+            "meta": "Women's health brand, Shopify build, packaging design and launch creative",
+            "span": "half",
+            "accent": "teal",
+            "link": "/pages/apphia",
+            "brief": "Packaging on a clean surface, or the Shopify product page on screen. Soft daylight, brand colours visible.",
+            "asset_file": "apphia-site-path.png",
+            "image_alt": "Apphia Health, DTC education path and product benefits"
+          }
+        },
+        "w4": {
+          "type": "project",
+          "settings": {
+            "badge": "Website · Ads",
+            "title": "Brown Cows",
+            "meta": "Dairy and agritourism, website, local lead generation and social",
+            "span": "third",
+            "accent": "sun",
+            "link": "/pages/brown-cows",
+            "brief": "The site on a laptop in context, or a farm/product photo from the shoot. Landscape.",
+            "asset_file": "brown-cows-hero.png",
+            "image_alt": "Brown Cows FarmStay homepage hero"
+          }
+        },
+        "w5": {
+          "type": "project",
+          "settings": {
+            "badge": "Creative · 3D",
+            "title": "FemiCheck packaging",
+            "meta": "Product render and packaging creative for a women's health brand",
+            "span": "third",
+            "accent": "violet",
+            "link": "/pages/creative-studio",
+            "brief": "One 3D render at full quality, the strongest one you have. Neutral background so it reads as craft, not a product listing.",
+            "asset_file": "hitork-product.png",
+            "image_alt": "HITORK 32-piece wrench set product photography"
+          }
+        }
+      },
+      "block_order": [
+        "w1",
+        "w2",
+        "w3",
+        "w4",
+        "w5"
+      ]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "kicker": "Next step",
+        "heading": "Want to be on this page?",
+        "subcopy": "Tell us what you're building. We'll tell you honestly whether we're the right studio for it.",
+        "cta_label": "Work With Us",
+        "cta_link": "/pages/contact",
+        "accent": "blue",
+        "background": "paper"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "work",
+    "cta"
+  ]
+}

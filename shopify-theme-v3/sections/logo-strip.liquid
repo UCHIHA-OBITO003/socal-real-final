@@ -1,0 +1,31 @@
+<section class="logo-strip section--paper" {{ section.shopify_attributes }}>
+  <div class="container logo-row reveal">
+    {%- if section.settings.label != blank -%}<span class="logo-label">{{ section.settings.label }}</span>{%- endif -%}
+    {%- for block in section.blocks -%}
+      <div class="logo-item" {{ block.shopify_attributes }}>
+        {%- if block.settings.asset_file != blank -%}
+          <img src="{{ block.settings.asset_file | asset_url }}" alt="{{ block.settings.name | escape }}" loading="lazy" height="34" style="max-height:34px;width:auto">
+        {%- elsif block.settings.image != blank -%}
+          {{ block.settings.image | image_url: height: 68 | image_tag: loading: 'lazy', alt: block.settings.name }}
+        {%- else -%}
+          {{ block.settings.name }}{%- if block.settings.sub != blank -%}<small>{{ block.settings.sub }}</small>{%- endif -%}
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Client logos",
+  "settings": [ { "type": "text", "id": "label", "label": "Label", "default": "Trusted by" } ],
+  "blocks": [
+    { "type": "logo", "name": "Logo", "settings": [
+      { "type": "image_picker", "id": "image", "label": "Logo image", "info": "SVG or transparent PNG. Falls back to the text name." },
+      { "type": "text", "id": "asset_file", "label": "Or theme asset filename", "info": "e.g. platform-amazon.png" },
+      { "type": "text", "id": "name", "label": "Name", "default": "HITORK" },
+      { "type": "text", "id": "sub", "label": "Sub-label", "default": "Hand tools" } ] }
+  ],
+  "presets": [{ "name": "Client logos" }]
+}
+{% endschema %}

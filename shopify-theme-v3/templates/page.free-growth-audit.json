@@ -1,0 +1,100 @@
+{
+  "name": "Free Growth Audit (alias to Contact)",
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "cta_label": "Jump to the form",
+        "cta_link": "#brief",
+        "accent": "violet",
+        "background": "paper",
+        "dark": false,
+        "kicker": "Contact",
+        "heading": "Tell us what you're building.",
+        "subcopy": "One form, one reply from a person, within one business day. No sequence, no chatbot."
+      }
+    },
+    "brief": {
+      "type": "lead-form",
+      "settings": {
+        "kicker": "Project brief",
+        "heading": "Start the conversation",
+        "subcopy": "The more you tell us here, the more useful our first reply will be. Everything except name, email, service and the last question is optional.",
+        "submit_label": "Send the brief",
+        "booking_label": "Prefer to talk? Book a 30-min call",
+        "note": "One reply from a person, within one business day. If we're not the right fit we'll tell you who is.",
+        "anchor": "brief",
+        "accent": "violet",
+        "background": "paper"
+      },
+      "blocks": {
+        "p1": {
+          "type": "point",
+          "settings": {
+            "text": "A written reply from a person, not an autoresponder"
+          }
+        },
+        "p2": {
+          "type": "point",
+          "settings": {
+            "text": "An honest read on whether we're the right studio"
+          }
+        },
+        "p3": {
+          "type": "point",
+          "settings": {
+            "text": "Within one business day"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ]
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+        "kicker": "Before you write",
+        "heading": "Quick answers",
+        "subcopy": "",
+        "accent": "violet",
+        "background": "white"
+      },
+      "blocks": {
+        "q1": {
+          "type": "qa",
+          "settings": {
+            "question": "What should I include?",
+            "answer": "<p>What you're building or selling, where you're stuck, and what a good outcome looks like in 90 days. A link beats a paragraph.</p>"
+          }
+        },
+        "q2": {
+          "type": "qa",
+          "settings": {
+            "question": "What if I don't have a spec?",
+            "answer": "<p>Most people don't. That's what discovery is for, send the problem and we'll work out the shape together.</p>"
+          }
+        },
+        "q3": {
+          "type": "qa",
+          "settings": {
+            "question": "How fast do you reply?",
+            "answer": "<p>One business day, from a person. If we're not the right fit we'll say so and point you somewhere better.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3"
+      ]
+    }
+  },
+  "order": [
+    "hero",
+    "brief",
+    "faq"
+  ]
+}

@@ -1,0 +1,175 @@
+{%- comment -%}
+  Project brief / lead form. Still carries all nine fields from requirements
+  §11, they're the ones that make a lead qualifiable, but framed for a
+  full-service studio rather than an Amazon audit.
+{%- endcomment -%}
+
+<section class="section {% if section.settings.background == 'white' %}section--white{% else %}section--paper{% endif %}" id="{{ section.settings.anchor | default: 'brief' }}">
+  <div class="container">
+    <div class="cta-block" style="--accent:var(--a-{{ section.settings.accent }})">
+      <div class="cta-grid">
+        <div class="reveal">
+          {%- if section.settings.kicker != blank -%}
+            <span class="kicker" style="color:var(--c-on-ink-2)">{{ section.settings.kicker }}</span>
+          {%- endif -%}
+          <h2 class="t-h2" style="margin:var(--sp-5) 0">{{ section.settings.heading }}</h2>
+          <p>{{ section.settings.subcopy }}</p>
+
+          {%- if section.blocks.size > 0 -%}
+            <ul class="cta-points">
+              {%- for block in section.blocks -%}
+                <li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+
+          {%- if settings.booking_url != blank -%}
+            <a href="{{ settings.booking_url }}" class="btn btn--ghost-ink" style="margin-top:var(--sp-8)" rel="noopener" target="_blank">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-calendar"/></svg>
+              {{ section.settings.booking_label }}
+            </a>
+          {%- endif -%}
+        </div>
+
+        <div class="form-card reveal">
+          {%- form 'contact', id: 'BriefForm' -%}
+            {%- if form.posted_successfully? -%}
+              <div class="form-alert form-alert--ok" role="status">
+                Thanks, that's in. We'll come back to you within one business day.
+              </div>
+            {%- endif -%}
+            {%- if form.errors -%}
+              <div class="form-alert form-alert--err" role="alert">{{ form.errors | default_errors }}</div>
+            {%- endif -%}
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="bf-name">Name <span class="req" aria-hidden="true">*</span></label>
+                <input class="form-input" type="text" id="bf-name" name="contact[name]" autocomplete="name" required aria-required="true" placeholder="Your name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="bf-company">Company</label>
+                <input class="form-input" type="text" id="bf-company" name="contact[Company]" autocomplete="organization" placeholder="Brand or company">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="bf-email">Work email <span class="req" aria-hidden="true">*</span></label>
+                <input class="form-input" type="email" id="bf-email" name="contact[email]" autocomplete="email" required aria-required="true" placeholder="you@company.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="bf-phone">Phone / WhatsApp</label>
+                <input class="form-input" type="tel" id="bf-phone" name="contact[Phone]" autocomplete="tel" placeholder="+1 (213) 000-0000">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="bf-link">Website, app or storefront link</label>
+              <input class="form-input" type="url" id="bf-link" name="contact[Link]" inputmode="url" placeholder="https://">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="bf-service">What do you need? <span class="req" aria-hidden="true">*</span></label>
+              <select class="form-select" id="bf-service" name="contact[Service needed]" required aria-required="true">
+                <option value="Web application">Web application</option>
+                <option value="Mobile app">Mobile app (iOS / Android)</option>
+                <option value="Website or Shopify store">Website or Shopify store</option>
+                <option value="Creative and 3D">Creative, branding or 3D</option>
+                <option value="Amazon and marketplaces">Amazon &amp; marketplaces</option>
+                <option value="Paid media">Paid media &amp; social</option>
+                <option value="Several of these">Several of these</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="bf-stage">Where are you now?</label>
+                <select class="form-select" id="bf-stage" name="contact[Stage]">
+                  <option value="">Select…</option>
+                  <option value="Idea / pre-launch">Idea or pre-launch</option>
+                  <option value="Launched, early traction">Launched, early traction</option>
+                  <option value="Growing, needs scale">Growing, needs to scale</option>
+                  <option value="Established, replatforming">Established, replatforming</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="bf-budget">Budget range</label>
+                <select class="form-select" id="bf-budget" name="contact[Budget]">
+                  <option value="">Select…</option>
+                  <option value="Under $10k">Under $10k</option>
+                  <option value="$10k-$25k">$10k, $25k</option>
+                  <option value="$25k-$75k">$25k, $75k</option>
+                  <option value="$75k+">$75k+</option>
+                  <option value="Retainer">Ongoing retainer</option>
+                  <option value="Not sure">Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="bf-timeline">Timeline</label>
+                <select class="form-select" id="bf-timeline" name="contact[Timeline]">
+                  <option value="">Select…</option>
+                  <option value="ASAP">As soon as possible</option>
+                  <option value="1-3 months">1,3 months</option>
+                  <option value="3-6 months">3,6 months</option>
+                  <option value="Exploring">Just exploring</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="bf-how">How did you find us?</label>
+                <input class="form-input" type="text" id="bf-how" name="contact[Source]" placeholder="Referral, search, LinkedIn…">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="bf-message">Tell us about it <span class="req" aria-hidden="true">*</span></label>
+              <textarea class="form-textarea" id="bf-message" name="contact[body]" required aria-required="true"
+                placeholder="What are you building or selling, where are you stuck, and what would a good outcome look like in 90 days?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--on-ink btn--lg btn--block">
+              {{ section.settings.submit_label }}
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
+            <p class="form-note">{{ section.settings.note }}</p>
+          {%- endform -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Project brief form",
+  "max_blocks": 5,
+  "settings": [
+    { "type": "text", "id": "kicker", "label": "Kicker", "default": "Let's Talk" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Tell us what you're building." },
+    { "type": "textarea", "id": "subcopy", "label": "Subcopy",
+      "default": "Send the brief, or just the problem. We'll come back with an approach, a rough timeline and a number, before you commit to anything." },
+    { "type": "text", "id": "submit_label", "label": "Submit label", "default": "Send the brief" },
+    { "type": "text", "id": "booking_label", "label": "Booking link label", "default": "Prefer to talk? Book a 30-min call" },
+    { "type": "textarea", "id": "note", "label": "Small print",
+      "default": "One reply from a person, within one business day. No sequence. If we're not the right fit we'll tell you who is." },
+    { "type": "text", "id": "anchor", "label": "Anchor id", "default": "brief" },
+    { "type": "select", "id": "accent", "label": "Glow colour", "default": "violet",
+      "options": [
+        { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },
+        { "value": "teal", "label": "Teal" }, { "value": "coral", "label": "Coral" },
+        { "value": "amber", "label": "Amber" }, { "value": "sun", "label": "Sun" }
+      ]},
+    { "type": "select", "id": "background", "label": "Background", "default": "paper",
+      "options": [ { "value": "paper", "label": "Paper" }, { "value": "white", "label": "White" } ] }
+  ],
+  "blocks": [
+    { "type": "point", "name": "What happens next", "settings": [
+      { "type": "text", "id": "text", "label": "Text", "default": "A written reply from a person, not an autoresponder" } ] }
+  ],
+  "presets": [{ "name": "Project brief form" }]
+}
+{% endschema %}

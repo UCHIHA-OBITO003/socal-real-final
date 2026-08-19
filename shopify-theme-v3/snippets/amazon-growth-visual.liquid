@@ -1,0 +1,115 @@
+{%- comment -%} Illustrative marketplace analytics dashboard — CSS + inline SVG, no static image. {%- endcomment -%}
+<div class="amazon-growth-visual" aria-hidden="true">
+  <div class="browser-frame amazon-growth-visual__frame">
+    <div class="browser-frame__chrome">
+      <span class="browser-frame__dots"><i></i><i></i><i></i></span>
+      <span class="browser-frame__url">sellercentral.amazon.com</span>
+    </div>
+    <div class="amazon-growth-visual__screen">
+      <div class="amazon-growth-visual__toolbar">
+        <div class="amazon-growth-visual__toolbar-left">
+          <span class="amazon-growth-visual__title">Business overview</span>
+          <span class="amazon-growth-visual__range">Last 30 days</span>
+        </div>
+        <span class="amazon-growth-visual__live"><i></i> Live</span>
+      </div>
+
+      <div class="amazon-growth-visual__kpis">
+        <div class="amazon-growth-visual__kpi">
+          <span class="amazon-growth-visual__kpi-label">Ordered revenue</span>
+          <strong class="amazon-growth-visual__kpi-value">$2.4M</strong>
+          <span class="amazon-growth-visual__kpi-delta amazon-growth-visual__kpi-delta--up">+18.4%</span>
+          <svg class="amazon-growth-visual__spark" viewBox="0 0 64 20" preserveAspectRatio="none" aria-hidden="true">
+            <polyline points="0,16 10,14 20,12 30,9 40,7 52,4 64,2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="amazon-growth-visual__kpi">
+          <span class="amazon-growth-visual__kpi-label">Ad spend</span>
+          <strong class="amazon-growth-visual__kpi-value">$184K</strong>
+          <span class="amazon-growth-visual__kpi-meta">ACOS 14.2%</span>
+          <svg class="amazon-growth-visual__spark" viewBox="0 0 64 20" preserveAspectRatio="none" aria-hidden="true">
+            <polyline points="0,12 12,13 24,10 36,11 48,8 64,6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="amazon-growth-visual__kpi">
+          <span class="amazon-growth-visual__kpi-label">Units ordered</span>
+          <strong class="amazon-growth-visual__kpi-value">48.2K</strong>
+          <span class="amazon-growth-visual__kpi-delta amazon-growth-visual__kpi-delta--up">+12.1%</span>
+          <svg class="amazon-growth-visual__spark" viewBox="0 0 64 20" preserveAspectRatio="none" aria-hidden="true">
+            <polyline points="0,14 11,12 22,13 33,9 44,8 55,5 64,3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="amazon-growth-visual__kpi">
+          <span class="amazon-growth-visual__kpi-label">Buy box %</span>
+          <strong class="amazon-growth-visual__kpi-value">94%</strong>
+          <span class="amazon-growth-visual__kpi-meta">Healthy catalog</span>
+          <svg class="amazon-growth-visual__spark" viewBox="0 0 64 20" preserveAspectRatio="none" aria-hidden="true">
+            <polyline points="0,8 16,7 32,6 48,5 64,4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="amazon-growth-visual__panel">
+        <div class="amazon-growth-visual__panel-head">
+          <span>Revenue &amp; ad efficiency</span>
+          <span class="amazon-growth-visual__legend">
+            <i class="amazon-growth-visual__legend-swatch amazon-growth-visual__legend-swatch--rev"></i> Revenue
+            <i class="amazon-growth-visual__legend-swatch amazon-growth-visual__legend-swatch--ads"></i> Sponsored
+          </span>
+        </div>
+        <div class="amazon-growth-visual__chart-wrap">
+          <svg class="amazon-growth-visual__chart" viewBox="0 0 400 110" preserveAspectRatio="none" role="presentation">
+            <defs>
+              <linearGradient id="agv-rev-fill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#FF9900" stop-opacity="0.42"/>
+                <stop offset="100%" stop-color="#FF9900" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="agv-ads-fill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#5B9FED" stop-opacity="0.28"/>
+                <stop offset="100%" stop-color="#5B9FED" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <line x1="0" y1="22" x2="400" y2="22" class="amazon-growth-visual__gridline"/>
+            <line x1="0" y1="44" x2="400" y2="44" class="amazon-growth-visual__gridline"/>
+            <line x1="0" y1="66" x2="400" y2="66" class="amazon-growth-visual__gridline"/>
+            <line x1="0" y1="88" x2="400" y2="88" class="amazon-growth-visual__gridline"/>
+            <path class="amazon-growth-visual__area amazon-growth-visual__area--ads"
+                  d="M0,92 L57,86 L114,80 L171,72 L228,62 L285,50 L342,38 L400,26 L400,110 L0,110 Z"
+                  fill="url(#agv-ads-fill)"/>
+            <path class="amazon-growth-visual__line amazon-growth-visual__line--ads"
+                  d="M0,92 L57,86 L114,80 L171,72 L228,62 L285,50 L342,38 L400,26"
+                  fill="none" stroke="#5B9FED" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            <path class="amazon-growth-visual__area amazon-growth-visual__area--rev"
+                  d="M0,98 L57,90 L114,82 L171,68 L228,54 L285,40 L342,28 L400,14 L400,110 L0,110 Z"
+                  fill="url(#agv-rev-fill)"/>
+            <path class="amazon-growth-visual__line amazon-growth-visual__line--rev"
+                  d="M0,98 L57,90 L114,82 L171,68 L228,54 L285,40 L342,28 L400,14"
+                  fill="none" stroke="#FF9900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="400" cy="14" r="3.5" fill="#FF9900"/>
+          </svg>
+          <div class="amazon-growth-visual__axis">
+            <span>W1</span><span>W2</span><span>W3</span><span>W4</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="amazon-growth-visual__channels">
+        <div class="amazon-growth-visual__channel">
+          <span class="amazon-growth-visual__channel-name">Amazon</span>
+          <span class="amazon-growth-visual__channel-bar"><i style="--w:72%"></i></span>
+          <span class="amazon-growth-visual__channel-val">72%</span>
+        </div>
+        <div class="amazon-growth-visual__channel">
+          <span class="amazon-growth-visual__channel-name">Walmart</span>
+          <span class="amazon-growth-visual__channel-bar"><i style="--w:18%"></i></span>
+          <span class="amazon-growth-visual__channel-val">18%</span>
+        </div>
+        <div class="amazon-growth-visual__channel">
+          <span class="amazon-growth-visual__channel-name">Target+</span>
+          <span class="amazon-growth-visual__channel-bar"><i style="--w:10%"></i></span>
+          <span class="amazon-growth-visual__channel-val">10%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

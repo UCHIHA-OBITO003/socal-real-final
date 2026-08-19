@@ -1,0 +1,28 @@
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "announcement": {
+      "type": "announcement",
+      "settings": {
+        "message": "Digital product & growth studio \u00b7 Los Angeles",
+        "link_label": "Let's Build Together",
+        "link_url": "/pages/contact",
+        "accent": "sun",
+        "dismissible": true
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "menu": "main-menu",
+        "cta_label": "Let's Build Together",
+        "cta_link": "/pages/contact"
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "header"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "contact-strip": {
+      "type": "contact-strip",
+      "settings": {
+        "fallback_link": "/pages/contact"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "m1": {
+          "type": "menu",
+          "settings": {
+            "title": "Services",
+            "menu": "footer"
+          }
+        },
+        "m2": {
+          "type": "menu",
+          "settings": {
+            "title": "Studio",
+            "menu": "footer-company"
+          }
+        }
+      },
+      "block_order": [
+        "m1",
+        "m2"
+      ],
+      "settings": {
+        "mega_line": "Let's make something people buy.",
+        "mega_link": "/pages/contact",
+        "about": "An independent studio in Los Angeles. We design, engineer and grow digital products for brands that sell.",
+        "legal": "Privacy \u00b7 Terms"
+      }
+    }
+  },
+  "order": [
+    "contact-strip",
+    "footer"
+  ]
+}

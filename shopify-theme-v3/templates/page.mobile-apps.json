@@ -1,0 +1,125 @@
+{
+  "name": "Mobile Applications",
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "cta_label": "Build My App",
+        "cta_link": "/pages/contact",
+        "accent": "violet",
+        "background": "paper",
+        "dark": true,
+        "kicker": "Mobile applications",
+        "heading": "Apps people keep on the first screen.",
+        "subcopy": "iOS and Android, from UX concept through App Store and Play Store release, and the release after that.",
+        "cta2_label": "What we build",
+        "cta2_link": "#what-we-build",
+        "want_banner": true,
+        "asset_file": "gdash-devices.png",
+        "image_alt": "Mobile app screens on device"
+      }
+    },
+    "signature": {
+      "type": "device-showcase",
+      "settings": {
+        "kicker": "Use cases",
+        "heading": "Apps we ship for",
+        "subcopy": "Field ops, e-commerce companions and consumer products on real devices.",
+        "background": "white",
+        "anchor": "use-cases"
+      },
+      "blocks": {
+        "d1": { "type": "device", "settings": { "title": "Field / ops app", "copy": "Distributed teams capturing jobs, photos and status offline-first.", "asset_file": "apphia-store-screen.png", "accent": "violet" } },
+        "d2": { "type": "device", "settings": { "title": "E-commerce companion", "copy": "Loyalty, reorder and support next to a Shopify or marketplace brand.", "asset_file": "apphia-site-path.png", "image_pos_x": 70, "accent": "teal" } },
+        "d3": { "type": "device", "settings": { "title": "Consumer product", "copy": "Onboarding, core loop and store presence for a first public release.", "asset_file": "brown-cows-hero.png", "accent": "coral" } }
+      },
+      "block_order": ["d1", "d2", "d3"]
+    },
+    "problems": {
+      "type": "problems",
+      "settings": {
+        "kicker": "Before you commit",
+        "heading": "What usually goes wrong with app projects",
+        "subcopy": "None of these are engineering problems. All of them are expensive.",
+        "background": "white"
+      },
+      "blocks": {
+        "b1": { "type": "pain", "settings": { "accent": "violet", "pain": "We built everything, then found out nobody wanted it.", "answer": "Prototype and test the core flow with real users before the build budget gets committed." } },
+        "b2": { "type": "pain", "settings": { "accent": "blue", "pain": "The app works but the store rejected it.", "answer": "Review guidelines are part of the definition phase, not a surprise at submission." } },
+        "b3": { "type": "pain", "settings": { "accent": "coral", "pain": "Every change needs the original developer.", "answer": "Documented architecture, tests and a handover session. You own the code and can leave." } },
+        "b4": { "type": "pain", "settings": { "accent": "teal", "pain": "It launched and then nothing happened.", "answer": "Launch is a sequence, store optimisation, install campaigns, onboarding and retention, planned before release." } }
+      },
+      "block_order": ["b1", "b2", "b3", "b4"]
+    },
+    "modules": {
+      "type": "modules",
+      "settings": {
+        "kicker": "What we build",
+        "heading": "Native where it matters, cross-platform where it makes sense",
+        "subcopy": "Swift/SwiftUI, Kotlin/Compose, or React Native, picked from requirements, not fashion.",
+        "background": "paper",
+        "align": "split",
+        "anchor": "what-we-build"
+      },
+      "blocks": {
+        "m1": { "type": "module", "settings": { "title": "Native iOS", "copy": "Swift and SwiftUI when performance, hardware access or platform feel decide the outcome.", "icon": "i-mobile", "accent": "violet" } },
+        "m2": { "type": "module", "settings": { "title": "Native Android", "copy": "Kotlin and Jetpack Compose, built to the same standard as the iOS side.", "icon": "i-mobile", "accent": "blue" } },
+        "m3": { "type": "module", "settings": { "title": "React Native", "copy": "One codebase across both platforms when the app is content and workflow rather than hardware.", "icon": "i-code", "accent": "teal" } },
+        "m4": { "type": "module", "settings": { "title": "Backend & APIs", "copy": "Auth, sync, push, offline handling and the API the app talks to, built by the same team.", "icon": "i-gear", "accent": "coral" } },
+        "m5": { "type": "module", "settings": { "title": "Design & prototyping", "copy": "Flows and a clickable prototype your users can try before a line of app code exists.", "icon": "i-pen", "accent": "amber" } },
+        "m6": { "type": "module", "settings": { "title": "Release & ops", "copy": "Store submission, staged rollout, crash reporting and the update cadence after launch.", "icon": "i-rocket", "accent": "sun" } }
+      },
+      "block_order": ["m1", "m2", "m3", "m4", "m5", "m6"]
+    },
+    "packages": {
+      "type": "tier-table",
+      "settings": {
+        "kicker": "Engagement shapes",
+        "heading": "Prototype · Build · Release",
+        "subcopy": "Roughly 12–20 weeks to a first release, depending on scope.",
+        "background": "paper",
+        "anchor": "packages",
+        "cta_label": "Discuss Your Project",
+        "cta_link": "/pages/contact"
+      },
+      "blocks": {
+        "pk1": { "type": "tier", "settings": { "title": "Prototype Pack", "included": "Flows, clickable prototype and store-guideline review before build budget.", "best_for": "Validating the idea before committing to build.", "accent": "violet" } },
+        "pk2": { "type": "tier", "settings": { "title": "Build Pack", "included": "Native or RN build to TestFlight / internal track with API and auth.", "best_for": "Teams ready to ship a first version.", "accent": "blue" } },
+        "pk3": { "type": "tier", "settings": { "title": "Release Pack", "included": "Store submission, staged rollout, crash monitoring and first update cadence.", "best_for": "Apps going public on App Store and Play Store.", "accent": "teal" } }
+      },
+      "block_order": ["pk1", "pk2", "pk3"]
+    },
+    "process": {
+      "type": "process",
+      "settings": {
+        "kicker": "Build process",
+        "heading": "How an app project runs",
+        "subcopy": "Roughly 12,20 weeks to a first release, depending on scope.",
+        "background": "white",
+        "step_ms": 180
+      },
+      "blocks": {
+        "p1": { "type": "step", "settings": { "title": "Discovery", "copy": "Users, jobs to be done and the one behaviour the app has to create.", "accent": "blue", "icon": "i-search" } },
+        "p2": { "type": "step", "settings": { "title": "Prototype", "copy": "Clickable flows tested with real users before build.", "accent": "violet", "icon": "i-pen" } },
+        "p3": { "type": "step", "settings": { "title": "Design", "copy": "Full design system across both platforms.", "accent": "teal", "icon": "i-pen" } },
+        "p4": { "type": "step", "settings": { "title": "Build", "copy": "Two-week increments with TestFlight and internal-track builds.", "accent": "coral", "icon": "i-code" } },
+        "p5": { "type": "step", "settings": { "title": "Beta", "copy": "Real-device QA, crash monitoring and a closed beta group.", "accent": "amber", "icon": "i-check" } },
+        "p6": { "type": "step", "settings": { "title": "Release & iterate", "copy": "Store submission, staged rollout, then a monthly release rhythm.", "accent": "sun", "icon": "i-rocket" } }
+      },
+      "block_order": ["p1", "p2", "p3", "p4", "p5", "p6"]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "kicker": "Next step",
+        "heading": "Have an app idea?",
+        "subcopy": "Bring the idea, the half-finished build or just the frustration.",
+        "cta_label": "Build My App",
+        "cta_link": "/pages/contact",
+        "accent": "violet",
+        "background": "paper"
+      }
+    }
+  },
+  "order": ["hero", "signature", "problems", "modules", "packages", "process", "cta"]
+}

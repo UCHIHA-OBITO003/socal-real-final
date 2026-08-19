@@ -1,0 +1,252 @@
+{
+  "name": "Marketplace Growth",
+  "sections": {
+    "hero": {
+      "type": "page-hero",
+      "settings": {
+        "cta_label": "Grow My Brand",
+        "cta_link": "/pages/contact",
+        "accent": "amber",
+        "background": "paper",
+        "dark": true,
+        "kicker": "Marketplace growth",
+        "heading": "Amazon and beyond, run like a P&L.",
+        "subcopy": "Listings, A+ Content, PPC, catalog health and operations across Amazon, Walmart, eBay and Target+, managed by people who sell on them.",
+        "cta2_label": "What we manage",
+        "cta2_link": "#what-we-manage",
+        "want_banner": true,
+        "banner_visual": "amazon_growth",
+        "asset_file": "",
+        "image_alt": "Amazon marketplace growth dashboard"
+      }
+    },
+    "problems": {
+      "type": "problems",
+      "settings": {
+        "kicker": "Where listings stall",
+        "heading": "Why marketplace brands plateau",
+        "subcopy": "Common barriers we see on first audits, and what we fix first.",
+        "background": "white"
+      },
+      "blocks": {
+        "b1": {
+          "type": "pain",
+          "settings": {
+            "accent": "amber",
+            "pain": "Low visibility, products stuck on page two.",
+            "answer": "Keyword strategy, listing quality and indexation rebuilt around real search intent, not guesswork."
+          }
+        },
+        "b2": {
+          "type": "pain",
+          "settings": {
+            "accent": "sun",
+            "pain": "High ACOS with no clear bid strategy.",
+            "answer": "Campaigns structured around contribution profit, Sponsored Products, Brands and Display with weekly search-term hygiene."
+          }
+        },
+        "b3": {
+          "type": "pain",
+          "settings": {
+            "accent": "coral",
+            "pain": "Poor conversions, shoppers bounce to competitors.",
+            "answer": "Imagery, titles and A+ Content that answer objections in the order buyers raise them."
+          }
+        },
+        "b4": {
+          "type": "pain",
+          "settings": {
+            "accent": "teal",
+            "pain": "Lost Buy Box, suppressed listings, stockouts.",
+            "answer": "Catalog health, FBA planning and compliance recovery before we scale ad spend."
+          }
+        }
+      },
+      "block_order": ["b1", "b2", "b3", "b4"]
+    },
+    "modules": {
+      "type": "modules",
+      "settings": {
+        "kicker": "Marketplace services",
+        "heading": "What we manage",
+        "subcopy": "Full account, or just the parts you need. Creative support sits next to the campaigns, not a separate vendor queue.",
+        "background": "paper",
+        "align": "split",
+        "anchor": "what-we-manage"
+      },
+      "blocks": {
+        "m1": {
+          "type": "module",
+          "settings": {
+            "title": "Listing & keyword SEO",
+            "copy": "Titles, bullets, backend terms and indexation built around real search intent.",
+            "icon": "i-search",
+            "accent": "amber"
+          }
+        },
+        "m2": {
+          "type": "module",
+          "settings": {
+            "title": "PPC management",
+            "copy": "Sponsored Products, Brands and Display structured around contribution profit, not vanity ROAS.",
+            "icon": "i-megaphone",
+            "accent": "sun"
+          }
+        },
+        "m3": {
+          "type": "module",
+          "settings": {
+            "title": "A+ Content & Brand Store",
+            "copy": "Modules and storefront pages that answer objections in the order buyers raise them.",
+            "icon": "i-audit",
+            "accent": "coral"
+          }
+        },
+        "m4": {
+          "type": "module",
+          "settings": {
+            "title": "Catalog health",
+            "copy": "Variation structure, suppressed and stranded ASIN recovery, attributes and compliance.",
+            "icon": "i-shield",
+            "accent": "teal"
+          }
+        },
+        "m5": {
+          "type": "module",
+          "settings": {
+            "title": "Creative for listings",
+            "copy": "Main images, lifestyle shots, infographics and video produced in-house for the same accounts we manage.",
+            "icon": "i-camera",
+            "accent": "violet"
+          }
+        },
+        "m6": {
+          "type": "module",
+          "settings": {
+            "title": "Other marketplaces",
+            "copy": "Walmart, eBay and Target+, opened once the primary channel is performing, not on day one.",
+            "icon": "i-globe",
+            "accent": "blue"
+          }
+        }
+      },
+      "block_order": ["m1", "m2", "m3", "m4", "m5", "m6"]
+    },
+    "signature": {
+      "type": "growth-stats",
+      "settings": {
+        "kicker": "What we fix first",
+        "heading": "Amazon SEO, listings and Shopify support",
+        "subcopy": "Keyword strategy, catalog health and storefront work — not generic agency retainers.",
+        "background": "white",
+        "anchor": "amazon-seo"
+      },
+      "blocks": {
+        "s1": { "type": "stat", "settings": { "value": "Page 1", "label": "Amazon SEO", "copy": "Titles, bullets, backend terms and indexation rebuilt around real search intent.", "icon": "i-search", "accent": "amber" } },
+        "s2": { "type": "stat", "settings": { "value": "ACOS ↓", "label": "PPC management", "copy": "Sponsored Products, Brands and Display structured around contribution profit.", "icon": "i-megaphone", "accent": "sun" } },
+        "s3": { "type": "stat", "settings": { "value": "Buy Box", "label": "Catalog health", "copy": "Suppressed listings, variation structure and compliance recovery before scaling spend.", "icon": "i-shield", "accent": "teal" } },
+        "s4": { "type": "stat", "settings": { "value": "Shopify", "label": "D2C storefront help", "copy": "Shopify builds, landing pages and catalog story that feed the same brand on Amazon.", "icon": "i-cart", "accent": "coral" } }
+      },
+      "block_order": ["s1", "s2", "s3", "s4"]
+    },
+    "packages": {
+      "type": "tier-table",
+      "settings": {
+        "kicker": "Engagement shapes",
+        "heading": "Audit · Manage · Expand",
+        "subcopy": "Written audit first. Ongoing management only if the numbers make sense.",
+        "background": "paper",
+        "anchor": "packages",
+        "cta_label": "Grow My Brand",
+        "cta_link": "/pages/contact"
+      },
+      "blocks": {
+        "pk1": { "type": "tier", "settings": { "title": "Audit Pack", "included": "Account, catalog, ads and creative reviewed in writing — yours to keep either way.", "best_for": "Brands unsure where margin is leaking.", "accent": "amber" } },
+        "pk2": { "type": "tier", "settings": { "title": "Manage", "included": "Listings, PPC, A+ and catalog health on a weekly cadence tied to contribution profit.", "best_for": "Active Amazon sellers ready for hands-on management.", "accent": "sun" } },
+        "pk3": { "type": "tier", "settings": { "title": "Expand", "included": "New ASINs, categories, Walmart/eBay/Target+ and Shopify support once the primary channel earns.", "best_for": "Brands scaling beyond a single marketplace.", "accent": "coral" } }
+      },
+      "block_order": ["pk1", "pk2", "pk3"]
+    },
+    "process": {
+      "type": "process",
+      "settings": {
+        "kicker": "How it runs",
+        "heading": "Audit to scale",
+        "subcopy": "",
+        "background": "white",
+        "step_ms": 180,
+        "anchor": ""
+      },
+      "blocks": {
+        "p1": {
+          "type": "step",
+          "settings": {
+            "title": "Audit",
+            "copy": "Account, catalog, advertising and creative reviewed in writing.",
+            "accent": "blue",
+            "icon": "i-search"
+          }
+        },
+        "p2": {
+          "type": "step",
+          "settings": {
+            "title": "Fix",
+            "copy": "Suppressed listings, compliance flags and catalog structure first.",
+            "accent": "violet",
+            "icon": "i-gear"
+          }
+        },
+        "p3": {
+          "type": "step",
+          "settings": {
+            "title": "Content",
+            "copy": "Copy, keywords, imagery, A+ and storefront rebuilt.",
+            "accent": "teal",
+            "icon": "i-pen"
+          }
+        },
+        "p4": {
+          "type": "step",
+          "settings": {
+            "title": "Campaigns",
+            "copy": "Structure, budgets, bids and negatives established.",
+            "accent": "coral",
+            "icon": "i-rocket"
+          }
+        },
+        "p5": {
+          "type": "step",
+          "settings": {
+            "title": "Optimise",
+            "copy": "Weekly search-term review, bid adjustment, creative iteration.",
+            "accent": "amber",
+            "icon": "i-chart"
+          }
+        },
+        "p6": {
+          "type": "step",
+          "settings": {
+            "title": "Expand",
+            "copy": "New ASINs, new categories, new marketplaces, in that order.",
+            "accent": "sun",
+            "icon": "i-trend"
+          }
+        }
+      },
+      "block_order": ["p1", "p2", "p3", "p4", "p5", "p6"]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "kicker": "Next step",
+        "heading": "Want to know where the margin is going?",
+        "subcopy": "Send us your storefront. We'll come back with a written review, yours to keep either way.",
+        "cta_label": "Grow My Brand",
+        "cta_link": "/pages/contact",
+        "accent": "amber",
+        "background": "paper"
+      }
+    }
+  },
+  "order": ["hero", "problems", "signature", "modules", "packages", "process", "cta"]
+}

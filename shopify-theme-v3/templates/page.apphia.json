@@ -1,0 +1,226 @@
+{
+  "name": "Apphia Health",
+  "sections": {
+    "case": {
+      "type": "case-study",
+      "settings": {
+        "kicker": "Case study · Portfolio proof",
+        "heading": "Apphia Health",
+        "lead": "Early detection pregnancy test brand, Amazon USA presence, Shopify/DTC education content, packaging direction, and listing creative built to earn trust.",
+        "tags": "Amazon USA, Shopify / DTC, Packaging, Listing Creative, A+ Content",
+        "cta_label": "Start a similar project",
+        "cta_link": "/pages/contact",
+        "hero_asset": "",
+        "logo_asset": "",
+        "accent": "teal",
+        "problem_kicker": "The challenge",
+        "problem_heading": "Trust-critical product. Cluttered category.",
+        "problem_copy": "Apphia needed a clear Amazon USA listing system and DTC education flow that explained how to use the product, when to test, and why early detection matters, without sounding clinical or salesy.",
+        "success_items": "Clean Amazon listing with early-detection creative\nShopify/DTC sections that educate (path, how-to-use, benefits)\nPackaging and A+ style visuals that feel premium and calm\nSocial proof presented clearly from marketplace feedback",
+        "work_kicker": "Work delivered",
+        "work_heading": "Full-funnel brand system for Amazon + DTC",
+        "work_subcopy": "Scoped modules for product brands, marketplace, creative, and education content under one partner.",
+        "snapshots": "Listing system live|Amazon USA\nEducation flow live|Shopify / DTC\nCreative system live|A+ · Packaging · How-to",
+        "work_note": "Results shown are qualitative delivery outcomes. No unverified ROAS or lift percentages are published here. Amazon star ratings below are public marketplace snapshots, not socal labs performance KPIs.",
+        "gallery_kicker": "Visuals",
+        "gallery_heading": "Work in market",
+        "gallery_subcopy": "Selected screens from the Apphia site, Amazon listing creatives, and instructional graphics.",
+        "quotes_kicker": "Amazon customer feedback",
+        "quotes_heading": "What buyers say on Amazon",
+        "quotes_subcopy": "Public marketplace reviews for Apphia Health, used here as brand social proof, not as agency performance metrics.",
+        "quotes_snapshots": "~4.0 / 5|Amazon public rating\n123+ ratings|Marketplace snapshot\nVerified Purchase|Buyer feedback",
+        "quotes_note": "Review quotes are paraphrased from public Amazon customer feedback for portfolio context. Themes buyers mention include accuracy, ease of use, value, and packaging. Not socal labs performance KPIs."
+      },
+      "blocks": {
+        "m1": {
+          "type": "module",
+          "settings": {
+            "title": "Amazon USA listing",
+            "copy": "Title system, variants (5 / 10 / 15), early-detection hero creative, and conversion-focused imagery.",
+            "icon": "i-cart",
+            "accent": "amber"
+          }
+        },
+        "m2": {
+          "type": "module",
+          "settings": {
+            "title": "A+ & info graphics",
+            "copy": "Calendar “6 days sooner” creative, hCG timing graph, and how-to-use instructional modules.",
+            "icon": "i-pen",
+            "accent": "teal"
+          }
+        },
+        "m3": {
+          "type": "module",
+          "settings": {
+            "title": "Shopify / DTC education",
+            "copy": "Three-step fertility path, product benefits, and simple how-to-use content for the brand site.",
+            "icon": "i-code",
+            "accent": "blue"
+          }
+        },
+        "m4": {
+          "type": "module",
+          "settings": {
+            "title": "Packaging direction",
+            "copy": "Midstream kit packaging presentation and brand-consistent unboxing / shelf presence.",
+            "icon": "i-cube",
+            "accent": "violet"
+          }
+        },
+        "m5": {
+          "type": "module",
+          "settings": {
+            "title": "Content & ads support",
+            "copy": "Listing and social-ready creative that carries the same calm health aesthetic across channels.",
+            "icon": "i-megaphone",
+            "accent": "coral"
+          }
+        },
+        "m6": {
+          "type": "module",
+          "settings": {
+            "title": "Review presentation",
+            "copy": "Marketplace feedback surfaced as social proof, clearly labeled as Amazon customer feedback.",
+            "icon": "i-chart",
+            "accent": "sun"
+          }
+        },
+        "g1": {
+          "type": "gallery",
+          "settings": {
+            "asset_file": "apphia-site-path.png",
+            "caption": "DTC site, fertility path + product benefits",
+            "wide": true
+          }
+        },
+        "g2": {
+          "type": "gallery",
+          "settings": {
+            "asset_file": "apphia-how-to-use.png",
+            "caption": "How to Use, instructional module",
+            "wide": false
+          }
+        },
+        "g3": {
+          "type": "gallery",
+          "settings": {
+            "asset_file": "apphia-amazon-listing.png",
+            "caption": "Amazon USA listing, early detection hero",
+            "wide": false
+          }
+        },
+        "g4": {
+          "type": "gallery",
+          "settings": {
+            "asset_file": "apphia-early-detection.png",
+            "caption": "Listing creative, 6 days sooner calendar",
+            "wide": false
+          }
+        },
+        "g5": {
+          "type": "gallery",
+          "settings": {
+            "asset_file": "apphia-hcg-graph.png",
+            "caption": "A+ style graphic, test smarter timing",
+            "wide": false
+          }
+        },
+        "g6": {
+          "type": "gallery",
+          "settings": {
+            "asset_file": "apphia-reviews-summary.png",
+            "caption": "Amazon reviews summary presentation",
+            "wide": false
+          }
+        },
+        "g7": {
+          "type": "gallery",
+          "settings": {
+            "asset_file": "apphia-reviews-detail.png",
+            "caption": "Amazon customer feedback detail",
+            "wide": false
+          }
+        },
+        "q1": {
+          "type": "quote",
+          "settings": {
+            "title": "Great tests and value",
+            "quote": "Accurate, easy to use, and a great value for confirmation testing.",
+            "name": "Brit",
+            "meta": "Verified Purchase · Amazon USA",
+            "accent": "teal"
+          }
+        },
+        "q2": {
+          "type": "quote",
+          "settings": {
+            "title": "Simple to read · individual packaging",
+            "quote": "Midstream design simplifies testing. Result window is clear, no second-guessing. Bundle offers good value and peace of mind.",
+            "name": "Tenesha D.",
+            "meta": "Verified Purchase · Amazon USA",
+            "accent": "coral"
+          }
+        },
+        "q3": {
+          "type": "quote",
+          "settings": {
+            "title": "great!!",
+            "quote": "Amazing and accurate, good design, easy to use, great value.",
+            "name": "emily",
+            "meta": "Verified Purchase · Amazon USA",
+            "accent": "blue"
+          }
+        },
+        "q4": {
+          "type": "quote",
+          "settings": {
+            "title": "Clear results",
+            "quote": "Easy to use and the window is easy to read. Good value for the pack size.",
+            "name": "Amazon Customer",
+            "meta": "Verified Purchase · Amazon USA",
+            "accent": "violet"
+          }
+        },
+        "q5": {
+          "type": "quote",
+          "settings": {
+            "title": "Worked as expected",
+            "quote": "Arrived quickly, packaging was intact, and tests performed as described.",
+            "name": "Amazon Customer",
+            "meta": "Verified Purchase · Amazon USA",
+            "accent": "amber"
+          }
+        },
+        "q6": {
+          "type": "quote",
+          "settings": {
+            "title": "Solid confirmation tests",
+            "quote": "Useful for confirmation testing. Clear instructions and decent value overall.",
+            "name": "Amazon Customer",
+            "meta": "Verified Purchase · Amazon USA",
+            "accent": "sun"
+          }
+        }
+      },
+      "block_order": [
+        "m1", "m2", "m3", "m4", "m5", "m6",
+        "g1", "g2", "g3", "g4", "g5", "g6", "g7",
+        "q1", "q2", "q3", "q4", "q5", "q6"
+      ]
+    },
+    "cta": {
+      "type": "cta-band",
+      "settings": {
+        "kicker": "Start a similar project",
+        "heading": "Ready for Amazon + DTC that builds trust?",
+        "subcopy": "Tell us what you're building. We'll map listing, creative, and education systems like Apphia, and say honestly if we're the right fit.",
+        "cta_label": "Discuss Your Project",
+        "cta_link": "/pages/contact",
+        "accent": "teal",
+        "background": "paper"
+      }
+    }
+  },
+  "order": ["case", "cta"]
+}
