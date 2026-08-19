@@ -16,9 +16,9 @@
         "f2": { "type": "fact", "settings": { "icon": "i-code", "accent": "violet", "text": "Two-week sprints, live staging" } },
         "f3": { "type": "fact", "settings": { "icon": "i-cube", "accent": "coral", "text": "Creative and 3D in-house" } },
         "f4": { "type": "fact", "settings": { "icon": "i-location", "accent": "teal", "text": "USA brands, coast to coast" } },
-        "t1": { "type": "tile", "settings": { "label": "Mobile apps", "link": "/pages/mobile-apps", "accent": "violet", "tagline": "iOS and Android, concept to App Store.", "asset_file": "apphia-store-screen.png" } },
-        "t2": { "type": "tile", "settings": { "label": "Web apps", "link": "/pages/web-apps", "accent": "blue", "tagline": "Dashboards, portals and internal tools.", "asset_file": "gdash-devices.png" } },
-        "t3": { "type": "tile", "settings": { "label": "Creative & 3D", "link": "/pages/creative-studio", "accent": "coral", "tagline": "Brand, packaging and 3D, in-house.", "asset_file": "creative-studio-hero.png" } },
+        "t1": { "type": "tile", "settings": { "label": "Mobile apps", "link": "/pages/mobile-apps", "accent": "violet", "tagline": "iOS and Android, concept to App Store.", "asset_file": "apphia-store-screen.png", "image_pos_y": 5 } },
+        "t2": { "type": "tile", "settings": { "label": "Web apps", "link": "/pages/web-apps", "accent": "blue", "tagline": "Dashboards, portals and internal tools.", "asset_file": "gdash-devices.png", "image_zoom": 105, "image_pos_x": 65 } },
+        "t3": { "type": "tile", "settings": { "label": "Creative & 3D", "link": "/pages/creative-studio", "accent": "coral", "tagline": "Brand, packaging and 3D, in-house.", "asset_file": "creative-studio-hero.png", "image_zoom": 110 } },
         "t4": { "type": "tile", "settings": { "label": "E-commerce", "link": "/pages/websites", "accent": "teal", "tagline": "Shopify storefronts built to convert.", "asset_file": "brown-cows-hero.png" } }
       },
       "block_order": ["f1", "f2", "f3", "f4", "t1", "t2", "t3", "t4"]

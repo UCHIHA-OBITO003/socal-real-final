@@ -57,7 +57,7 @@
         {%- for block in section.blocks -%}
           {%- if block.type == 'tile' -%}
             {%- capture tile_class -%}hero-tile{% if block.settings.asset_file == blank and block.settings.image == blank %} hero-tile--text{% endif %}{% if block.settings.image_fit == 'cover' %} hero-tile--fit-cover{% endif %}{% if block.settings.image_zoom != blank and block.settings.image_zoom != 100 %} hero-tile--zoom{% endif %}{% if block.settings.link != blank %} hero-tile--link{% endif %}{%- endcapture -%}
-            {%- capture tile_style -%}--accent:var(--a-{{ block.settings.accent }});--accent-wash:var(--a-{{ block.settings.accent }}-wash);--accent-text:var(--a-{{ block.settings.accent }}-text){% if block.settings.image_zoom != blank and block.settings.image_zoom != 100 %};--tile-zoom:{{ block.settings.image_zoom | append: '%' }}{% endif %}{%- endcapture -%}
+            {%- capture tile_style -%}--accent:var(--a-{{ block.settings.accent }});--accent-wash:var(--a-{{ block.settings.accent }}-wash);--accent-text:var(--a-{{ block.settings.accent }}-text){% if block.settings.image_zoom != blank and block.settings.image_zoom != 100 %};--tile-zoom:{{ block.settings.image_zoom }}%{% endif %}{% if block.settings.image_pos_x != blank %};--tile-pos-x:{{ block.settings.image_pos_x }}%{% endif %}{% if block.settings.image_pos_y != blank %};--tile-pos-y:{{ block.settings.image_pos_y }}%{% endif %}{%- endcapture -%}
             {%- if block.settings.link != blank -%}
               <a href="{{ block.settings.link }}" class="{{ tile_class | strip }}" style="{{ tile_style }}" {{ block.shopify_attributes }}>
             {%- else -%}
@@ -151,6 +151,10 @@
           ]},
         { "type": "range", "id": "image_zoom", "label": "Image zoom %", "min": 100, "max": 200, "step": 5, "default": 100,
           "info": "Zoom in to crop device frames. 125% works well for phone mockups." },
+        { "type": "range", "id": "image_pos_x", "label": "Image position X %", "min": 0, "max": 100, "step": 5, "default": 50,
+          "info": "Horizontal focal point. 50 = centre, 0 = left edge, 100 = right edge." },
+        { "type": "range", "id": "image_pos_y", "label": "Image position Y %", "min": 0, "max": 100, "step": 5, "default": 20,
+          "info": "Vertical focal point. 20 = near top (default), 50 = centre." },
         { "type": "select", "id": "accent", "label": "Accent", "default": "violet",
           "options": [
             { "value": "blue", "label": "Blue" }, { "value": "violet", "label": "Violet" },

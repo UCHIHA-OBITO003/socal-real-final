@@ -123,29 +123,62 @@
    Big imagery, hover motion. Image slots are Shopify image_picker fields —
    drop real project shots in and this section carries the whole site. */
 .work-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--sp-6); }
-.work-card { position: relative; display: block; grid-column: span 6; }
-.work-card--wide { grid-column: span 12; }
+.work-card {
+  display: grid; grid-column: span 6;
+  overflow: hidden; border-radius: var(--r-xl);
+  aspect-ratio: 4 / 3; background: var(--accent-wash);
+  transition: box-shadow var(--dur) var(--ease);
+}
+.work-card--wide { grid-column: span 12; aspect-ratio: 24 / 9; }
 .work-card--third { grid-column: span 4; }
 .work-media {
-  position: relative; overflow: hidden; border-radius: var(--r-xl);
-  aspect-ratio: 4 / 3; background: var(--accent-wash);
-  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  grid-area: 1 / 1;
+  overflow: hidden;
+  transition: transform var(--dur) var(--ease);
 }
-.work-card--wide .work-media { aspect-ratio: 24 / 9; }
-.work-media .work-media-stack { position: absolute; inset: 0; }
+.work-body {
+  grid-area: 1 / 1;
+}
+/* Work cards: full-bleed image, no floating panel */
+.work-media { display: grid; }
+.work-media .work-media-stack,
+.work-media .thumb-stack,
+.work-media .thumb-stack__blur,
+.work-media .thumb-stack__sharp { grid-area: 1/1; }
+.work-media .work-media-stack,
+.work-media .thumb-stack { display: contents; }
+.work-media .thumb-stack__blur { display: none; }
+.work-media .thumb-stack__veil { display: none; }
+.work-media .thumb-stack__sharp {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 0;
+}
+.work-media .thumb-stack__sharp img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(calc(var(--tile-zoom, 100) / 100));
+  transform-origin: center top;
+  filter: none;
+  transition: transform 900ms var(--ease);
+}
 .work-media:not(:has(.thumb-stack)) img {
   position: absolute; inset: 0; display: block;
   width: 100%; height: 100%;
   object-fit: cover; object-position: center center;
   transition: transform 900ms var(--ease);
 }
-.work-media--zoom .thumb-stack__sharp img {
-  max-width: none;
-  max-height: none;
-  width: var(--tile-zoom, 100%);
-  height: var(--tile-zoom, 100%);
-  object-fit: contain;
-}
+.work-card:hover .work-media .thumb-stack__sharp img { transform: scale(calc(var(--tile-zoom, 100) / 100 * 1.03)); }
 .work-card:hover .work-media { box-shadow: var(--sh-hover); }
 .work-card:hover .work-media .thumb-stack__sharp img { transform: scale(1.03); }
 .work-card:hover .work-media:not(:has(.thumb-stack)) img { transform: scale(1.05); }
@@ -427,16 +460,22 @@
   font-size: var(--fs-micro); font-weight: 700; letter-spacing: var(--ls-wide); text-transform: uppercase;
   color: var(--accent-text); padding: 7px 13px; border-radius: var(--r-pill);
 }
-.work-body { padding-top: var(--sp-5); display: flex; justify-content: space-between; gap: var(--sp-6); align-items: flex-start; }
-.work-body h3 { margin-bottom: 6px; }
-.work-meta { font-size: var(--fs-sm); color: var(--c-text-3); }
-.work-open { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--c-line); display: grid; place-items: center; flex: none; transition: all var(--dur) var(--ease); }
-.work-card:hover .work-open { background: var(--c-ink); border-color: var(--c-ink); color: #fff; transform: rotate(-45deg); }
+.work-body {
+  align-self: start;
+  padding: var(--sp-6);
+  display: flex; justify-content: space-between; gap: var(--sp-6); align-items: flex-start;
+  background: linear-gradient(to bottom, rgba(10,10,14,.72) 0%, rgba(10,10,14,.3) 60%, transparent 100%);
+  z-index: 2;
+  color: #fff;
+}
+.work-body h3 { margin-bottom: 4px; color: #fff; }
+.work-meta { font-size: var(--fs-sm); color: rgba(255,255,255,.65); }
+.work-open { width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,.5); color: #fff; display: grid; place-items: center; flex: none; transition: all var(--dur) var(--ease); }
+.work-card:hover .work-open { background: #fff; border-color: #fff; color: var(--c-ink); transform: rotate(-45deg); }
 .work-open svg { width: 17px; height: 17px; }
 .work-open--live { width: auto; height: 44px; border-radius: 999px; padding: 0 var(--sp-5); display: inline-flex; align-items: center; gap: 8px; }
-.work-open-text { font-size: var(--fs-sm); font-weight: 600; white-space: nowrap; }
+.work-open-text { font-size: var(--fs-sm); font-weight: 600; white-space: nowrap; color: #fff; }
 .work-card:hover .work-open--live { transform: none; }
-.section--ink .work-open { border-color: var(--c-line-ink); }
 @media (max-width: 860px) { .work-card, .work-card--third, .work-card--wide { grid-column: span 12; } }
 
 /* ------------------------------------------------- Build / Grow capability */
@@ -858,8 +897,8 @@ a.cstrip-item:hover { background: var(--c-white); }
 .hero-fact svg { width: 18px; height: 18px; color: var(--accent); flex: none; }
 @media (max-width: 900px) { .hero-sub { grid-template-columns: 1fr; gap: var(--sp-8); } }
 
-/* Hero visual band — compact text tiles or portrait image tiles */
-.hero-band { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-3); margin-top: var(--sp-12); align-items: stretch; }
+/* Hero visual band — all four tiles same height, equal columns */
+.hero-band { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--sp-3); margin-top: var(--sp-12); align-items: start; }
 .hero-tile {
   aspect-ratio: 3 / 4; border-radius: var(--r-lg); overflow: hidden; position: relative;
   background: var(--accent-wash); display: grid; place-items: center;
@@ -869,7 +908,6 @@ a.hero-tile { text-decoration: none; color: inherit; cursor: pointer; }
 a.hero-tile--text:hover,
 a.hero-tile--link:hover { transform: translateY(-4px); box-shadow: var(--sh-card); }
 .hero-tile--text {
-  aspect-ratio: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -899,9 +937,42 @@ a.hero-tile--link:hover { transform: translateY(-4px); box-shadow: var(--sh-card
 .hero-tile:not(.hero-tile--text):hover { transform: translateY(-4px); }
 .hero-tile .hero-tile-stack,
 .hero-tile .thumb-stack { position: absolute; inset: 0; }
-/* Keep the sharp image clear of the bottom label pill on every screen size */
-.hero-tile .thumb-stack__sharp { padding: 10px 10px 38px; }
-.hero-tile .thumb-stack__sharp img { max-width: 100%; max-height: 100%; }
+
+/* Hero tiles: images fill the box edge-to-edge, cover crop, no floating */
+.hero-tile .thumb-stack__blur { display: none; }         /* no blurred bg needed — image already fills */
+.hero-tile .thumb-stack__veil { display: none; }         /* no veil — label pill provides its own readability */
+.hero-tile .thumb-stack__sharp {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  display: block;
+}
+.hero-tile .thumb-stack__sharp img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: var(--tile-pos-x, 50%) var(--tile-pos-y, 20%);
+  transform: scale(calc(var(--tile-zoom, 100) / 100));
+  transform-origin: var(--tile-pos-x, 50%) var(--tile-pos-y, 20%);
+  filter: none;
+  transition: transform 900ms var(--ease);
+}
+/* Subtle gradient scrim so the label pill is always readable */
+.hero-tile .thumb-stack::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(10,10,14,.55) 0%, rgba(10,10,14,.1) 40%, transparent 70%);
+  border-radius: inherit;
+}
+/* Label pill sits above the scrim */
+.hero-tile .hero-tile-label { z-index: 3; }
 .hero-tile > img {
   position: absolute; inset: 0; display: block;
   width: 100%; height: 100%;
@@ -936,7 +1007,7 @@ a.hero-tile--link:hover { transform: translateY(-4px); box-shadow: var(--sh-card
 }
 .hero-tile--zoom:hover > img { transform: translate(-50%, -50%) scale(1.03); }
 .hero-tile--zoom:hover .thumb-stack__sharp img { transform: scale(1.03); }
-.hero-tile:not(.hero-tile--text):not(.hero-tile--zoom):hover .thumb-stack__sharp img { transform: scale(1.04); }
+.hero-tile:not(.hero-tile--text):not(.hero-tile--zoom):hover .thumb-stack__sharp img { transform: scale(1.05); }
 .hero-tile-panel {
   position: relative; z-index: 1;
   display: flex; flex-direction: column; gap: 5px;
@@ -973,8 +1044,8 @@ a.hero-tile--link:hover { transform: translateY(-4px); box-shadow: var(--sh-card
   border: 1px solid rgba(255, 255, 255, 0.65);
 }
 .hero-tile > svg { width: 54px; height: 54px; color: var(--accent); opacity: .4; }
-@media (max-width: 900px) { .hero-band { grid-template-columns: repeat(2, 1fr); gap: var(--sp-3); } }
-@media (max-width: 520px) { .hero-band { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 900px) { .hero-band { grid-template-columns: repeat(2, 1fr); gap: var(--sp-3); align-items: start; } }
+@media (max-width: 520px) { .hero-band { grid-template-columns: 1fr 1fr; gap: var(--sp-2); align-items: start; } }
 
 /* -------------------------------------------------- Hero v5 motion layer */
 /* Cycling word: all words stacked in one inline-grid cell (container sizes to

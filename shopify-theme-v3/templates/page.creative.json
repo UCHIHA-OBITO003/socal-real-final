@@ -40,6 +40,23 @@
       },
       "block_order": ["t1", "t2", "t3", "t4", "t5", "t6", "t7", "t8"]
     },
+    "renders3d": {
+      "type": "creative-mosaic",
+      "settings": {
+        "kicker": "Photoreal 3D",
+        "heading": "Rendered in-house",
+        "subcopy": "Product visualisation, concept renders and dark-room hero shots — no photography needed.",
+        "background": "ink",
+        "anchor": "3d-renders"
+      },
+      "blocks": {
+        "r1": { "type": "tile", "settings": { "title": "Optical scanner", "tag": "3D render", "asset_file": "creative-3d-scanner.png", "size": "wide", "accent": "teal" } },
+        "r2": { "type": "tile", "settings": { "title": "Luxury timepiece", "tag": "3D render", "asset_file": "creative-3d-watch.png", "size": "medium", "accent": "amber" } },
+        "r3": { "type": "tile", "settings": { "title": "Blade concept", "tag": "3D render", "asset_file": "creative-3d-blade.png", "size": "medium", "accent": "blue" } },
+        "r4": { "type": "tile", "settings": { "title": "Mech concept", "tag": "3D render", "asset_file": "creative-3d-mech.png", "size": "wide", "accent": "coral" } }
+      },
+      "block_order": ["r1", "r2", "r3", "r4"]
+    },
     "problems": {
       "type": "problems",
       "settings": {
@@ -251,5 +268,5 @@
       }
     }
   },
-  "order": ["hero", "signature", "problems", "modules", "packages", "process", "cta"]
+  "order": ["hero", "signature", "renders3d", "problems", "modules", "packages", "process", "cta"]
 }
