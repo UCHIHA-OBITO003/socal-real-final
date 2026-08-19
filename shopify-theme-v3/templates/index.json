@@ -16,10 +16,10 @@
         "f2": { "type": "fact", "settings": { "icon": "i-code", "accent": "violet", "text": "Two-week sprints, live staging" } },
         "f3": { "type": "fact", "settings": { "icon": "i-cube", "accent": "coral", "text": "Creative and 3D in-house" } },
         "f4": { "type": "fact", "settings": { "icon": "i-location", "accent": "teal", "text": "USA brands, coast to coast" } },
-        "t1": { "type": "tile", "settings": { "label": "Mobile apps", "link": "/pages/mobile-apps", "accent": "violet", "tagline": "iOS and Android, concept to App Store.", "asset_file": "app-store-phone.png" } },
-        "t2": { "type": "tile", "settings": { "label": "Web apps", "link": "/pages/web-apps", "accent": "blue", "tagline": "Dashboards, portals and internal tools.", "asset_file": "web-apps-hero.png" } },
+        "t1": { "type": "tile", "settings": { "label": "Mobile apps", "link": "/pages/mobile-apps", "accent": "violet", "tagline": "iOS and Android, concept to App Store.", "asset_file": "apphia-store-screen.png" } },
+        "t2": { "type": "tile", "settings": { "label": "Web apps", "link": "/pages/web-apps", "accent": "blue", "tagline": "Dashboards, portals and internal tools.", "asset_file": "gdash-devices.png" } },
         "t3": { "type": "tile", "settings": { "label": "Creative & 3D", "link": "/pages/creative-studio", "accent": "coral", "tagline": "Brand, packaging and 3D, in-house.", "asset_file": "creative-studio-hero.png" } },
-        "t4": { "type": "tile", "settings": { "label": "E-commerce", "link": "/pages/websites", "accent": "teal", "tagline": "Shopify storefronts built to convert.", "asset_file": "websites-hero.png" } }
+        "t4": { "type": "tile", "settings": { "label": "E-commerce", "link": "/pages/websites", "accent": "teal", "tagline": "Shopify storefronts built to convert.", "asset_file": "brown-cows-hero.png" } }
       },
       "block_order": ["f1", "f2", "f3", "f4", "t1", "t2", "t3", "t4"]
     },
@@ -60,10 +60,10 @@
         "anchor": "work"
       },
       "blocks": {
-        "w1": { "type": "project", "settings": { "badge": "E-commerce · Brand · Growth", "title": "HiTork", "copy": "A hand-tool brand taken from catalog to storefront to marketplace.", "tone": "dark", "accent": "coral", "link": "https://www.thetoolcompany.com/", "asset_file": "hitork-hero.png" } },
-        "w3": { "type": "project", "settings": { "badge": "Web app · E-commerce", "title": "socal BioMed", "copy": "Our own lab-equipment brand, catalog platform and storefront.", "tone": "tint", "accent": "teal", "link": "https://www.socalbiomed.com/", "asset_file": "biomed-hero.png", "image_zoom": 100 } },
-        "w4": { "type": "project", "settings": { "badge": "Shopify · Packaging", "title": "Apphia Health", "copy": "Store, packaging and launch creative for a women's health brand.", "tone": "light", "accent": "violet", "link": "/pages/apphia", "asset_file": "apphia-site-path.png" } },
-        "w5": { "type": "project", "settings": { "badge": "Website · Ads", "title": "Brown Cows", "copy": "Dairy and agritourism brand, FarmStay booking site and local lead generation.", "tone": "tint", "accent": "sun", "link": "/pages/brown-cows", "asset_file": "brown-cows-hero.png" } }
+        "w1": { "type": "project", "settings": { "badge": "E-commerce Â· Brand Â· Growth", "title": "HiTork", "copy": "A hand-tool brand taken from catalog to storefront to marketplace.", "tone": "dark", "accent": "coral", "link": "https://www.thetoolcompany.com/", "asset_file": "hitork-hero.png" } },
+        "w3": { "type": "project", "settings": { "badge": "Web app Â· E-commerce", "title": "socal BioMed", "copy": "Our own lab-equipment brand, catalog platform and storefront.", "tone": "tint", "accent": "teal", "link": "https://www.socalbiomed.com/", "asset_file": "biomed-hero.png", "image_zoom": 100 } },
+        "w4": { "type": "project", "settings": { "badge": "Shopify Â· Packaging", "title": "Apphia Health", "copy": "Store, packaging and launch creative for a women's health brand.", "tone": "light", "accent": "violet", "link": "/pages/apphia", "asset_file": "apphia-site-path.png" } },
+        "w5": { "type": "project", "settings": { "badge": "Website Â· Ads", "title": "Brown Cows", "copy": "Dairy and agritourism brand, FarmStay booking site and local lead generation.", "tone": "tint", "accent": "sun", "link": "/pages/brown-cows", "asset_file": "brown-cows-hero.png" } }
       },
       "block_order": ["w1", "w3", "w4", "w5"]
     },
@@ -71,20 +71,20 @@
       "type": "logo-strip",
       "settings": { "label": "Where we ship and grow", "big": true },
       "blocks": {
-        "pl1": { "type": "logo", "settings": { "asset_file": "platform-amazon.png", "name": "Amazon" } },
-        "pl2": { "type": "logo", "settings": { "asset_file": "platform-shopify.png", "name": "Shopify" } },
-        "pl3": { "type": "logo", "settings": { "asset_file": "platform-google.png", "name": "Google" } },
-        "pl4": { "type": "logo", "settings": { "asset_file": "platform-meta.png", "name": "Meta" } },
-        "pl5": { "type": "logo", "settings": { "asset_file": "platform-tiktok.png", "name": "TikTok" } },
-        "pl6": { "type": "logo", "settings": { "asset_file": "platform-walmart.png", "name": "Walmart" } },
-        "pl7": { "type": "logo", "settings": { "asset_file": "platform-target.png", "name": "Target" } }
+        "pl1": { "type": "logo", "settings": { "asset_file": "platform-amazon.svg", "name": "Amazon" } },
+        "pl2": { "type": "logo", "settings": { "asset_file": "platform-shopify.svg", "name": "Shopify" } },
+        "pl3": { "type": "logo", "settings": { "asset_file": "platform-google.svg", "name": "Google" } },
+        "pl4": { "type": "logo", "settings": { "asset_file": "platform-meta.svg", "name": "Meta" } },
+        "pl5": { "type": "logo", "settings": { "asset_file": "platform-tiktok.svg", "name": "TikTok" } },
+        "pl6": { "type": "logo", "settings": { "asset_file": "platform-walmart.svg", "name": "Walmart" } },
+        "pl7": { "type": "logo", "settings": { "asset_file": "platform-target.svg", "name": "Target" } }
       },
       "block_order": ["pl1", "pl2", "pl3", "pl4", "pl5", "pl6", "pl7"]
     },
     "asp": {
       "type": "app-store-proof",
       "settings": {
-        "kicker": "iOS · The last mile",
+        "kicker": "iOS Â· The last mile",
         "heading": "We take it all the way to the store.",
         "subcopy": "Design, build, review, release. Your app doesn't stop at a repo, it ships with its listing, screenshots and submission handled.",
         "app_name": "apphia",
@@ -95,7 +95,7 @@
         "store_style": "apphia",
         "shot_1_asset": "",
         "shot_2_asset": "",
-        "caption": "Apphia Health — App Store listing, screenshots and submission handled end to end.",
+        "caption": "Apphia Health â€” App Store listing, screenshots and submission handled end to end.",
         "accent": "violet"
       }
     },
@@ -110,8 +110,8 @@
       "blocks": {
         "q1": { "type": "quote", "settings": { "quote": "Easy and convenient. Clear instructions, results in minutes, and a result window that is easy to read. Affording Made in USA quality at a better price.", "name": "Verified buyer", "role": "Amazon review", "company": "Apphia Health", "accent": "teal", "sample": false } },
         "q2": { "type": "quote", "settings": { "quote": "As a part-time mechanic I was shocked at the quality and comfort for the price. I plan to look at their other tools.", "name": "Verified buyer", "role": "Amazon review", "company": "HiTork", "accent": "coral", "sample": false } },
-        "q3": { "type": "quote", "settings": { "quote": "Peaceful and rejuvenating stay in a mud cottage. Beautiful farm setting in Telangana.", "name": "Sunita Reddy", "role": "Guest", "company": "Google · Brown Cows", "accent": "sun", "sample": false } },
-        "q4": { "type": "quote", "settings": { "quote": "Midstream design simplifies testing. Result window is clear, no second-guessing. Bundle offers good value and peace of mind.", "name": "Tenesha D.", "role": "Verified purchase", "company": "Amazon USA · Apphia Health", "accent": "violet", "sample": false } },
+        "q3": { "type": "quote", "settings": { "quote": "Peaceful and rejuvenating stay in a mud cottage. Beautiful farm setting in Telangana.", "name": "Sunita Reddy", "role": "Guest", "company": "Google Â· Brown Cows", "accent": "sun", "sample": false } },
+        "q4": { "type": "quote", "settings": { "quote": "Midstream design simplifies testing. Result window is clear, no second-guessing. Bundle offers good value and peace of mind.", "name": "Tenesha D.", "role": "Verified purchase", "company": "Amazon USA Â· Apphia Health", "accent": "violet", "sample": false } },
         "q5": { "type": "quote", "settings": { "quote": "Solid set especially for the price. Used it for suspension work, gave it a beating, still perfect. Accurate sizing and a real organizer tray.", "name": "Verified buyer", "role": "Amazon review", "company": "HiTork", "accent": "amber", "sample": false } },
         "q6": { "type": "quote", "settings": { "quote": "Participated in milking and making butter. The A2 ghee is outstanding, pure and fragrant. Kids loved every moment.", "name": "Guest", "role": "Farm stay", "company": "Brown Cows Organic Dairy", "accent": "blue", "sample": false } }
       },
@@ -166,10 +166,10 @@
         "background": "white"
       },
       "blocks": {
-        "p1": { "type": "step", "settings": { "title": "Discovery", "copy": "Goals, users, constraints and the one number this project has to move.", "meta": "1–2 weeks", "icon": "i-search", "accent": "blue" } },
+        "p1": { "type": "step", "settings": { "title": "Discovery", "copy": "Goals, users, constraints and the one number this project has to move.", "meta": "1â€“2 weeks", "icon": "i-search", "accent": "blue" } },
         "p2": { "type": "step", "settings": { "title": "Definition", "copy": "Scope, flows and a fixed number, agreed before anyone opens a design file.", "meta": "1 week", "icon": "i-target", "accent": "violet" } },
-        "p3": { "type": "step", "settings": { "title": "Design", "copy": "A system, not a set of screens. Reviewed in prototype before it gets built.", "meta": "2–4 weeks", "icon": "i-pen", "accent": "teal" } },
-        "p4": { "type": "step", "settings": { "title": "Build", "copy": "Two-week increments on staging you can open whenever you like.", "meta": "4–12 weeks", "icon": "i-code", "accent": "coral" } },
+        "p3": { "type": "step", "settings": { "title": "Design", "copy": "A system, not a set of screens. Reviewed in prototype before it gets built.", "meta": "2â€“4 weeks", "icon": "i-pen", "accent": "teal" } },
+        "p4": { "type": "step", "settings": { "title": "Build", "copy": "Two-week increments on staging you can open whenever you like.", "meta": "4â€“12 weeks", "icon": "i-code", "accent": "coral" } },
         "p5": { "type": "step", "settings": { "title": "Launch", "copy": "QA, accessibility pass, performance budget and tracking live from hour one.", "meta": "1 week", "icon": "i-rocket", "accent": "amber" } },
         "p6": { "type": "step", "settings": { "title": "Grow", "copy": "Campaigns, creative and marketplace work against the number we agreed in step one.", "meta": "Ongoing", "icon": "i-trend", "accent": "sun" } }
       },
@@ -220,7 +220,7 @@
       },
       "blocks": {
         "q1": { "type": "qa", "settings": { "question": "What does a project cost?", "answer": "<p>Discovery is a fixed, small fee. After it you get a scope and a number for the build, not a range that moves. Ongoing growth work runs monthly. We'd rather lose a deal on price than surprise you halfway through one.</p>" } },
-        "q2": { "type": "qa", "settings": { "question": "How long does a build take?", "answer": "<p>A marketing site or Shopify storefront: 4–8 weeks. A mobile app or web application: 12–20 weeks to a first release, depending on scope. Anyone quoting faster without seeing your requirements is guessing.</p>" } },
+        "q2": { "type": "qa", "settings": { "question": "How long does a build take?", "answer": "<p>A marketing site or Shopify storefront: 4â€“8 weeks. A mobile app or web application: 12â€“20 weeks to a first release, depending on scope. Anyone quoting faster without seeing your requirements is guessing.</p>" } },
         "q3": { "type": "qa", "settings": { "question": "Do I have to use you for both build and growth?", "answer": "<p>No. Plenty of clients use one side only. The reason we offer both is that the handoff between a dev shop and a marketing agency is where most projects lose a quarter.</p>" } },
         "q4": { "type": "qa", "settings": { "question": "Who owns the code and the accounts?", "answer": "<p>You do, repositories, ad accounts, analytics, everything. We work inside your accounts where possible and hand over cleanly if you ever leave.</p>" } },
         "q5": { "type": "qa", "settings": { "question": "Do you work with early-stage companies?", "answer": "<p>Yes, when the scope is real. We'd rather build a sharp first version than a full platform for an idea that hasn't met a customer.</p>" } },
@@ -266,3 +266,4 @@
     "brief"
   ]
 }
+

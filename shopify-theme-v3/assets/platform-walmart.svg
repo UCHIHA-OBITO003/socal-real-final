@@ -1,0 +1,13 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 60" width="230" height="60">
+  <g transform="translate(6,8)">
+    <line x1="22" y1="0" x2="22" y2="10" stroke="#FFC220" stroke-width="5" stroke-linecap="round"/>
+    <line x1="22" y1="34" x2="22" y2="44" stroke="#FFC220" stroke-width="5" stroke-linecap="round"/>
+    <line x1="0" y1="22" x2="10" y2="22" stroke="#FFC220" stroke-width="5" stroke-linecap="round"/>
+    <line x1="34" y1="22" x2="44" y2="22" stroke="#FFC220" stroke-width="5" stroke-linecap="round"/>
+    <line x1="6" y1="6" x2="13" y2="13" stroke="#FFC220" stroke-width="5" stroke-linecap="round"/>
+    <line x1="31" y1="31" x2="38" y2="38" stroke="#FFC220" stroke-width="5" stroke-linecap="round"/>
+    <line x1="38" y1="6" x2="31" y2="13" stroke="#FFC220" stroke-width="5" stroke-linecap="round"/>
+    <line x1="13" y1="31" x2="6" y2="38" stroke="#FFC220" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <text x="62" y="40" font-family="Arial,sans-serif" font-weight="700" font-size="24" fill="#007DC6">Walmart</text>
+</svg>

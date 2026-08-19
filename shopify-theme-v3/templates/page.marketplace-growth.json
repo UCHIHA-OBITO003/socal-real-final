@@ -24,13 +24,13 @@
       "type": "logo-strip",
       "settings": { "label": "Marketplaces and channels we run", "big": true },
       "blocks": {
-        "pl1": { "type": "logo", "settings": { "asset_file": "platform-amazon.png", "name": "Amazon" } },
-        "pl2": { "type": "logo", "settings": { "asset_file": "platform-walmart.png", "name": "Walmart" } },
-        "pl3": { "type": "logo", "settings": { "asset_file": "platform-target.png", "name": "Target" } },
-        "pl4": { "type": "logo", "settings": { "asset_file": "platform-tiktok.png", "name": "TikTok Shop" } },
-        "pl5": { "type": "logo", "settings": { "asset_file": "platform-shopify.png", "name": "Shopify" } },
-        "pl6": { "type": "logo", "settings": { "asset_file": "platform-google.png", "name": "Google" } },
-        "pl7": { "type": "logo", "settings": { "asset_file": "platform-meta.png", "name": "Meta" } }
+        "pl1": { "type": "logo", "settings": { "asset_file": "platform-amazon.svg", "name": "Amazon" } },
+        "pl2": { "type": "logo", "settings": { "asset_file": "platform-walmart.svg", "name": "Walmart" } },
+        "pl3": { "type": "logo", "settings": { "asset_file": "platform-target.svg", "name": "Target" } },
+        "pl4": { "type": "logo", "settings": { "asset_file": "platform-tiktok.svg", "name": "TikTok Shop" } },
+        "pl5": { "type": "logo", "settings": { "asset_file": "platform-shopify.svg", "name": "Shopify" } },
+        "pl6": { "type": "logo", "settings": { "asset_file": "platform-google.svg", "name": "Google" } },
+        "pl7": { "type": "logo", "settings": { "asset_file": "platform-meta.svg", "name": "Meta" } }
       },
       "block_order": ["pl1", "pl2", "pl3", "pl4", "pl5", "pl6", "pl7"]
     },
@@ -151,13 +151,13 @@
       "settings": {
         "kicker": "What we fix first",
         "heading": "Amazon SEO, listings and Shopify support",
-        "subcopy": "Keyword strategy, catalog health and storefront work — not generic agency retainers.",
+        "subcopy": "Keyword strategy, catalog health and storefront work â€” not generic agency retainers.",
         "background": "white",
         "anchor": "amazon-seo"
       },
       "blocks": {
         "s1": { "type": "stat", "settings": { "value": "Page 1", "label": "Amazon SEO", "copy": "Titles, bullets, backend terms and indexation rebuilt around real search intent.", "icon": "i-search", "accent": "amber" } },
-        "s2": { "type": "stat", "settings": { "value": "ACOS ↓", "label": "PPC management", "copy": "Sponsored Products, Brands and Display structured around contribution profit.", "icon": "i-megaphone", "accent": "sun" } },
+        "s2": { "type": "stat", "settings": { "value": "ACOS â†“", "label": "PPC management", "copy": "Sponsored Products, Brands and Display structured around contribution profit.", "icon": "i-megaphone", "accent": "sun" } },
         "s3": { "type": "stat", "settings": { "value": "Buy Box", "label": "Catalog health", "copy": "Suppressed listings, variation structure and compliance recovery before scaling spend.", "icon": "i-shield", "accent": "teal" } },
         "s4": { "type": "stat", "settings": { "value": "Shopify", "label": "D2C storefront help", "copy": "Shopify builds, landing pages and catalog story that feed the same brand on Amazon.", "icon": "i-cart", "accent": "coral" } }
       },
@@ -184,7 +184,7 @@
       "type": "tier-table",
       "settings": {
         "kicker": "Engagement shapes",
-        "heading": "Audit · Manage · Expand",
+        "heading": "Audit Â· Manage Â· Expand",
         "subcopy": "Written audit first. Ongoing management only if the numbers make sense.",
         "background": "paper",
         "anchor": "packages",
@@ -192,7 +192,7 @@
         "cta_link": "/pages/contact"
       },
       "blocks": {
-        "pk1": { "type": "tier", "settings": { "title": "Audit Pack", "included": "Account, catalog, ads and creative reviewed in writing — yours to keep either way.", "best_for": "Brands unsure where margin is leaking.", "accent": "amber" } },
+        "pk1": { "type": "tier", "settings": { "title": "Audit Pack", "included": "Account, catalog, ads and creative reviewed in writing â€” yours to keep either way.", "best_for": "Brands unsure where margin is leaking.", "accent": "amber" } },
         "pk2": { "type": "tier", "settings": { "title": "Manage", "included": "Listings, PPC, A+ and catalog health on a weekly cadence tied to contribution profit.", "best_for": "Active Amazon sellers ready for hands-on management.", "accent": "sun" } },
         "pk3": { "type": "tier", "settings": { "title": "Expand", "included": "New ASINs, categories, Walmart/eBay/Target+/TikTok Shop and Shopify support once the primary channel earns.", "best_for": "Brands scaling beyond a single marketplace.", "accent": "coral" } }
       },
@@ -281,3 +281,4 @@
   },
   "order": ["hero", "platforms", "problems", "signature", "modules", "aplus", "packages", "process", "cta"]
 }
+

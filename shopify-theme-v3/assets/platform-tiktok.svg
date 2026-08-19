@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <text x="50" y="43" font-family="Arial,sans-serif" font-weight="800" font-size="34" fill="#010101">TikTok</text>
+  <ellipse cx="26" cy="30" rx="13" ry="16" fill="#EE1D52" opacity="0.85"/>
+  <ellipse cx="30" cy="30" rx="13" ry="16" fill="#010101"/>
+  <ellipse cx="34" cy="30" rx="13" ry="16" fill="#69C9D0" opacity="0.85"/>
+  <ellipse cx="30" cy="30" rx="8" ry="11" fill="#010101"/>
+</svg>
