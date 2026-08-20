@@ -41,6 +41,7 @@
             "link": "https://www.thetoolcompany.com/",
             "brief": "Wide hero for the HiTork work. Best option: the wrench set shot flat on a dark surface, or the Amazon A+ module rendered on screen. Landscape, nothing important in the outer 10%.",
             "asset_file": "hitork-hero.png",
+            "image_zoom": 108,
             "image_alt": "HITORK storefront, The Tool Company"
           }
         },

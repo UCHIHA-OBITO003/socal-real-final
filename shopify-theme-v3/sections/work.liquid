@@ -42,28 +42,14 @@
            style="--accent:var(--a-{{ a }});--accent-text:var(--a-{{ a }}-text);--accent-wash:var(--a-{{ a }}-wash)"
            {% if external %}target="_blank" rel="noopener"{% endif %}
            {{ block.shopify_attributes }}>
-          <div class="work-media{% if block.settings.image_zoom != blank and block.settings.image_zoom != 100 %} work-media--zoom{% endif %}"{% if block.settings.image_zoom != blank and block.settings.image_zoom != 100 %} style="--tile-zoom:{{ block.settings.image_zoom }}%"{% endif %}>
+          <div class="work-media{% if block.settings.image_zoom != blank and block.settings.image_zoom != 100 %} work-media--zoom{% endif %}"{% if block.settings.image_zoom != blank and block.settings.image_zoom != 100 %} style="--tile-zoom:{{ block.settings.image_zoom }}"{% endif %}>
             {%- if block.settings.badge != blank -%}
               <span class="work-badge">{{ block.settings.badge }}</span>
             {%- endif -%}
             {%- if block.settings.asset_file != blank -%}
-              {%- assign work_src = block.settings.asset_file | asset_url -%}
-              {%- assign work_alt = block.settings.image_alt | default: block.settings.title -%}
-              {% render 'thumb-stack',
-                   src: work_src,
-                   alt: work_alt,
-                   width: 1200,
-                   height: 900,
-                   class: 'work-media-stack' %}
+              <img src="{{ block.settings.asset_file | asset_url }}" alt="{{ block.settings.image_alt | default: block.settings.title | escape }}" loading="lazy" width="1200" height="900">
             {%- elsif block.settings.image != blank -%}
-              {%- assign work_src = block.settings.image | image_url: width: 1600 -%}
-              {%- assign work_alt = block.settings.image_alt | default: block.settings.title -%}
-              {% render 'thumb-stack',
-                   src: work_src,
-                   alt: work_alt,
-                   width: 1200,
-                   height: 900,
-                   class: 'work-media-stack' %}
+              <img src="{{ block.settings.image | image_url: width: 1600 }}" alt="{{ block.settings.image_alt | default: block.settings.title | escape }}" loading="lazy" width="1200" height="900">
             {%- else -%}
               {%- liquid
                 assign ratio = '4:3'
@@ -131,7 +117,7 @@
         { "type": "text", "id": "asset_file", "label": "Or theme asset filename",
           "info": "Fallback when Image is empty, e.g. apphia-site-path.png" },
         { "type": "text", "id": "image_alt", "label": "Image alt text" },
-        { "type": "range", "id": "image_zoom", "label": "Image zoom %", "min": 50, "max": 150, "step": 5, "default": 100,
+        { "type": "range", "id": "image_zoom", "label": "Image zoom %", "min": 50, "max": 150, "step": 1, "default": 100,
           "info": "Below 100 zooms out (shows more of the image). Above 100 zooms in." },
         { "type": "textarea", "id": "brief", "label": "Image brief",
           "default": "One landscape shot of the finished work, a real screen, render or product photo. No stock, no mockup templates.",

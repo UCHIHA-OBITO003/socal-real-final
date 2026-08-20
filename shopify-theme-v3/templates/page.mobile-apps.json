@@ -31,7 +31,7 @@
       "blocks": {
         "d1": { "type": "device", "settings": { "title": "Field / ops app", "copy": "Distributed teams capturing jobs, photos and status offline-first.", "asset_file": "apphia-store-screen.png", "accent": "violet" } },
         "d2": { "type": "device", "settings": { "title": "E-commerce companion", "copy": "Loyalty, reorder and support next to a Shopify or marketplace brand.", "asset_file": "apphia-site-path.png", "image_pos_x": 70, "accent": "teal" } },
-        "d3": { "type": "device", "settings": { "title": "Consumer product", "copy": "Onboarding, core loop and store presence for a first public release.", "asset_file": "brown-cows-app-screen.png", "image_zoom": 97, "accent": "coral" } }
+        "d3": { "type": "device", "settings": { "title": "Consumer product", "copy": "Onboarding, core loop and store presence for a first public release.", "asset_file": "brown-cows-app-screen.png", "image_zoom": 100, "accent": "coral" } }
       },
       "block_order": ["d1", "d2", "d3"]
     },

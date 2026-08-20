@@ -16,28 +16,20 @@
           {%- if block.settings.badge != blank -%}<span class="tile-meta">{{ block.settings.badge }}</span>{%- endif -%}
           <h3 class="tile-title">{{ block.settings.title }}</h3>
           {%- if block.settings.copy != blank -%}<p class="tile-copy">{{ block.settings.copy }}</p>{%- endif -%}
-          <span class="tile-media thumb-stack{% if block.settings.image_zoom != blank and block.settings.image_zoom != 100 %} tile-media--zoom{% endif %}"{% if block.settings.image_zoom != blank and block.settings.image_zoom != 100 %} style="--tile-zoom:{{ block.settings.image_zoom }}%"{% endif %}>
+          {%- capture media_style -%}
+            {%- if block.settings.image_zoom != blank and block.settings.image_zoom != 100 -%}--tile-zoom:{{ block.settings.image_zoom }};{%- endif -%}
+            {%- if block.settings.image_pos_x != blank -%}--tile-pos-x:{{ block.settings.image_pos_x }}%;{%- endif -%}
+          {%- endcapture -%}
+          <span class="tile-media{% if block.settings.image_zoom != blank and block.settings.image_zoom != 100 %} tile-media--zoom{% endif %}"{% if media_style != blank %} style="{{ media_style | strip }}"{% endif %}>
             {%- if block.settings.asset_file != blank -%}
-              {%- assign tile_src = block.settings.asset_file | asset_url -%}
-              <span class="thumb-stack__blur" aria-hidden="true"><img src="{{ tile_src }}" alt="" loading="lazy" width="900" height="675"></span>
-              <span class="thumb-stack__veil" aria-hidden="true"></span>
-              <span class="thumb-stack__sharp tile-media__sharp">
-                <img src="{{ tile_src }}" alt="{{ block.settings.title | escape }}" loading="lazy" width="900" height="675">
-              </span>
+              <img src="{{ block.settings.asset_file | asset_url }}" alt="{{ block.settings.title | escape }}" loading="lazy" width="900" height="675">
             {%- elsif block.settings.image != blank -%}
-              {%- assign tile_src = block.settings.image | image_url: width: 900 -%}
-              <span class="thumb-stack__blur" aria-hidden="true"><img src="{{ tile_src }}" alt="" loading="lazy" width="900" height="675"></span>
-              <span class="thumb-stack__veil" aria-hidden="true"></span>
-              <span class="thumb-stack__sharp tile-media__sharp">
-                <img src="{{ tile_src }}" alt="{{ block.settings.title | escape }}" loading="lazy" width="900" height="675">
-              </span>
-            {%- else -%}
-              {%- if request.design_mode -%}
+              <img src="{{ block.settings.image | image_url: width: 900 }}" alt="{{ block.settings.title | escape }}" loading="lazy" width="900" height="675">
+            {%- elsif request.design_mode -%}
               <span class="tile-brief">
                 <span class="img-brief-tag"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-camera"/></svg>Image needed</span>
                 <span>{{ block.settings.brief | default: 'Add a project shot.' }}</span>
               </span>
-              {%- endif -%}
             {%- endif -%}
           </span>
           {%- if href contains 'http://' or href contains 'https://' -%}
@@ -75,8 +67,10 @@
         { "type": "textarea", "id": "brief", "label": "Image brief fallback" },
         { "type": "image_picker", "id": "image", "label": "Image" },
         { "type": "text", "id": "asset_file", "label": "Or theme asset filename" },
-        { "type": "range", "id": "image_zoom", "label": "Image zoom %", "min": 50, "max": 150, "step": 5, "default": 100,
+        { "type": "range", "id": "image_zoom", "label": "Image zoom %", "min": 50, "max": 150, "step": 1, "default": 100,
           "info": "Below 100 zooms out (shows more of the image). Above 100 zooms in." },
+        { "type": "range", "id": "image_pos_x", "label": "Image position X %", "min": 0, "max": 100, "step": 1, "default": 50,
+          "info": "50 = centre. Lower values shift the crop left." },
         { "type": "text", "id": "link", "label": "Link", "default": "#brief" },
         { "type": "select", "id": "tone", "label": "Tile tone", "default": "light",
           "options": [

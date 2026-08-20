@@ -17,7 +17,7 @@ Final **socal labs** Shopify theme v3 — source + zip only. Send this folder (o
 View page source on the storefront:
 
 ```html
-data-theme-build="2026-08-07-thumb-stack-blur"
+data-theme-build="2026-08-19-logo-strip-spacing"
 ```
 
 File: `shopify-theme-v3/layout/theme.liquid`

@@ -83,10 +83,9 @@
       "blocks": {
         "c1": { "type": "tile", "settings": { "title": "Social ad set", "tag": "Meta \u00b7 TikTok", "asset_file": "gdash-social.png", "size": "wide", "accent": "blue" } },
         "c2": { "type": "tile", "settings": { "title": "Influencer & UGC", "tag": "Creator briefs", "asset_file": "gdash-influencer.png", "size": "medium", "accent": "coral" } },
-        "c3": { "type": "tile", "settings": { "title": "Audience research", "tag": "Strategy", "asset_file": "paid-media-audience-research.png", "size": "wide", "accent": "violet" } },
         "c4": { "type": "tile", "settings": { "title": "3D product creative", "tag": "In-house 3D", "asset_file": "gdash-3d.png", "size": "wide", "accent": "amber" } }
       },
-      "block_order": ["c1", "c3", "c2", "c4"]
+      "block_order": ["c1", "c2", "c4"]
     },
     "packages": {
       "type": "tier-table",

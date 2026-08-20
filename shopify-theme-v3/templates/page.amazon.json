@@ -24,13 +24,13 @@
       "type": "logo-strip",
       "settings": { "label": "Marketplaces and channels we run", "big": true },
       "blocks": {
-        "pl1": { "type": "logo", "settings": { "asset_file": "platform-amazon.svg", "name": "Amazon" } },
-        "pl2": { "type": "logo", "settings": { "asset_file": "platform-walmart.svg", "name": "Walmart" } },
-        "pl3": { "type": "logo", "settings": { "asset_file": "platform-target.svg", "name": "Target" } },
-        "pl4": { "type": "logo", "settings": { "asset_file": "platform-tiktok.svg", "name": "TikTok Shop" } },
-        "pl5": { "type": "logo", "settings": { "asset_file": "platform-shopify.svg", "name": "Shopify" } },
-        "pl6": { "type": "logo", "settings": { "asset_file": "platform-google.svg", "name": "Google" } },
-        "pl7": { "type": "logo", "settings": { "asset_file": "platform-meta.svg", "name": "Meta" } }
+        "pl1": { "type": "logo", "settings": { "asset_file": "platform-amazon.png", "name": "Amazon" } },
+        "pl2": { "type": "logo", "settings": { "asset_file": "platform-walmart.png", "name": "Walmart" } },
+        "pl3": { "type": "logo", "settings": { "asset_file": "platform-target.png", "name": "Target" } },
+        "pl4": { "type": "logo", "settings": { "asset_file": "platform-tiktok.png", "name": "TikTok Shop" } },
+        "pl5": { "type": "logo", "settings": { "asset_file": "platform-shopify.png", "name": "Shopify" } },
+        "pl6": { "type": "logo", "settings": { "asset_file": "platform-google.png", "name": "Google" } },
+        "pl7": { "type": "logo", "settings": { "asset_file": "platform-meta.png", "name": "Meta" } }
       },
       "block_order": ["pl1", "pl2", "pl3", "pl4", "pl5", "pl6", "pl7"]
     },

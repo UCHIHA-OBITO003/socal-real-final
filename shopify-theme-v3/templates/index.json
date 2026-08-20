@@ -60,7 +60,7 @@
         "anchor": "work"
       },
       "blocks": {
-        "w1": { "type": "project", "settings": { "badge": "E-commerce Â· Brand Â· Growth", "title": "HiTork", "copy": "A hand-tool brand taken from catalog to storefront to marketplace.", "tone": "dark", "accent": "coral", "link": "https://www.thetoolcompany.com/", "asset_file": "hitork-hero.png" } },
+        "w1": { "type": "project", "settings": { "badge": "E-commerce Â· Brand Â· Growth", "title": "HiTork", "copy": "A hand-tool brand taken from catalog to storefront to marketplace.", "tone": "dark", "accent": "coral", "link": "https://www.thetoolcompany.com/", "asset_file": "hitork-hero.png", "image_zoom": 108, "image_pos_x": 10 } },
         "w3": { "type": "project", "settings": { "badge": "Web app Â· E-commerce", "title": "socal BioMed", "copy": "Our own lab-equipment brand, catalog platform and storefront.", "tone": "tint", "accent": "teal", "link": "https://www.socalbiomed.com/", "asset_file": "biomed-hero.png", "image_zoom": 100 } },
         "w4": { "type": "project", "settings": { "badge": "Shopify Â· Packaging", "title": "Apphia Health", "copy": "Store, packaging and launch creative for a women's health brand.", "tone": "light", "accent": "violet", "link": "/pages/apphia", "asset_file": "apphia-site-path.png" } },
         "w5": { "type": "project", "settings": { "badge": "Website Â· Ads", "title": "Brown Cows", "copy": "Dairy and agritourism brand, FarmStay booking site and local lead generation.", "tone": "tint", "accent": "sun", "link": "/pages/brown-cows", "asset_file": "brown-cows-hero.png" } }
@@ -71,13 +71,13 @@
       "type": "logo-strip",
       "settings": { "label": "Where we ship and grow", "big": true },
       "blocks": {
-        "pl1": { "type": "logo", "settings": { "asset_file": "platform-amazon.svg", "name": "Amazon" } },
-        "pl2": { "type": "logo", "settings": { "asset_file": "platform-shopify.svg", "name": "Shopify" } },
-        "pl3": { "type": "logo", "settings": { "asset_file": "platform-google.svg", "name": "Google" } },
-        "pl4": { "type": "logo", "settings": { "asset_file": "platform-meta.svg", "name": "Meta" } },
-        "pl5": { "type": "logo", "settings": { "asset_file": "platform-tiktok.svg", "name": "TikTok" } },
-        "pl6": { "type": "logo", "settings": { "asset_file": "platform-walmart.svg", "name": "Walmart" } },
-        "pl7": { "type": "logo", "settings": { "asset_file": "platform-target.svg", "name": "Target" } }
+        "pl1": { "type": "logo", "settings": { "asset_file": "platform-amazon.png", "name": "Amazon" } },
+        "pl2": { "type": "logo", "settings": { "asset_file": "platform-shopify.png", "name": "Shopify" } },
+        "pl3": { "type": "logo", "settings": { "asset_file": "platform-google.png", "name": "Google" } },
+        "pl4": { "type": "logo", "settings": { "asset_file": "platform-meta.png", "name": "Meta" } },
+        "pl5": { "type": "logo", "settings": { "asset_file": "platform-tiktok.png", "name": "TikTok" } },
+        "pl6": { "type": "logo", "settings": { "asset_file": "platform-walmart.png", "name": "Walmart" } },
+        "pl7": { "type": "logo", "settings": { "asset_file": "platform-target.png", "name": "Target" } }
       },
       "block_order": ["pl1", "pl2", "pl3", "pl4", "pl5", "pl6", "pl7"]
     },
